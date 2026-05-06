@@ -38,6 +38,7 @@
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="tools.html">Tools</a>
+      <a href="cv.html">CV</a>
       <a href="writing.html">Writing</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -69,8 +70,8 @@
         Selected Publications
         <span class="arrow">→</span>
       </a>
-      <a href="about.html" class="btn ghost">
-        About me
+      <a href="cv.html" class="btn ghost">
+        View CV
         <span class="arrow">→</span>
       </a>
     </div>
@@ -110,26 +111,80 @@
   </div>
 </section>
 
+<!-- Contact form -->
+<section class="s" id="reach-out">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">Send a <em>note.</em></h2>
+    </div>
+
+    <!--
+      To make this form actually deliver mail:
+      1. Sign up for free at https://formspree.io
+      2. Create a new form, copy the form endpoint URL it gives you
+      3. Replace the 'YOUR_FORM_ID' placeholder in the action attribute below
+
+      Until you do that, the form will display correctly but submissions
+      go nowhere. Alternatives that also work on GitHub Pages:
+      web3forms.com (no signup) or basin (also free).
+    -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="form-row" style="grid-template-columns: 1fr;">
+        <div class="form-field full">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="_subject" required />
+        </div>
+      </div>
+
+      <div class="form-row" style="grid-template-columns: 1fr;">
+        <div class="form-field full">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" required rows="6"></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">
+          Send message
+          <span class="arrow">→</span>
+        </button>
+        <span class="form-note">Replies usually within a few days.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
 <footer class="site">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-prompt">
-        Reach out about <em>research, collaboration,</em> or <a href="contact.html">a tool you wish existed</a>.
+        Reach out about <em>research, collaboration,</em> or <a href="contact.html">an idea worth discussing</a>.
       </div>
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
-          <li><a href="#">Google Scholar</a></li>
+          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
           <li><a href="#">ORCID</a></li>
-          <li><a href="#">ResearchGate</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
         <h5>Code &amp; Writing</h5>
         <ul>
           <li><a href="#">GitHub</a></li>
-          <li><a href="#">Esri Community</a></li>
           <li><a href="writing.html">Notes</a></li>
           <li><a href="#">Bluesky</a></li>
         </ul>
