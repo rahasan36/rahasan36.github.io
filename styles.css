@@ -1346,6 +1346,8 @@ footer.site {
 @media (max-width: 600px) {
   .trip-gallery { column-count: 1; }
 }
+
+@media (max-width: 980px) {
   nav.primary { gap: 14px; }
   nav.primary a { font-size: 10px; letter-spacing: 0.1em; }
 
