@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel — Rakibul Ahasan</title>
+  <meta name="description" content="Travel diaries — recent trips, brief notes, and photographs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<div class="orb" aria-hidden="true"></div>
+
+<script>
+  document.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--my', e.clientY + 'px');
+  });
+</script>
+
+
+<header class="site">
+  <div class="container header-row">
+    <a href="index.html" class="brand">RA<span class="dot">.</span></a>
+    <nav class="primary" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="travel.html" class="active">Travel</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>Travel</div>
+    <h1 class="page-title rise d1">Travel <em>diaries.</em></h1>
+    <p class="page-lede rise d2">Notes from places I've spent time in lately. A geographer who studies cities at planetary scale still notices the small things on the ground.</p>
+  </div>
+</section>
+
+<section class="s">
+  <div class="container">
+
+    <!--
+      ============================================================
+      HOW TO ADD A NEW TRIP
+      ============================================================
+      1. Copy the entire <article class="trip">...</article> block below.
+      2. Update: trip-date, trip-coord (decimal degrees → DMS),
+         trip-where, trip-title, and trip-note.
+      3. Drop your photos in /assets/travel/ (see README there).
+      4. Update the <img src="..."> paths to point to your new photos.
+      5. Add or remove <figure> blocks to fit your photo count
+         (works well with 6–12 photos per trip).
+      6. Commit and push. Done.
+
+      Use loading="lazy" on every image so the page stays fast.
+      ============================================================
+    -->
+
+    <!-- ============== TRIP 1 (template, replace) ============== -->
+    <article class="trip">
+      <header class="trip-header">
+        <div class="trip-meta">
+          <span class="trip-date">March 2026</span>
+          <span class="trip-sep">/</span>
+          <span class="trip-coord">33°53′N · 115°54′W</span>
+          <span class="trip-sep">/</span>
+          <span class="trip-where">Joshua Tree, California</span>
+        </div>
+        <h2 class="trip-title">A weekend in <em>Joshua Tree</em></h2>
+        <p class="trip-note">[Replace this with a 2–4 sentence reflection on the trip — what you noticed, what surprised you, a small moment worth remembering. The point is not the itinerary, it's the texture.]</p>
+      </header>
+
+      <div class="trip-gallery">
+        <figure class="placeholder">Photo 01</figure>
+        <figure class="placeholder">Photo 02</figure>
+        <figure class="placeholder">Photo 03</figure>
+        <figure class="placeholder">Photo 04</figure>
+        <figure class="placeholder">Photo 05</figure>
+        <figure class="placeholder">Photo 06</figure>
+        <figure class="placeholder">Photo 07</figure>
+        <figure class="placeholder">Photo 08</figure>
+
+        <!--
+          When your photos are uploaded to /assets/travel/, replace each
+          placeholder above with a figure like this:
+
+          <figure>
+            <img src="assets/travel/joshua-tree-01.jpg"
+                 alt="Boulder field near Hidden Valley at dawn"
+                 loading="lazy" />
+            <figcaption>Hidden Valley, just after sunrise.</figcaption>
+          </figure>
+
+          The <figcaption> is optional — it appears as a hover overlay on
+          the image. Skip it for a cleaner gallery.
+        -->
+      </div>
+    </article>
+
+    <!-- ============== TRIP 2 (template, replace) ============== -->
+    <article class="trip">
+      <header class="trip-header">
+        <div class="trip-meta">
+          <span class="trip-date">[Month Year]</span>
+          <span class="trip-sep">/</span>
+          <span class="trip-coord">[lat · lon]</span>
+          <span class="trip-sep">/</span>
+          <span class="trip-where">[City, Region]</span>
+        </div>
+        <h2 class="trip-title">[Trip <em>title</em>]</h2>
+        <p class="trip-note">[Replace with a brief reflection. Italicize a key word with &lt;em&gt;...&lt;/em&gt; for emphasis if you'd like.]</p>
+      </header>
+
+      <div class="trip-gallery">
+        <figure class="placeholder">Photo 01</figure>
+        <figure class="placeholder">Photo 02</figure>
+        <figure class="placeholder">Photo 03</figure>
+        <figure class="placeholder">Photo 04</figure>
+        <figure class="placeholder">Photo 05</figure>
+        <figure class="placeholder">Photo 06</figure>
+        <figure class="placeholder">Photo 07</figure>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-prompt">
+        Reach out about <em>research, collaboration,</em> or <a href="contact.html">an idea worth discussing</a>.
+      </div>
+      <div class="contact-col">
+        <h5>Profiles</h5>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="#">ORCID</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener">ResearchGate</a></li>
+          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="contact-col">
+        <h5>Code &amp; Writing</h5>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Bluesky</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 Rakibul Ahasan</span>
+      <span>Last updated · May 2026</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

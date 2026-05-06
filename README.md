@@ -42,6 +42,28 @@ The `data-tags` attribute controls which filter buttons show the item.
 Available tags: `urban`, `biodiv`, `roads`, `planning`. Add more tags
 or filter buttons as needed.
 
+## Adding a travel diary entry
+
+1. Drop trip photos in `assets/travel/` using the naming convention
+   `tripname-NN.jpg` (e.g., `tokyo-01.jpg`, `tokyo-02.jpg`).
+2. In `travel.html`, copy any existing `<article class="trip">` block.
+3. Update the trip metadata (date, coordinates, location, title, note).
+4. Replace each `<figure class="placeholder">Photo NN</figure>` with a
+   real figure pointing at your image:
+
+   ```html
+   <figure>
+     <img src="assets/travel/tokyo-01.jpg"
+          alt="Description of the photo"
+          loading="lazy" />
+     <figcaption>Optional hover caption.</figcaption>
+   </figure>
+   ```
+
+5. Compress images first — try squoosh.app to keep each photo under
+   ~400 KB. The page lazy-loads images, but small files still beat
+   big ones on mobile.
+
 ## Deploying
 
 This is a vanilla static site. Drop these files in any GitHub Pages
