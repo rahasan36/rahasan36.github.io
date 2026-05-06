@@ -762,6 +762,8 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   transition: padding 0.25s ease;
 }
 .service-item:hover { padding-left: 12px; }
+a.service-item { text-decoration: none; cursor: pointer; }
+a.service-item:hover .service-what { color: var(--amber); }
 .service-when {
   font-family: var(--mono);
   font-size: 12px;
