@@ -236,38 +236,120 @@ h1.hero-name em {
   color: var(--cream);
 }
 
-/* Marquee scrolling band */
+/* Latest publications scrolling strip */
 .marquee {
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
-  padding: 28px 0;
+  padding: 24px 0;
   margin: 40px 0;
   overflow: hidden;
   white-space: nowrap;
   background: var(--bg-2);
+  position: relative;
 }
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-2), transparent);
+}
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-2), transparent);
+}
+
 .marquee-track {
   display: inline-flex;
-  gap: 60px;
-  animation: scroll-x 38s linear infinite;
-  font-family: var(--display);
-  font-size: 36px;
-  letter-spacing: -0.015em;
-  color: var(--cream);
+  gap: 48px;
+  animation: scroll-x 50s linear infinite;
   align-items: center;
 }
-.marquee-track .pip {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: var(--accent);
-  border-radius: 50%;
-  flex-shrink: 0;
+/* Pause on hover or when keyboard focus enters the strip */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
 }
-.marquee-track em { font-style: italic; color: var(--accent); }
 @keyframes scroll-x {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+/* Each publication entry */
+.latest {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+.latest:hover { opacity: 1; }
+.marquee:hover .latest:not(:hover) { opacity: 0.45; }
+
+.latest .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--theme-color, var(--cream));
+  flex-shrink: 0;
+  align-self: center;
+}
+.latest .latest-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--theme-color, var(--cream-mute));
+  font-weight: 500;
+  align-self: center;
+}
+.latest .latest-title {
+  font-family: var(--display);
+  font-size: 24px;
+  letter-spacing: -0.005em;
+  color: var(--cream);
+  font-weight: 400;
+  line-height: 1;
+}
+.latest .latest-meta {
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--cream-mute);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.latest .latest-meta em {
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--cream-soft);
+  font-size: 15px;
+}
+
+/* Theme colors per publication */
+.latest.urban       { --theme-color: var(--accent); }
+.latest.roads       { --theme-color: var(--coral); }
+.latest.biodiv      { --theme-color: var(--moss); }
+.latest.environment { --theme-color: #C9A96E; }     /* warm sand */
+.latest.health      { --theme-color: #7DA8C7; }     /* slate blue */
+.latest.modeling    { --theme-color: #B89BC4; }     /* dusty mauve */
+
+.marquee-track .pip {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--hairline);
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 .btn {
