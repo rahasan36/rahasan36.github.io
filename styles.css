@@ -588,29 +588,6 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   position: sticky;
   top: 110px;
 }
-.pub-meta {
-  font-family: var(--mono);
-  font-size: 13px;
-  margin-bottom: 40px;
-}
-.pub-meta .row {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--hairline);
-}
-.pub-meta .row:first-child { border-top: 1px solid var(--hairline); }
-.pub-meta dt {
-  color: var(--cream-mute);
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 0.16em;
-  margin-bottom: 6px;
-}
-.pub-meta dd {
-  font-family: var(--body);
-  font-size: 15px;
-  color: var(--cream);
-  font-weight: 400;
-}
 .pub-sidebar-label {
   font-family: var(--mono);
   font-size: 10px;
