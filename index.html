@@ -11,23 +11,21 @@
   <meta property="og:url" content="https://www.rakibulahasan.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<svg class="topo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-  <path d="M0,200 Q400,100 800,220 T1600,180" />
-  <path d="M0,260 Q420,160 820,280 T1600,240" />
-  <path d="M0,320 Q440,220 840,340 T1600,300" />
-  <path d="M0,380 Q460,280 860,400 T1600,360" />
-  <path d="M0,440 Q480,340 880,460 T1600,420" />
-  <path d="M0,560 Q380,460 780,580 T1600,540" />
-  <path d="M0,620 Q400,520 800,640 T1600,600" />
-  <path d="M0,680 Q420,580 820,700 T1600,660" />
-  <path d="M0,740 Q440,640 840,760 T1600,720" />
-  <path d="M0,800 Q460,700 860,820 T1600,780" />
-</svg>
+
+<div class="orb" aria-hidden="true"></div>
+
+<script>
+  // Cursor-following orb
+  document.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--my', e.clientY + 'px');
+  });
+</script>
 
 <header class="site">
   <div class="container header-row">
@@ -39,7 +37,6 @@
       <a href="publications.html">Publications</a>
       <a href="tools.html">Tools</a>
       <a href="cv.html">CV</a>
-      <a href="writing.html">Writing</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -50,7 +47,7 @@
     <div class="hero-meta rise d1">
       <span class="coord">30°37′N · 96°20′W</span>
       <span class="sep">/</span>
-      <span>Esri Spatial Analyst R&amp;D</span>
+      <span class="live">Esri Spatial Analyst R&amp;D</span>
     </div>
 
     <h1 class="hero-name rise d2">
@@ -77,6 +74,24 @@
     </div>
   </div>
 </section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Urban land change</span><span class="pip"></span>
+    <span><em>Road networks</em></span><span class="pip"></span>
+    <span>Biodiversity</span><span class="pip"></span>
+    <span><em>Geospatial tooling</em></span><span class="pip"></span>
+    <span>Brazil · Indonesia · Nigeria</span><span class="pip"></span>
+    <span><em>Khulna → Ames → College Station → Redlands</em></span><span class="pip"></span>
+    <span>Urban land change</span><span class="pip"></span>
+    <span><em>Road networks</em></span><span class="pip"></span>
+    <span>Biodiversity</span><span class="pip"></span>
+    <span><em>Geospatial tooling</em></span><span class="pip"></span>
+    <span>Brazil · Indonesia · Nigeria</span><span class="pip"></span>
+    <span><em>Khulna → Ames → College Station → Redlands</em></span><span class="pip"></span>
+  </div>
+</div>
 
 <!-- Quick research preview on home -->
 <section class="s">
@@ -185,7 +200,6 @@
         <h5>Code &amp; Writing</h5>
         <ul>
           <li><a href="#">GitHub</a></li>
-          <li><a href="writing.html">Notes</a></li>
           <li><a href="#">Bluesky</a></li>
         </ul>
       </div>

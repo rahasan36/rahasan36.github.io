@@ -7,19 +7,21 @@
   <meta name="description" content="Research themes: urban land change, road network modeling, biodiversity and protected areas, geospatial tooling." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<svg class="topo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-  <path d="M0,200 Q400,100 800,220 T1600,180" />
-  <path d="M0,260 Q420,160 820,280 T1600,240" />
-  <path d="M0,320 Q440,220 840,340 T1600,300" />
-  <path d="M0,380 Q460,280 860,400 T1600,360" />
-  <path d="M0,440 Q480,340 880,460 T1600,420" />
-  <path d="M0,560 Q380,460 780,580 T1600,540" />
-</svg>
+
+<div class="orb" aria-hidden="true"></div>
+
+<script>
+  // Cursor-following orb
+  document.addEventListener('mousemove', (e) => {
+    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--my', e.clientY + 'px');
+  });
+</script>
 
 <header class="site">
   <div class="container header-row">
@@ -31,7 +33,6 @@
       <a href="publications.html">Publications</a>
       <a href="tools.html">Tools</a>
       <a href="cv.html">CV</a>
-      <a href="writing.html">Writing</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -91,7 +92,7 @@
       <h2 class="section-title">Geospatial <em>tooling</em></h2>
     </div>
     <div class="prose">
-      <p>At Esri I design tools for the Spatial Analyst extension of ArcGIS Pro. Recent work covers weighted Voronoi tessellations, network-constrained kernel density, probabilistic surface analysis, and a five-tool addition to the Proximity toolset. The full list lives on the <a href="tools.html" style="color:var(--terra);text-decoration:none;border-bottom:1px solid var(--terra);">tools page</a>.</p>
+      <p>At Esri I design tools for the Spatial Analyst extension of ArcGIS Pro. Recent work covers weighted Voronoi tessellations, network-constrained kernel density, probabilistic surface analysis, and a five-tool addition to the Proximity toolset. The full list lives on the <a href="tools.html">tools page</a>.</p>
       <p>This thread is the practical complement to the research above. Many of the methods I publish in journals would be inaccessible to most analysts without a properly designed tool. Building those tools is, in a real sense, a form of methodological dissemination.</p>
     </div>
   </div>
@@ -116,7 +117,6 @@
         <h5>Code &amp; Writing</h5>
         <ul>
           <li><a href="#">GitHub</a></li>
-          <li><a href="writing.html">Notes</a></li>
           <li><a href="#">Bluesky</a></li>
         </ul>
       </div>
