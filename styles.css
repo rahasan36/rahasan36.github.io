@@ -549,6 +549,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 .pub-status.review { background: var(--coral); }
 .pub-status.prep   { background: var(--cream-mute); color: var(--bg); }
+.pub-status.wishful { background: var(--moss); color: var(--cream); }
 
 .pub-filter {
   display: flex;
@@ -607,7 +608,22 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   width: 100%;
   padding: 10px 16px;
   border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
+.pub-filter button .count {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--cream-mute);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.pub-filter button.active .count { color: var(--bg); opacity: 0.55; }
+.pub-filter button:hover .count { color: var(--cream); }
 .pub-list-wrap { min-width: 0; }
 
 .tools-grid {

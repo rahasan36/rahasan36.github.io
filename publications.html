@@ -53,21 +53,46 @@
     <div class="pub-grid">
       <aside class="pub-sidebar">
         <div class="pub-sidebar-label">Filter by theme</div>
-        <div class="pub-filter" role="tablist">
-          <button class="active" data-filter="all">All</button>
-          <button data-filter="urban">Urban land change</button>
-          <button data-filter="roads">Road networks</button>
-          <button data-filter="biodiv">Biodiversity</button>
-          <button data-filter="environment">Human–environment</button>
-          <button data-filter="health">Health GIS</button>
-          <button data-filter="modeling">Spatial modeling</button>
+        <div class="pub-filter" role="tablist" data-filter-group="theme">
+          <button class="active" data-filter="all">All <span class="count"></span></button>
+          <button data-filter="urban">Urban land change <span class="count"></span></button>
+          <button data-filter="roads">Road networks <span class="count"></span></button>
+          <button data-filter="biodiv">Biodiversity <span class="count"></span></button>
+          <button data-filter="environment">Human–environment <span class="count"></span></button>
+          <button data-filter="health">Health GIS <span class="count"></span></button>
+          <button data-filter="modeling">Spatial modeling <span class="count"></span></button>
+        </div>
+
+        <div class="pub-sidebar-label" style="margin-top: 36px;">Filter by status</div>
+        <div class="pub-filter" role="tablist" data-filter-group="status">
+          <button class="active" data-filter="all">All <span class="count"></span></button>
+          <button data-filter="published">Published <span class="count"></span></button>
+          <button data-filter="review">Under Review <span class="count"></span></button>
+          <button data-filter="prep">In Prep <span class="count"></span></button>
+          <button data-filter="wishful">Wishful Thinking <span class="count"></span></button>
         </div>
       </aside>
 
       <div class="pub-list-wrap">
         <div class="pub-list">
 
-      <article class="pub-item" data-tags="urban roads biodiv environment">
+      <!--
+        ============================================================
+        STATUS TAGGING
+        ============================================================
+        Each <article class="pub-item"> needs:
+          data-tags="theme1 theme2 ..."   (themes it belongs to)
+          data-status="published" | "review" | "prep" | "wishful"
+
+        - "published"  : appeared in a journal, no status pill needed
+        - "review"     : add <span class="pub-status review">In Revision</span>
+        - "prep"       : add <span class="pub-status prep">In Prep</span>
+        - "wishful"    : add <span class="pub-status wishful">Wishful</span>
+                         (use for ideas/projects you want to publish someday)
+        ============================================================
+      -->
+
+      <article class="pub-item" data-tags="urban roads biodiv environment" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Combined impacts of road development and urban expansion on biodiversity and habitats: insights from Brazil, Indonesia, and Nigeria<span class="pub-status prep">In Prep</span></div>
@@ -78,7 +103,7 @@
         <a href="#" class="pub-link">Coming Soon</a>
       </article>
 
-      <article class="pub-item" data-tags="urban biodiv">
+      <article class="pub-item" data-tags="urban biodiv" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Accelerating urbanization drives the physical isolation of global protected areas, 1990–2015<span class="pub-status prep">In Prep</span></div>
@@ -89,7 +114,7 @@
         <a href="#" class="pub-link">Coming Soon</a>
       </article>
 
-      <article class="pub-item" data-tags="roads environment">
+      <article class="pub-item" data-tags="roads environment" data-status="review">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Transportation infrastructure exposure to floods in Texas through 2100<span class="pub-status review">In Revision</span></div>
@@ -101,7 +126,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="roads modeling">
+      <article class="pub-item" data-tags="roads modeling" data-status="review">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">A spatially explicit model for forecasting hierarchical road network growth<span class="pub-status review">In Revision</span></div>
@@ -113,7 +138,7 @@
         <a href="#" class="pub-link">Preprint ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="urban modeling">
+      <article class="pub-item" data-tags="urban modeling" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Global ensemble forecasts reveal accelerating urban land-cover conversion and high uncertainty<span class="pub-status prep">In Prep</span></div>
@@ -124,7 +149,7 @@
         <a href="#" class="pub-link">Coming Soon</a>
       </article>
 
-      <article class="pub-item" data-tags="urban biodiv">
+      <article class="pub-item" data-tags="urban biodiv" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">The scaling of extinction: how urban hierarchies drive specialist habitat loss in Bangladesh<span class="pub-status prep">In Prep</span></div>
@@ -135,7 +160,7 @@
         <a href="#" class="pub-link">Coming Soon</a>
       </article>
 
-      <article class="pub-item" data-tags="urban biodiv">
+      <article class="pub-item" data-tags="urban biodiv" data-status="published">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Urban expansion and its impact on species habitats and Key Biodiversity Areas in Indonesia</div>
@@ -147,7 +172,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="urban">
+      <article class="pub-item" data-tags="urban" data-status="published">
         <div class="pub-year">2025</div>
         <div>
           <div class="pub-title">Urban land-change futures: current understanding, challenges, and implications</div>
@@ -159,7 +184,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="roads">
+      <article class="pub-item" data-tags="roads" data-status="published">
         <div class="pub-year">2023</div>
         <div>
           <div class="pub-title">Changing institutional landscape and transportation development in Dhaka, Bangladesh</div>
@@ -171,7 +196,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="environment">
+      <article class="pub-item" data-tags="environment" data-status="published">
         <div class="pub-year">2023</div>
         <div>
           <div class="pub-title">Spatio-temporal investigation of urban thermal comfort in Khulna City and surrounding areas</div>
@@ -183,7 +208,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="roads modeling">
+      <article class="pub-item" data-tags="roads modeling" data-status="published">
         <div class="pub-year">2022</div>
         <div>
           <div class="pub-title">Transportation in urban land change models: a systematic review and future directions</div>
@@ -195,7 +220,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="health">
+      <article class="pub-item" data-tags="health" data-status="published">
         <div class="pub-year">2022</div>
         <div>
           <div class="pub-title">Applications of GIS and geospatial analyses in COVID-19 research: a systematic review</div>
@@ -207,7 +232,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="health">
+      <article class="pub-item" data-tags="health" data-status="published">
         <div class="pub-year">2022</div>
         <div>
           <div class="pub-title">Applications of geospatial analyses in health research among homeless people: a systematic scoping review</div>
@@ -219,7 +244,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="urban modeling">
+      <article class="pub-item" data-tags="urban modeling" data-status="published">
         <div class="pub-year">2021</div>
         <div>
           <div class="pub-title">A data-driven machine learning approach for urban land cover change modeling: Khulna City Corporation</div>
@@ -231,7 +256,7 @@
         <a href="#" class="pub-link">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="health">
+      <article class="pub-item" data-tags="health" data-status="published">
         <div class="pub-year">2021</div>
         <div>
           <div class="pub-title">Leveraging GIS and spatial analysis for informed decision-making in the COVID-19 pandemic</div>
@@ -287,20 +312,66 @@
 </footer>
 
 <script>
-  // Publication filter
-  const filterBtns = document.querySelectorAll('.pub-filter button');
+  // Dual-filter publication system: theme × status, with live counts
+  const themeBtns = document.querySelectorAll('[data-filter-group="theme"] button');
+  const statusBtns = document.querySelectorAll('[data-filter-group="status"] button');
   const pubItems = document.querySelectorAll('.pub-item');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+
+  let activeTheme = 'all';
+  let activeStatus = 'all';
+
+  // Test whether an item passes a given (theme, status) combo
+  function itemMatches(item, theme, status) {
+    const tags = item.dataset.tags || '';
+    const itemStatus = item.dataset.status || '';
+    const themeOk = (theme === 'all') || tags.split(' ').includes(theme);
+    const statusOk = (status === 'all') || itemStatus === status;
+    return themeOk && statusOk;
+  }
+
+  // Apply the current filters and update the count badges
+  function applyFilters() {
+    pubItems.forEach(item => {
+      item.style.display = itemMatches(item, activeTheme, activeStatus) ? '' : 'none';
+    });
+
+    // Update theme button counts (counted against the currently active status)
+    themeBtns.forEach(btn => {
       const f = btn.dataset.filter;
-      pubItems.forEach(item => {
-        const tags = item.dataset.tags || '';
-        item.style.display = (f === 'all' || tags.includes(f)) ? '' : 'none';
-      });
+      let n = 0;
+      pubItems.forEach(item => { if (itemMatches(item, f, activeStatus)) n++; });
+      btn.querySelector('.count').textContent = n;
+    });
+
+    // Update status button counts (counted against the currently active theme)
+    statusBtns.forEach(btn => {
+      const f = btn.dataset.filter;
+      let n = 0;
+      pubItems.forEach(item => { if (itemMatches(item, activeTheme, f)) n++; });
+      btn.querySelector('.count').textContent = n;
+    });
+  }
+
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      themeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeTheme = btn.dataset.filter;
+      applyFilters();
     });
   });
+
+  statusBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      statusBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeStatus = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  // Initialize counts on first paint
+  applyFilters();
 </script>
 
 </body>
