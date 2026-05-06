@@ -42,6 +42,26 @@ The `data-tags` attribute controls which filter buttons show the item.
 Available tags: `urban`, `biodiv`, `roads`, `planning`. Add more tags
 or filter buttons as needed.
 
+## Adding a research figure
+
+1. Drop figure images in `assets/research/` using the naming convention
+   `theme-NN.jpg` (e.g., `urban-01.jpg`, `roads-01.jpg`).
+2. In `research.html`, find the `<aside class="theme-figures">` block
+   for the relevant theme and replace one of the `<figure class="theme-figure placeholder">`
+   blocks with a real figure:
+
+   ```html
+   <figure class="theme-figure">
+     <img src="assets/research/urban-01.jpg"
+          alt="Brief description of the figure"
+          loading="lazy" />
+     <figcaption>Fig. 1 — Short caption explaining the figure</figcaption>
+   </figure>
+   ```
+
+3. Compress images first with squoosh.app (target <500 KB per file).
+   PNG is best for charts and diagrams; JPG/WebP for maps and photos.
+
 ## Adding a travel diary entry
 
 1. Drop trip photos in `assets/travel/` using the naming convention
