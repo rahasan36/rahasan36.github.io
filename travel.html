@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Travel — Rakibul Ahasan</title>
   <meta name="description" content="Travel diaries — recent trips, brief notes, and photographs." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -68,67 +70,79 @@
 
     <!-- ============== TRIP 1 (template, replace) ============== -->
     <article class="trip">
-      <header class="trip-header">
-        <div class="trip-meta">
-          <span class="trip-date">March 2026</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-coord">33°53′N · 115°54′W</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-where">Joshua Tree, California</span>
+      <div class="trip-grid">
+        <aside class="trip-sidebar">
+          <div class="trip-meta-list">
+            <div class="row"><dt>When</dt><dd>March 2026</dd></div>
+            <div class="row"><dt>Where</dt><dd>Joshua Tree, California</dd></div>
+            <div class="row"><dt>Coords</dt><dd>33°53′N · 115°54′W</dd></div>
+            <div class="row"><dt>Photos</dt><dd>8</dd></div>
+          </div>
+        </aside>
+
+        <div class="trip-main">
+          <header class="trip-header">
+            <h2 class="trip-title">A weekend in <em>Joshua Tree</em></h2>
+            <p class="trip-note">[Replace this with a 2–4 sentence reflection on the trip — what you noticed, what surprised you, a small moment worth remembering. The point is not the itinerary, it's the texture.]</p>
+          </header>
+
+          <div class="trip-gallery">
+            <figure class="placeholder">Photo 01</figure>
+            <figure class="placeholder">Photo 02</figure>
+            <figure class="placeholder">Photo 03</figure>
+            <figure class="placeholder">Photo 04</figure>
+            <figure class="placeholder">Photo 05</figure>
+            <figure class="placeholder">Photo 06</figure>
+            <figure class="placeholder">Photo 07</figure>
+            <figure class="placeholder">Photo 08</figure>
+
+            <!--
+              When your photos are uploaded to /assets/travel/, replace each
+              placeholder above with a figure like this:
+
+              <figure>
+                <img src="assets/travel/joshua-tree-01.jpg"
+                     alt="Boulder field near Hidden Valley at dawn"
+                     loading="lazy" />
+                <figcaption>Hidden Valley, just after sunrise.</figcaption>
+              </figure>
+
+              The <figcaption> is optional — it appears as a hover overlay on
+              the image. Skip it for a cleaner gallery.
+            -->
+          </div>
         </div>
-        <h2 class="trip-title">A weekend in <em>Joshua Tree</em></h2>
-        <p class="trip-note">[Replace this with a 2–4 sentence reflection on the trip — what you noticed, what surprised you, a small moment worth remembering. The point is not the itinerary, it's the texture.]</p>
-      </header>
-
-      <div class="trip-gallery">
-        <figure class="placeholder">Photo 01</figure>
-        <figure class="placeholder">Photo 02</figure>
-        <figure class="placeholder">Photo 03</figure>
-        <figure class="placeholder">Photo 04</figure>
-        <figure class="placeholder">Photo 05</figure>
-        <figure class="placeholder">Photo 06</figure>
-        <figure class="placeholder">Photo 07</figure>
-        <figure class="placeholder">Photo 08</figure>
-
-        <!--
-          When your photos are uploaded to /assets/travel/, replace each
-          placeholder above with a figure like this:
-
-          <figure>
-            <img src="assets/travel/joshua-tree-01.jpg"
-                 alt="Boulder field near Hidden Valley at dawn"
-                 loading="lazy" />
-            <figcaption>Hidden Valley, just after sunrise.</figcaption>
-          </figure>
-
-          The <figcaption> is optional — it appears as a hover overlay on
-          the image. Skip it for a cleaner gallery.
-        -->
       </div>
     </article>
 
     <!-- ============== TRIP 2 (template, replace) ============== -->
     <article class="trip">
-      <header class="trip-header">
-        <div class="trip-meta">
-          <span class="trip-date">[Month Year]</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-coord">[lat · lon]</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-where">[City, Region]</span>
-        </div>
-        <h2 class="trip-title">[Trip <em>title</em>]</h2>
-        <p class="trip-note">[Replace with a brief reflection. Italicize a key word with &lt;em&gt;...&lt;/em&gt; for emphasis if you'd like.]</p>
-      </header>
+      <div class="trip-grid">
+        <aside class="trip-sidebar">
+          <div class="trip-meta-list">
+            <div class="row"><dt>When</dt><dd>[Month Year]</dd></div>
+            <div class="row"><dt>Where</dt><dd>[City, Region]</dd></div>
+            <div class="row"><dt>Coords</dt><dd>[lat · lon]</dd></div>
+            <div class="row"><dt>Photos</dt><dd>[N]</dd></div>
+          </div>
+        </aside>
 
-      <div class="trip-gallery">
-        <figure class="placeholder">Photo 01</figure>
-        <figure class="placeholder">Photo 02</figure>
-        <figure class="placeholder">Photo 03</figure>
-        <figure class="placeholder">Photo 04</figure>
-        <figure class="placeholder">Photo 05</figure>
-        <figure class="placeholder">Photo 06</figure>
-        <figure class="placeholder">Photo 07</figure>
+        <div class="trip-main">
+          <header class="trip-header">
+            <h2 class="trip-title">[Trip <em>title</em>]</h2>
+            <p class="trip-note">[Replace with a brief reflection. Italicize a key word with &lt;em&gt;...&lt;/em&gt; for emphasis if you'd like.]</p>
+          </header>
+
+          <div class="trip-gallery">
+            <figure class="placeholder">Photo 01</figure>
+            <figure class="placeholder">Photo 02</figure>
+            <figure class="placeholder">Photo 03</figure>
+            <figure class="placeholder">Photo 04</figure>
+            <figure class="placeholder">Photo 05</figure>
+            <figure class="placeholder">Photo 06</figure>
+            <figure class="placeholder">Photo 07</figure>
+          </div>
+        </div>
       </div>
     </article>
 
