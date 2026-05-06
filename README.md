@@ -42,12 +42,6 @@ The `data-tags` attribute controls which filter buttons show the item.
 Available tags: `urban`, `biodiv`, `roads`, `planning`. Add more tags
 or filter buttons as needed.
 
-## Deploying
-
-This is a vanilla static site. Drop these files in any GitHub Pages
-repo (or any host: Netlify, Vercel, Cloudflare Pages) and the site
-works.
-
 ## License / credits
 
 Fonts: Fraunces, Source Serif 4, JetBrains Mono — all open licenses
