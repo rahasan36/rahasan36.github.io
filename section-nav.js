@@ -51,3 +51,50 @@
     });
   });
 })();
+
+/* ====================================================
+   MOBILE MENU
+   ----------------------------------------------------
+   The burger button in the header pill. Opens the primary
+   nav as a panel on small screens; closes on link click,
+   Esc, or a tap outside.
+   ==================================================== */
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('primary-nav');
+  if (!toggle || !nav) return;
+
+  function setOpen(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(nav.classList.contains('is-open') === false);
+  });
+
+  // choosing a destination closes the menu
+  Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) {
+    a.addEventListener('click', function () { setOpen(false); });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (nav.classList.contains('is-open') && !nav.contains(e.target) && e.target !== toggle) {
+      setOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  // returning to desktop width should never leave the panel stuck open
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 980) setOpen(false);
+  });
+})();
