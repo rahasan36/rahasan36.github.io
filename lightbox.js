@@ -11,7 +11,7 @@
              Wraps within the group the photo came from.
    ==================================================== */
 (function () {
-  var GROUP_SELECTOR = '.trip-gallery, .theme-figures';
+  var GROUP_SELECTOR = '.trip-gallery, .theme-figures, .summary-grid';
 
   var groups = [];
   Array.prototype.forEach.call(document.querySelectorAll(GROUP_SELECTOR), function (container) {

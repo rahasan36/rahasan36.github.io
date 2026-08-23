@@ -1910,9 +1910,11 @@ footer.site {
    LIGHTBOX
    ==================================================== */
 .trip-gallery figure.is-zoomable,
-.theme-figure.is-zoomable { cursor: zoom-in; }
+.theme-figure.is-zoomable,
+.summary-figure.is-zoomable { cursor: zoom-in; }
 .trip-gallery figure.is-zoomable:focus-visible,
-.theme-figure.is-zoomable:focus-visible {
+.theme-figure.is-zoomable:focus-visible,
+.summary-figure.is-zoomable:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
