@@ -348,6 +348,14 @@ h1.hero-name em {
   line-height: 1.45;
   letter-spacing: -0.005em;
 }
+.page-lede a {
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.page-lede a:hover { color: var(--accent); border-bottom-color: var(--accent-deep); }
 .page-lede em {
   font-family: var(--display);
   font-style: italic;
