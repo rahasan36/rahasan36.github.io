@@ -1636,6 +1636,34 @@ footer.site {
 }
 .summary-lead em { color: var(--accent); font-style: italic; }
 
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: start;
+}
+.summary-figure { margin: 0; }
+.summary-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--hairline);
+  background: var(--bg-3);
+}
+.summary-figure figcaption {
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-mute);
+  margin-top: 14px;
+}
+@media (max-width: 980px) {
+  .summary-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
 .stat-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
