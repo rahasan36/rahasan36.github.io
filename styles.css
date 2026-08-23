@@ -480,13 +480,7 @@ h1.hero-name em {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  /* optical centring: don't inherit line-height, and compensate for
-     (a) uppercase caps riding high in the em box  -> 17 top / 15 bottom
-     (b) trailing letter-spacing after the last glyph -> 25 right / 26 left */
-  line-height: 1;
-  padding: 17px 25px 15px 26px;
-  justify-content: center;
-  text-align: center;
+  padding: 16px 26px;
   text-decoration: none;
   transition: all 0.25s ease;
   border: 1px solid var(--cream);
@@ -563,11 +557,12 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 /* a button in prose: no text leading, so its spacing is symmetric */
 .prose .prose-cta {
-  line-height: 1;
-  margin-top: 6px;
-  margin-bottom: 4px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 4px;
 }
-.btn.btn-center { justify-content: center; text-align: center; }
 .prose p {
   font-size: 19px;
   line-height: 1.65;
@@ -608,14 +603,14 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   font-weight: 300;
 }
 .prose li { margin-bottom: 0.5em; }
-.prose a {
+.prose a:not(.btn) {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid var(--accent);
   padding-bottom: 1px;
   transition: all 0.2s ease;
 }
-.prose a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
+.prose a:not(.btn):hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
 
 .about-grid {
   display: grid;
