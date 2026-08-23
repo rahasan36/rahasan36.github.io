@@ -420,8 +420,8 @@
     <div class="interest-grid">
       <div class="interest">
         <div class="interest-num">01</div>
-        <h4>Urban land change at global scale</h4>
-        <p>Where cities have already grown and where they are going next, reconstructed from multi-decadal land-cover series and projected under SSP scenarios. I care about keeping regional differences visible rather than averaging them into a single global curve.</p>
+        <h4>Urban land change at local, regional, and global scale</h4>
+        <p>Where cities have already grown and where they are going next, reconstructed from multi-decadal land-cover series and projected under SSP scenarios &mdash; from single metropolitan areas through world regions to the global total. Each scale answers a different question, and I care about keeping those differences visible rather than averaging them into one curve.</p>
       </div>
 
       <div class="interest">
@@ -523,54 +523,7 @@
 </footer>
 
 
-<script>
-  // Right-hand section rail: highlight the section currently in view,
-  // and smooth-scroll on click. Falls back silently if IO is unavailable.
-  (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a'));
-    if (!links.length) return;
-
-    var byId = {};
-    var sections = [];
-    links.forEach(function (link) {
-      var el = document.getElementById(link.dataset.target);
-      if (!el) return;
-      byId[link.dataset.target] = link;
-      sections.push(el);
-    });
-    if (!sections.length) return;
-
-    function setActive(id) {
-      links.forEach(function (l) { l.classList.toggle('active', l.dataset.target === id); });
-    }
-
-    if ('IntersectionObserver' in window) {
-      // Track how much of each section is on screen and light up the largest.
-      var ratios = {};
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { ratios[e.target.id] = e.isIntersecting ? e.intersectionRatio : 0; });
-        var best = null, bestRatio = 0;
-        Object.keys(ratios).forEach(function (id) {
-          if (ratios[id] > bestRatio) { bestRatio = ratios[id]; best = id; }
-        });
-        if (best) setActive(best);
-      }, { threshold: [0, 0.15, 0.35, 0.6, 0.9], rootMargin: '-90px 0px -35% 0px' });
-      sections.forEach(function (el) { io.observe(el); });
-    }
-
-    links.forEach(function (link) {
-      link.addEventListener('click', function (ev) {
-        var el = document.getElementById(link.dataset.target);
-        if (!el) return;
-        ev.preventDefault();
-        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-        setActive(link.dataset.target);
-        history.replaceState(null, '', '#' + link.dataset.target);
-      });
-    });
-  })();
-</script>
+<script src="section-nav.js"></script>
 
 </body>
 </html>

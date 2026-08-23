@@ -53,86 +53,241 @@
 
     <!--
       ============================================================
-      HOW TO ADD A NEW TRIP
+      HOW THIS PAGE IS ORGANISED
       ============================================================
-      1. Copy the entire <article class="trip">...</article> block below.
-      2. Update: trip-date, trip-coord (decimal degrees → DMS),
-         trip-where, trip-title, and trip-note.
-      3. Drop your photos in /assets/travel/ (see README there).
-      4. Update the <img src="..."> paths to point to your new photos.
-      5. Add or remove <figure> blocks to fit your photo count
-         (works well with 6–12 photos per trip).
-      6. Commit and push. Done.
+      Year  ->  <section class="travel-year">, newest year first
+      Trip  ->  <article class="trip"> inside it, newest first
+      Album ->  <div class="trip-gallery">, 6 photos = a 3 x 2 grid
 
-      Use loading="lazy" on every image so the page stays fast.
+      TO ADD A TRIP
+      1. Copy one <article class="trip"> block into the right year.
+      2. Update trip-date, trip-coord (decimal degrees -> DMS),
+         trip-where, trip-title, and trip-note.
+      3. Drop photos in /assets/travel/ (see README there), then swap
+         each placeholder figure for:
+
+         <figure>
+           <img src="assets/travel/glacier-01.jpg"
+                alt="Short description of the photo"
+                loading="lazy" />
+           <figcaption>Optional caption, shown on hover.</figcaption>
+         </figure>
+
+      4. Keep 6 per album so the grid stays 3 x 2. Add another row of
+         3 if a trip deserves more.
+
+      TO ADD A YEAR
+      Copy the <section class="travel-year"> wrapper, change the year
+      number and trip count, and place it above the previous year.
       ============================================================
     -->
 
-    <!-- ============== TRIP 1 (template, replace) ============== -->
-    <article class="trip">
-      <header class="trip-header">
-        <div class="trip-meta">
-          <span class="trip-date">March 2026</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-coord">33°53′N · 115°54′W</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-where">Joshua Tree, California</span>
-        </div>
-        <h2 class="trip-title">A weekend in <em>Joshua Tree</em></h2>
-        <p class="trip-note">[Replace this with a 2–4 sentence reflection on the trip — what you noticed, what surprised you, a small moment worth remembering. The point is not the itinerary, it's the texture.]</p>
-      </header>
-
-      <div class="trip-gallery">
-        <figure class="placeholder">Photo 01</figure>
-        <figure class="placeholder">Photo 02</figure>
-        <figure class="placeholder">Photo 03</figure>
-        <figure class="placeholder">Photo 04</figure>
-        <figure class="placeholder">Photo 05</figure>
-        <figure class="placeholder">Photo 06</figure>
-        <figure class="placeholder">Photo 07</figure>
-        <figure class="placeholder">Photo 08</figure>
-
-        <!--
-          When your photos are uploaded to /assets/travel/, replace each
-          placeholder above with a figure like this:
-
-          <figure>
-            <img src="assets/travel/joshua-tree-01.jpg"
-                 alt="Boulder field near Hidden Valley at dawn"
-                 loading="lazy" />
-            <figcaption>Hidden Valley, just after sunrise.</figcaption>
-          </figure>
-
-          The <figcaption> is optional — it appears as a hover overlay on
-          the image. Skip it for a cleaner gallery.
-        -->
+    <!-- ==================== 2026 ==================== -->
+    <section class="travel-year" id="y2026">
+      <div class="year-head">
+        <h2 class="year-num">2026</h2>
+        <span class="year-count">3 trips</span>
       </div>
-    </article>
 
-    <!-- ============== TRIP 2 (template, replace) ============== -->
-    <article class="trip">
-      <header class="trip-header">
-        <div class="trip-meta">
-          <span class="trip-date">[Month Year]</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-coord">[lat · lon]</span>
-          <span class="trip-sep">/</span>
-          <span class="trip-where">[City, Region]</span>
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">July 2026</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">48°42′N · 113°43′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Glacier National Park, Montana</span>
+          </div>
+          <h2 class="trip-title"><em>Glacier</em> National Park</h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
         </div>
-        <h2 class="trip-title">[Trip <em>title</em>]</h2>
-        <p class="trip-note">[Replace with a brief reflection. Italicize a key word with &lt;em&gt;...&lt;/em&gt; for emphasis if you'd like.]</p>
-      </header>
+      </article>
 
-      <div class="trip-gallery">
-        <figure class="placeholder">Photo 01</figure>
-        <figure class="placeholder">Photo 02</figure>
-        <figure class="placeholder">Photo 03</figure>
-        <figure class="placeholder">Photo 04</figure>
-        <figure class="placeholder">Photo 05</figure>
-        <figure class="placeholder">Photo 06</figure>
-        <figure class="placeholder">Photo 07</figure>
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">May 2026</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">41°53′N · 87°38′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Chicago, Illinois</span>
+          </div>
+          <h2 class="trip-title">A few days in <em>Chicago</em></h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">March 2026</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">36°03′N · 112°08′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Arizona &amp; Utah</span>
+          </div>
+          <h2 class="trip-title">The <em>Colorado Plateau</em> loop</h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== 2025 ==================== -->
+    <section class="travel-year" id="y2025">
+      <div class="year-head">
+        <h2 class="year-num">2025</h2>
+        <span class="year-count">4 trips</span>
       </div>
-    </article>
+
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">October 2025</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">42°22′N · 71°04′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Vermont, Maine &amp; Massachusetts</span>
+          </div>
+          <h2 class="trip-title">Vermont, Maine, and <em>Boston</em></h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">July 2025</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">44°26′N · 110°35′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Wyoming &amp; Montana</span>
+          </div>
+          <h2 class="trip-title"><em>Yellowstone</em> and Grand Teton</h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">June 2025</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">39°44′N · 104°59′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Colorado</span>
+          </div>
+          <h2 class="trip-title">Through <em>Colorado</em></h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">March 2025</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">[lat &middot; lon]</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">[Where was this?]</span>
+          </div>
+          <h2 class="trip-title">[Trip title]</h2>
+          <p class="trip-note">[PLACEHOLDER &mdash; a trip happened here in March 2025 but the destination is not recorded yet. Fill in location, coordinates, title and note, or delete this block.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== 2024 ==================== -->
+    <section class="travel-year" id="y2024">
+      <div class="year-head">
+        <h2 class="year-num">2024</h2>
+        <span class="year-count">1 trip</span>
+      </div>
+
+      <article class="trip">
+        <header class="trip-header">
+          <div class="trip-meta">
+            <span class="trip-date">May 2024</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-coord">29°15′N · 103°15′W</span>
+            <span class="trip-sep">/</span>
+            <span class="trip-where">Texas &amp; New Mexico</span>
+          </div>
+          <h2 class="trip-title">Four parks: <em>Big Bend</em> to White Sands</h2>
+          <p class="trip-note">[Two to four sentences on this trip &mdash; what you noticed, what surprised you, one small moment worth keeping. Not the itinerary, the texture.]</p>
+        </header>
+
+        <div class="trip-gallery">
+          <figure class="placeholder">Photo 01</figure>
+          <figure class="placeholder">Photo 02</figure>
+          <figure class="placeholder">Photo 03</figure>
+          <figure class="placeholder">Photo 04</figure>
+          <figure class="placeholder">Photo 05</figure>
+          <figure class="placeholder">Photo 06</figure>
+        </div>
+      </article>
+    </section>
 
   </div>
 </section>

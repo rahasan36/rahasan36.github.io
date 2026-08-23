@@ -40,6 +40,16 @@
   </div>
 </header>
 
+
+<nav class="section-nav" aria-label="Page sections">
+    <a href="#overview" data-target="overview"><span class="label">Overview</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#esri" data-target="esri"><span class="label">Esri</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#doctorate" data-target="doctorate"><span class="label">Doctorate</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#iowa" data-target="iowa"><span class="label">Iowa State</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#khulna" data-target="khulna"><span class="label">Khulna</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#outside" data-target="outside"><span class="label">Outside work</span><span class="tick" aria-hidden="true"></span></a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>About</div>
@@ -65,19 +75,53 @@
       </aside>
 
       <div class="prose">
-        <p class="dropcap">I grew up sketching cities on tracing paper in Khulna and now spend my days writing the code and designing the functionalities that help other people analyze them. My research traces how urban expansion and road networks reshape landscapes, and what that change means for the species and people sharing those landscapes.</p>
 
-        <p>At Esri I work, in geospatial R&amp;D, applying spatial analysis to questions about urban planning, service delivery, and beyond. In parallel, I publish on global biodiversity loss, protected-area isolation, and infrastructure exposure to climate hazards. The two halves feed each other — the applied work keeps the academic questions grounded, and the academic work keeps the applied work asking the right things.</p>
+        <div class="about-block" id="overview">
+          <p class="dropcap">I grew up sketching cities on tracing paper in Khulna and now spend my days writing the code and designing the functionality that helps other people analyze them. My research traces how urban expansion and road networks reshape landscapes, and what that change means for the species and people sharing them.</p>
 
-        <p>Methodologically, my work sits at the convergence of <em>land change modeling, machine learning, statistical modeling,</em> and large-scale spatial analysis. Across projects, I lean on spatial, econometric, and statistical, machine-learning-based approaches to land-cover classification, statistical and AI-based flood susceptibility modeling, and large process models for urban–transportation coevolution. The common thread is a preference for models that take spatial structure seriously, communicate uncertainty honestly, and remain interpretable.</p>
+          <p>Methodologically my work sits at the convergence of <em>land change modeling, machine learning, statistical modeling,</em> and large-scale spatial analysis. The common thread is a preference for models that take spatial structure seriously, communicate uncertainty honestly, and stay interpretable enough that someone other than the modeler can use them.</p>
 
-        <p>Recent collaborators include Burak Güneralp and Lee A. Fitzgerald at Texas A&amp;M, M Mahbub Hossain at the University of Houston, and the Oak Ridge National Laboratory Human Geography Group. I co-convene the AGU Urban Area and Global Change session in 2026.</p>
+          <p>Recent collaborators include Burak G&uuml;neralp and Lee A. Fitzgerald at Texas A&amp;M, M Mahbub Hossain at the University of Houston, and the Oak Ridge National Laboratory Human Geography Group. I co-convene the AGU Urban Area and Global Change session in 2026.</p>
+        </div>
 
-        <h3>Background</h3>
-        <p>Before joining Esri in 2024, I completed a PhD in Geography at Texas A&amp;M, advised by Burak Güneralp. My dissertation produced one of the first large, global-scale road network growth models, work that was featured in AGU's <em>Eos</em> magazine. Earlier, I completed two master's degrees from Iowa State, one in Community and Regional Planning and one in Transportation, with a graduate certificate in GIS along the way. My undergraduate degree in Urban and Rural Planning is from Khulna University. The planning identity runs underneath everything I do. </p>
+        <div class="about-block" id="esri">
+          <h3>Building the tools at <em>Esri</em></h3>
+          <div class="when">Product Engineer II &middot; Redlands, California &middot; 2024 &ndash; present</div>
+          <p>I work in geospatial R&amp;D, applying spatial analysis to questions about urban planning, service delivery, and beyond. It is a different kind of reach from publishing a paper: what I help design and document ends up in the hands of millions of users worldwide &mdash; in government, utilities, conservation, industry, and research &mdash; and gets pointed at problems I will never hear about.</p>
+          <p>That changes how you think about a method. Something that works in your own notebook, on your own data, has to survive being handed to someone with a different dataset, a different question, and no patience for your assumptions. I came to Esri first as an intern in the summer of 2023 and returned full time in January 2024. The applied side keeps the academic questions grounded; the academic side keeps the tooling pointed at problems worth solving.</p>
+        </div>
 
-        <h3>Outside work</h3>
-        <p>I am Bangladeshi, married, and live in the United States. My wife and I travel whenever we can (mostly in Nature). Exploring the National Parks and going to all of the parks before turning 40 is one of the bucket list items for me. </p>
+        <div class="about-block" id="doctorate">
+          <h3>The doctoral <em>years</em></h3>
+          <div class="when">PhD in Geography &middot; Texas A&amp;M University &middot; 2019 &ndash; 2024</div>
+          <p>I completed my PhD at Texas A&amp;M under Burak G&uuml;neralp. The dissertation produced one of the first global-scale road network growth models &mdash; calibrated against historical road expansion, projected forward under multiple development scenarios &mdash; and AGU&#39;s <em>Eos</em> magazine covered it on publication.</p>
+          <p>What I valued most was the range. Over five years the projects ran from the thermal environment of a single city to the entire terrestrial protected-area network, and the methods had to stretch to match: multi-criteria decision analysis and Monte Carlo perturbation for flood susceptibility, machine learning for land-cover classification, segmented regression and spatial statistics for global pattern, process models for urban&ndash;transport coevolution. Few graduate students get to move across that many problems, and each one left a technique behind that the next could use.</p>
+          <p>Working at the grandest scale available &mdash; every protected area on Earth, the global road network, a thirty-year land-cover record &mdash; teaches you quickly which questions survive the jump from a case study and which quietly fall apart on the way up. It also came with the chance to teach GIS at undergraduate and graduate level and to mentor fourteen students through their own spatial analysis and habitat-change work, which remains among the more rewarding parts of the job. Five years is long enough to learn that the hard part of a dissertation is rarely the method. It is deciding which version of the question is worth five years.</p>
+        </div>
+
+        <div class="about-block" id="iowa">
+          <h3>Two degrees in <em>Iowa</em></h3>
+          <div class="when">MCRP, MSc, Graduate Certificate in GIS &middot; Iowa State University &middot; 2017 &ndash; 2019</div>
+          <p>Before Texas came Ames: a master&#39;s in Community and Regional Planning, a second in Transportation, and a graduate certificate in GIS along the way. I taught GIS labs in Community and Regional Planning and, as a teaching assistant, supervised the changeover from ArcMap to ArcGIS Pro across the undergraduate and graduate sequences &mdash; which is a specific kind of education in how software actually gets adopted.</p>
+          <p>I also worked as a GIS technician at the Iowa State GIS Facility, building and validating spatial datasets for the <em>Agricultural Conservation Planning Framework</em> across Iowa, Indiana, and Ohio, and communicating what we found to USDA and Iowa DNR. That job taught me more about data preparation than any course did, and the habit of distrusting a dataset until I have checked it against another one dates from there.</p>
+        </div>
+
+        <div class="about-block" id="khulna">
+          <h3>Where it started: <em>Khulna</em></h3>
+          <div class="when">BURP and MURP &middot; Khulna University, Bangladesh</div>
+          <p>My undergraduate and master&#39;s degrees in Urban and Rural Planning are both from Khulna University. I was the first student in the discipline to earn a perfect 4.00 in a semester, and graduated top of my batch with a 3.89 CGPA.</p>
+          <p>Planning in Bangladesh is not an abstract exercise. You are working on cities growing faster than the infrastructure serving them, in a delta that floods. Questions about accessibility, transport equity, and hazard exposure were not research topics there; they were the conditions. That is where the thread running through everything since begins &mdash; my earliest papers were on public transport performance and metro rail accessibility in Dhaka, and on housing affordability measured against the planning theory meant to deliver it.</p>
+          <p>Staying was the comfortable option. But graduate study in the United States had been the plan for years, and I left for it &mdash; the American dream, named plainly. The planning identity came along and still runs underneath all of it: I remain more interested in what a model implies for a decision than in the model itself.</p>
+        </div>
+
+        <div class="about-block" id="outside">
+          <h3>Away from the <em>screen</em></h3>
+          <div class="when">Travel, photography, and football</div>
+          <p>I am Bangladeshi, married, and live in the United States. My wife and I travel whenever we can, mostly toward nature &mdash; Glacier, Yellowstone and Grand Teton, the Colorado Plateau, Big Bend and the parks of West Texas and New Mexico. Visiting all of the National Parks before I turn forty is a genuine item on the list, not a figure of speech. There are <a href="travel.html">photographs from some of it</a>.</p>
+          <p>Photography is the other half of that habit. Carrying a camera changes how you look at a landscape: you start noticing light, structure, and the edges of things, which is not so far from what I do with a land-cover raster, only slower and in better weather.</p>
+          <p>I follow sport closely and football above all &mdash; the watching kind, with the arguments that come with it. It is the one domain where I am content to hold strong opinions I cannot support with data.</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -112,6 +156,8 @@
     </div>
   </div>
 </footer>
+
+<script src="section-nav.js"></script>
 
 </body>
 </html>
