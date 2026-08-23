@@ -144,7 +144,7 @@ nav.primary a {
 nav.primary a:hover { color: var(--accent); }
 nav.primary a.active { color: var(--accent); }
 
-.hero { padding-top: 130px; padding-bottom: 80px; position: relative; overflow: hidden; }
+.hero { padding-top: 96px; padding-bottom: 64px; position: relative; overflow: hidden; }
 
 /* Hooding-ceremony photo, faded into the right of the hero.
    The mask gradient dissolves the left edge into the page background
@@ -210,8 +210,8 @@ nav.primary a.active { color: var(--accent); }
   line-height: 1.62;
   font-weight: 300;
   color: var(--cream-mute);
-  max-width: 760px;
-  margin-bottom: 52px;
+  max-width: 780px;
+  margin-bottom: 36px;
 }
 .hero-detail strong { color: var(--cream-soft); font-weight: 400; }
 .hero-cta { position: relative; }
@@ -230,7 +230,7 @@ nav.primary a.active { color: var(--accent); }
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--cream-mute);
-  margin-bottom: 60px;
+  margin-bottom: 38px;
 }
 .hero-meta .coord { color: var(--accent); }
 .hero-meta .sep { color: var(--hairline); }
@@ -247,11 +247,11 @@ nav.primary a.active { color: var(--accent); }
 
 h1.hero-name {
   font-family: var(--display);
-  font-size: clamp(80px, 16vw, 280px);
+  font-size: clamp(56px, min(9vw, 14vh), 168px);
   font-weight: 400;
   line-height: 0.86;
   letter-spacing: -0.04em;
-  margin-bottom: 56px;
+  margin-bottom: 34px;
   color: var(--cream);
 }
 h1.hero-name em {
@@ -261,13 +261,13 @@ h1.hero-name em {
 
 .hero-sub {
   font-family: var(--body);
-  font-size: clamp(20px, 2.2vw, 28px);
+  font-size: clamp(19px, 1.75vw, 25px);
   font-weight: 300;
-  max-width: 880px;
+  max-width: 860px;
   color: var(--cream-soft);
   line-height: 1.4;
   letter-spacing: -0.005em;
-  margin-bottom: 56px;
+  margin-bottom: 26px;
 }
 .hero-sub em {
   font-style: italic;
