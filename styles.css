@@ -1220,8 +1220,8 @@ footer.site {
    ==================================================== */
 .theme-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 64px;
+  grid-template-columns: 1fr 600px;
+  gap: 48px;
   align-items: start;
 }
 
@@ -1307,9 +1307,10 @@ footer.site {
 }
 
 .theme-figures {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  align-content: start;
   position: sticky;
   top: 110px;
 }
@@ -1355,12 +1356,9 @@ footer.site {
   .theme-grid { grid-template-columns: 1fr; gap: 40px; }
   .theme-figures {
     position: static;
-    flex-direction: row;
-    overflow-x: auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
-    padding-bottom: 8px;
   }
-  .theme-figure { flex: 0 0 280px; }
 }
 
 /* ====================================================
