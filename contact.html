@@ -40,6 +40,13 @@
   </div>
 </header>
 
+
+<nav class="section-nav" aria-label="Page sections">
+    <a href="#details" data-target="details"><span class="label">Details</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#work" data-target="work"><span class="label">What I work on</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#note" data-target="note"><span class="label">Send a note</span><span class="tick" aria-hidden="true"></span></a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>Contact</div>
@@ -48,7 +55,7 @@
   </div>
 </section>
 
-<section class="s">
+<section class="s" id="details">
   <div class="container">
     <div class="about-grid">
       <aside class="about-meta">
@@ -72,13 +79,99 @@
 
         <h3>Profiles</h3>
         <ul>
-          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-4772-8499">ORCID</a></li>
-          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener">ResearchGate</a></li>
-          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- What I work on -->
+<section class="s" id="work">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">What I work on</div>
+      <h2 class="section-title">Where a note <em>lands well.</em></h2>
+    </div>
+
+    <p class="interest-lead">Most of what I work on comes back to one question &mdash; <em>how do cities reshape the planet?</em> &mdash; approached from four directions. If your question sits near any of these, I would like to hear about it.</p>
+
+    <div class="interest-grid">
+          <div class="interest">
+            <div class="interest-num">01</div>
+            <h4>Urban land change at local, regional, and global scale</h4>
+            <p>Where cities have already grown and where they are going next, reconstructed from multi-decadal land-cover series and projected under SSP scenarios &mdash; from single metropolitan areas through world regions to the global total. Each scale answers a different question, and I care about keeping those differences visible rather than averaging them into one curve.</p>
+          </div>
+
+          <div class="interest">
+            <div class="interest-num">02</div>
+            <h4>Road networks as a driver, not a backdrop</h4>
+            <p>Transportation usually enters land-change models as a fixed input. My work treats road growth as something to forecast in its own right, because knowing where new roads appear tells you where forests open and where new hazard exposure accumulates.</p>
+          </div>
+
+          <div class="interest">
+            <div class="interest-num">03</div>
+            <h4>Biodiversity and protected-area integrity</h4>
+            <p>What urban and road expansion do to species ranges, Key Biodiversity Areas, and the landscapes immediately outside protected boundaries. Increasingly the interesting signal is at the edge rather than inside the line on the map.</p>
+          </div>
+
+          <div class="interest">
+            <div class="interest-num">04</div>
+            <h4>Hazard exposure and spatial method</h4>
+            <p>How built systems sit relative to flooding and other hazards, and the methodological questions underneath &mdash; scale, product choice, validation, and how to report uncertainty when the sample is large enough to make everything significant.</p>
+          </div>
+        </div>
+
+    <p class="interest-note">Beyond the areas above, I am glad to discuss potential collaborations, questions about published work, the graduate school and early-career research journey, and Earth and environmental science research more broadly. A short note on your question and the data behind it helps me reply usefully.</p>
+  </div>
+</section>
+
+<!-- Contact form -->
+<section class="s" id="note">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Send a note</div>
+      <h2 class="section-title">Or just <em>write.</em></h2>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" />
+        </div>
+      </div>
+
+      <div class="form-row" style="grid-template-columns: 1fr;">
+        <div class="form-field full">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="_subject" required />
+        </div>
+      </div>
+
+      <div class="form-row" style="grid-template-columns: 1fr;">
+        <div class="form-field full">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" required rows="6"></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">
+          Send message
+          <span class="arrow">→</span>
+        </button>
+        <span class="form-note">Replies usually within a few days.</span>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -91,17 +184,16 @@
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
-          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-4772-8499">ORCID</a></li>
-          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener">ResearchGate</a></li>
-          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+          <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
         <h5>Code &amp; Writing</h5>
         <ul>
-          <li><a href="https://github.com/rahasan36">GitHub</a></li>
-          <!-- <li><a href="#">Bluesky</a></li> -->
+          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </div>
     </div>
@@ -111,6 +203,8 @@
     </div>
   </div>
 </footer>
+
+<script src="section-nav.js"></script>
 
 </body>
 </html>

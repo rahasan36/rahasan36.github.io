@@ -320,6 +320,14 @@ h1.hero-name em {
   color: var(--cream);
 }
 .page-title em { font-style: italic; color: var(--accent); }
+/* long titles: step the display size down and cap the measure so the
+   line count stays sane instead of running to five or six lines */
+.page-title.is-long {
+  font-size: clamp(34px, 4.6vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+}
 
 .page-lede {
   font-family: var(--body);
@@ -395,6 +403,18 @@ h1.hero-name em {
 .latest:hover { opacity: 1; }
 .marquee:hover .latest:not(:hover) { opacity: 0.45; }
 
+/* "Latest" badge breathes so the newest item reads as live */
+.latest .latest-tag.is-live,
+.latest .latest-tag.is-live + .latest-title { animation: latest-pulse 2.4s ease-in-out infinite; }
+.latest .latest-tag.is-live { font-weight: 600; }
+@keyframes latest-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.42; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .latest .latest-tag.is-live,
+  .latest .latest-tag.is-live + .latest-title { animation: none; }
+}
 .latest .dot {
   width: 10px;
   height: 10px;
@@ -715,6 +735,14 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   transition: color 0.2s ease;
 }
 .pub-link:hover { color: var(--cream); }
+/* no public link yet: the slot states the status instead of offering a dead button */
+.pub-link.is-status {
+  color: var(--cream-mute);
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.75;
+}
 .pub-status {
   display: inline-block;
   padding: 3px 10px;
