@@ -553,6 +553,20 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   background: var(--accent);
   margin-bottom: 10px;
 }
+/* long headings: step the display size down so they hold one line.
+   The title column is ~948px (container minus the 220px label and 56px gap);
+   trip titles sit inside a 760px header. They still wrap on small screens. */
+.section-title.is-long {
+  font-size: clamp(30px, 3.6vw, 50px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  max-width: none;
+}
+.trip-title.is-long {
+  font-size: clamp(26px, 3.1vw, 42px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
 .section-title {
   font-family: var(--display);
   font-size: clamp(44px, 6vw, 88px);
