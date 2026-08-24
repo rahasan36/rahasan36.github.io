@@ -2320,3 +2320,22 @@ html.lb-open { overflow: hidden; }
 @media (max-width: 980px) {
   .news-grid { grid-template-columns: 1fr; gap: 18px; }
 }
+
+/* ====================================================
+   TIGHT SECTION
+   ----------------------------------------------------
+   For short, scannable strips (the announcements row)
+   where the default 120px section padding plus the 80px
+   under the heading leaves the block stranded.
+   ==================================================== */
+.s.is-tight { padding-top: 72px; padding-bottom: 64px; }
+.s.is-tight .section-head { margin-bottom: 40px; }
+.s.is-tight .section-title { margin-bottom: 0; }
+/* the following section supplies the breathing room instead */
+.s.is-tight + .s { padding-top: 84px; }
+
+@media (max-width: 980px) {
+  .s.is-tight { padding-top: 52px; padding-bottom: 48px; }
+  .s.is-tight .section-head { margin-bottom: 28px; }
+  .s.is-tight + .s { padding-top: 60px; }
+}
