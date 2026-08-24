@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260824l" />
+  <link rel="stylesheet" href="styles.css?v=20260824m" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
 </head>
@@ -44,7 +44,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260824l"></script>
+<script src="orb.js?v=20260824m"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -350,7 +350,7 @@
       <a href="research.html#gis" class="research-card">
         <div class="num">VII.</div>
         <h3>GIS &amp; <em>Geospatial Data</em></h3>
-        <p>The craft underneath the results: multi-product validation against ESA CCI, GHS-BUILT-S and GAUD, multi-criteria and Monte Carlo susceptibility modeling, and accessibility analysis of transit networks.</p>
+        <p>The craft underneath the results: checking results against independently built datasets, hazard modelling that carries its own uncertainty, and measuring how well transit networks actually reach people.</p>
       </a>
     </div>
   </div>
@@ -430,19 +430,19 @@
     <p class="summary-lead">Before the method, the question I keep coming back to is <em>why this, and what follows from it</em> &mdash; who the answer is for, what decision it could change, and what it would cost to be wrong.</p>
 
     <div class="prose u-mb-64">
-      <p>A global model is only interesting if someone can act on it. So the work starts with the implication rather than the technique: if peripheral urbanisation is squeezing two-thirds of protected areas, that is a conservation-planning problem before it is a statistics problem. If half of Texas&#39; road and rail network sits in moderate-to-high flood susceptibility, that is a maintenance-budget problem. Keeping that end in view is what decides which version of a question is worth asking, and it is why the three habits below matter &mdash; each one protects the answer at the point where it would otherwise mislead someone.</p>
+      <p>A global model is only interesting if someone can act on it. So the work starts with the implication rather than the technique: if urban growth is pressing in on two-thirds of the world&#39;s protected areas, that is a conservation-planning problem before it is a statistics problem. If half of Texas&#39; road and rail network sits in moderate-to-high flood susceptibility, that is a maintenance-budget problem. Keeping that end in view is what decides which version of a question is worth asking, and it is why the three habits below matter &mdash; each one protects the answer at the point where it would otherwise mislead someone.</p>
     </div>
 
     <div class="tools-grid">
       <div class="tool-card">
         <div class="tool-num">01</div>
         <h4>Take spatial structure seriously</h4>
-        <p>Neighbours are not independent observations. Distance decay, spatial autocorrelation, and clustering are the signal, not a nuisance to correct away — which is why a global Moran&#39;s <em>I</em> or a Getis&ndash;Ord surface usually tells me more than the regression coefficient did.</p>
+        <p>Neighbours are not independent observations. Where things sit relative to each other is usually the finding, not a nuisance to correct away — a map of where an effect concentrates tells me more than a single coefficient averaged over everywhere.</p>
       </div>
       <div class="tool-card">
         <div class="tool-num">02</div>
         <h4>Report the uncertainty honestly</h4>
-        <p>At 169,997 protected areas almost anything is statistically significant, so the <em>p</em>-value carries no information on its own. Effect sizes, confidence intervals, bootstrap resampling, and threshold sweeps go in the paper alongside the headline number.</p>
+        <p>When the sample runs to every protected area on Earth, almost anything comes out statistically significant, so significance alone says nothing. How big the effect is, how confident we can be, and whether it survives a change of assumptions all go in alongside the headline number.</p>
       </div>
       <div class="tool-card">
         <div class="tool-num">03</div>
@@ -605,13 +605,13 @@
 </footer>
 
 
-<script src="section-nav.js?v=20260824l"></script>
+<script src="section-nav.js?v=20260824m"></script>
 
-<script src="lightbox.js?v=20260824l"></script>
+<script src="lightbox.js?v=20260824m"></script>
 
-<script src="form.js?v=20260824l"></script>
+<script src="form.js?v=20260824m"></script>
 
-<script src="whats-new.js?v=20260824l"></script>
+<script src="whats-new.js?v=20260824m"></script>
 
 </body>
 </html>

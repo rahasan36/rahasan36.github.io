@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260824l" />
+  <link rel="stylesheet" href="styles.css?v=20260824m" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
 </head>
@@ -44,7 +44,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260824l"></script>
+<script src="orb.js?v=20260824m"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -92,7 +92,7 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Urban land is the single most concentrated form of human transformation of the planet, and yet long-term high-resolution maps of where it has actually grown remain scarce. My work uses the GLC_FCS30D 30-meter time series and SSP scenario projections to reconstruct multi-decadal urban footprints in Bangladesh, Indonesia, and 19 world regions, with attention to the regional differences SSP-driven projections often blur.</p>
+          <p>Urban land is the single most concentrated form of human transformation of the planet, and yet long-term high-resolution maps of where it has actually grown remain scarce. My work reconstructs where urban land has actually appeared over the past three decades, using long-run satellite records, and projects it forward under a range of development futures. The aim is to keep regional differences visible: a single global growth curve hides the places where the change is fastest and the consequences heaviest.</p>
           <p>This thread sits underneath everything else on this page. You cannot meaningfully study road expansion or biodiversity loss without first knowing where cities have been, and where they are going.</p>
         </div>
 
@@ -140,7 +140,7 @@
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/urban-04.png"
-               alt="Chord diagrams of land-cover transitions for each IPBES sub-region, ribbons sized by area moving between classes"
+               alt="Chord diagrams showing what land was converted into urban land, one panel per world sub-region"
                loading="lazy" />
           <figcaption>Every class-to-class flow, by sub-region, 1992–2020</figcaption>
         </figure>
@@ -222,7 +222,7 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Two manuscripts in this thread are in revision or review. A PNAS-targeted paper with Burak Güneralp and Lee A. Fitzgerald examines the combined impacts of road development and urban expansion on biodiversity in Brazil, Indonesia, and Nigeria. A manuscript under review, also with Güneralp, quantifies how urban expansion has isolated the global protected-area network from 1992 to 2015 and proposes a quantitative typology of regional buffer-and-growth regimes.</p>
+          <p>Two manuscripts in this thread are in revision or review. One, with Burak Güneralp and Lee A. Fitzgerald, examines the combined impacts of road development and urban expansion on biodiversity in Brazil, Indonesia, and Nigeria. A manuscript under review, also with Güneralp, quantifies how urban expansion has isolated the global protected-area network from 1992 to 2015 and proposes a quantitative typology of regional buffer-and-growth regimes.</p>
           <p>Earlier work in this thread covers Bangladesh's protected areas and Key Biodiversity Areas, and threatened amphibian, reptile, and mammal ranges across Indonesia under SSP scenarios.</p>
         </div>
 
@@ -317,7 +317,7 @@
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/environment-02.png"
-               alt="Three maps of Texas comparing flood susceptibility under MCDA-AHP, Monte Carlo perturbation, and multiscale modeling"
+               alt="Three maps of Texas comparing flood susceptibility under different modelling approaches"
                loading="lazy" />
           <figcaption>Statewide flood susceptibility across three modeling approaches — <em>Earth’s Future</em> (2026)</figcaption>
         </figure>
@@ -429,27 +429,27 @@
       <aside class="theme-figures">
         <figure class="theme-figure">
           <img src="assets/research/modeling-01.png"
-               alt="Moran scatterplots, LISA cluster map, and effective mesh size trajectories by IPBES sub-region"
+               alt="Maps and charts showing where urban growth around protected areas clusters, and how landscape connectivity has changed by sub-region"
                loading="lazy" />
-          <figcaption>Peripheral urban change clusters spatially (Moran’s <em>I</em> = 0.43) while connectivity falls in 14 of 17 sub-regions</figcaption>
+          <figcaption>Growth around protected areas is strongly clustered, and connectivity falls in 14 of 17 sub-regions</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/modeling-02.png"
-               alt="Segmented regression of interior urban cover prevalence against protected area size, with bootstrap breakpoint estimate"
+               alt="Chart relating urban cover inside protected areas to their size, showing the threshold where small reserves behave differently"
                loading="lazy" />
-          <figcaption>A segmented fit locates the size breakpoint at 145.7 km² (95% CI 44–478)</figcaption>
+          <figcaption>Below roughly 150 km², protected areas behave differently — small enough to be urbanised through</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/modeling-03.png"
-               alt="Getis-Ord Gi* hotspot map, bivariate choropleth, hex-binned density and latitudinal profile of urban cover"
+               alt="Global maps and charts of where urban growth around protected areas concentrates, and how it varies with latitude"
                loading="lazy" />
-          <figcaption>Getis–Ord Gi* hotspots of peripheral urban growth, with the latitudinal profile of exposure</figcaption>
+          <figcaption>Where growth around protected areas clusters, and how exposure shifts with latitude</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/modeling-04.png"
                alt="Ridgeline kernel density plots of urban cover per protected area by distance band for 2020, and by epoch from 1992 to 2020 for interiors and peripheries"
                loading="lazy" />
-          <figcaption>Distance shifts prevalence, not severity: 91.4% of interiors read zero against 2.6% at 25–50 km</figcaption>
+          <figcaption>Distance changes how often urban land appears, not how much: interiors are overwhelmingly empty, peripheries are not</figcaption>
         </figure>
       </aside>
     </div>
@@ -467,7 +467,7 @@
       <div class="theme-main">
         <div class="prose">
           <p>Every result on this page rests on a chain of geospatial decisions that rarely make it into the abstract: which product to trust, what a 300-metre pixel actually means on the ground, how to partition overlapping buffers so no hectare is counted twice, and whether the answer survives a change of threshold. This thread is that craft treated as the subject rather than the plumbing.</p>
-          <p>The habit predates the research. I validated conservation datasets for the <em>Agricultural Conservation Planning Framework</em> across Iowa, Indiana, and Ohio, and taught GIS at two universities — which is where you learn how much of an analysis actually lives in the data preparation. The work here runs from multi-product validation against ESA CCI, GHS-BUILT-S, and GAUD, through multi-criteria and Monte Carlo susceptibility modeling, to accessibility analysis of transit networks.</p>
+          <p>The habit predates the research. I validated conservation datasets for the <em>Agricultural Conservation Planning Framework</em> across Iowa, Indiana, and Ohio, and taught GIS at two universities — which is where you learn how much of an analysis actually lives in the data preparation. The work here runs from checking a result against independently built datasets, through hazard models that carry their own uncertainty, to measuring how well a transit network actually reaches the people it serves.</p>
         </div>
 
         <div class="theme-pubs">
@@ -498,21 +498,21 @@
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/gis-02.png"
-               alt="Six protected areas mapped side by side under ESA CCI, GHS-BUILT-S and GAUD for 2000 and 2020, with agreement and kappa statistics"
+               alt="Six protected areas mapped side by side using three independently built land-cover datasets, twenty years apart"
                loading="lazy" />
-          <figcaption>Validating one land-cover product against two others across six continents</figcaption>
+          <figcaption>Checking the same places against independently built datasets, across six continents</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/gis-03.png"
                alt="Ten world maps of urban land cover within protected areas and across cumulative 5, 10, 25 and 50 km peripheries, 1992 beside 2020"
                loading="lazy" />
-          <figcaption>The same 169,997 protected areas read at five zones and two epochs</figcaption>
+          <figcaption>Every protected area on Earth, read at five distances from its boundary, thirty years apart</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/gis-04.png"
-               alt="Violin and box distributions of urban cover per protected area by sub-region for 1992 and 2020, split between interiors and the 50 km periphery, annotated with counts"
+               alt="Distributions of urban cover per protected area by sub-region, comparing interiors with their surroundings, thirty years apart"
                loading="lazy" />
-          <figcaption>What a 300 m product can and cannot see: per-reserve distributions with the zero counts shown</figcaption>
+          <figcaption>What the data can and cannot resolve, shown reserve by reserve</figcaption>
         </figure>
       </aside>
     </div>
@@ -548,9 +548,9 @@
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260824l"></script>
+<script src="section-nav.js?v=20260824m"></script>
 
-<script src="lightbox.js?v=20260824l"></script>
+<script src="lightbox.js?v=20260824m"></script>
 
 </body>
 </html>
