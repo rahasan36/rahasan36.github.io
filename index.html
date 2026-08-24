@@ -14,20 +14,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260824a" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css?v=20260824c" />
 </head>
 <body>
 
 
 <div class="orb" aria-hidden="true"></div>
 
-<script>
-  // Cursor-following orb
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--my', e.clientY + 'px');
-  });
-</script>
+<script src="orb.js?v=20260824c"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -339,7 +335,7 @@
       </article>
     </div>
 
-    <div style="margin-top:48px; text-align:right;">
+    <div class="u-mt-48 u-right">
       <a href="publications.html" class="btn ghost">All 19 publications <span class="arrow">&rarr;</span></a>
     </div>
   </div>
@@ -355,7 +351,7 @@
 
     <p class="summary-lead">Before the method, the question I keep coming back to is <em>why this, and what follows from it</em> &mdash; who the answer is for, what decision it could change, and what it would cost to be wrong.</p>
 
-    <div class="prose" style="margin-bottom:64px;">
+    <div class="prose u-mb-64">
       <p>A global model is only interesting if someone can act on it. So the work starts with the implication rather than the technique: if peripheral urbanisation is squeezing two-thirds of protected areas, that is a conservation-planning problem before it is a statistics problem. If half of Texas&#39; road and rail network sits in moderate-to-high flood susceptibility, that is a maintenance-budget problem. Keeping that end in view is what decides which version of a question is worth asking, and it is why the three habits below matter &mdash; each one protects the answer at the point where it would otherwise mislead someone.</p>
     </div>
 
@@ -462,17 +458,7 @@
 
     <p class="interest-note">Beyond the areas above, I am glad to discuss potential collaborations, questions about published work, the graduate school and early-career research journey, and Earth and environmental science research more broadly. A short note on your question and the data behind it helps me reply usefully.</p>
 
-    <!--
-      To make this form actually deliver mail:
-      1. Sign up for free at https://formspree.io
-      2. Create a new form, copy the form endpoint URL it gives you
-      3. Replace the 'YOUR_FORM_ID' placeholder in the action attribute below
-
-      Until you do that, the form will display correctly but submissions
-      go nowhere. Alternatives that also work on GitHub Pages:
-      web3forms.com (no signup) or basin (also free).
-    -->
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/mwvybwwn" method="POST">
       <div class="form-row">
         <div class="form-field">
           <label for="cf-name">Name</label>
@@ -484,14 +470,14 @@
         </div>
       </div>
 
-      <div class="form-row" style="grid-template-columns: 1fr;">
+      <div class="form-row is-single">
         <div class="form-field full">
           <label for="cf-subject">Subject</label>
           <input type="text" id="cf-subject" name="_subject" required />
         </div>
       </div>
 
-      <div class="form-row" style="grid-template-columns: 1fr;">
+      <div class="form-row is-single">
         <div class="form-field full">
           <label for="cf-message">Message</label>
           <textarea id="cf-message" name="message" required rows="6"></textarea>
@@ -539,9 +525,9 @@
 </footer>
 
 
-<script src="section-nav.js?v=20260824a"></script>
+<script src="section-nav.js?v=20260824c"></script>
 
-<script src="lightbox.js?v=20260824a"></script>
+<script src="lightbox.js?v=20260824c"></script>
 
 </body>
 </html>

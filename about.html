@@ -10,20 +10,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260824a" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css?v=20260824c" />
 </head>
 <body>
 
 
 <div class="orb" aria-hidden="true"></div>
 
-<script>
-  // Cursor-following orb
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--my', e.clientY + 'px');
-  });
-</script>
+<script src="orb.js?v=20260824c"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -158,6 +154,6 @@
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260824a"></script>
+<script src="section-nav.js?v=20260824c"></script>
 </body>
 </html>

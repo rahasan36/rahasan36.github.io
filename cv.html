@@ -10,20 +10,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260824a" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css?v=20260824c" />
 </head>
 <body>
 
 
 <div class="orb" aria-hidden="true"></div>
 
-<script>
-  // Cursor-following orb
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--my', e.clientY + 'px');
-  });
-</script>
+<script src="orb.js?v=20260824c"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -548,7 +544,7 @@
     <div class="cv-grid">
       <div class="cv-section-label">Grants supported</div>
       <div class="cv-content">
-        <p class="cv-flat" style="margin-bottom:18px; font-style:italic;">Contributed as graduate researcher on the following funded proposals.</p>
+        <p class="cv-flat u-mb-18 u-italic">Contributed as graduate researcher on the following funded proposals.</p>
 
         <div class="cv-entry">
           <div class="cv-entry-main">
@@ -663,7 +659,7 @@
           <div class="cv-entry-date">Fall 2017</div>
         </div>
 
-        <p class="cv-flat" style="margin-top:24px; font-style:italic;">Academy for Future Faculty Fellow, Texas A&amp;M University (CIRTL certification). April 2023.</p>
+        <p class="cv-flat u-mt-24 u-italic">Academy for Future Faculty Fellow, Texas A&amp;M University (CIRTL certification). April 2023.</p>
 
       </div>
     </div>
@@ -709,10 +705,10 @@
       <div class="cv-section-label">Service &amp; peer review</div>
       <div class="cv-content">
 
-        <h3 style="margin-bottom:12px; font-size:18px;">Peer review</h3>
-        <p class="cv-flat" style="margin-bottom:32px;">Computers, Environment and Urban Systems · Nature Communications · Nature Sustainability · Earth's Future · PLoS One · Geo-Spatial Information Science · GeoJournal · Transactions in GIS · Sustainable Cities and Society · Social Sciences &amp; Humanities · Journal of Housing and the Built Environment · International Journal of Sustainable Development &amp; World Ecology.</p>
+        <h3 class="cv-subhead u-mb-12">Peer review</h3>
+        <p class="cv-flat u-mb-32">Computers, Environment and Urban Systems · Nature Communications · Nature Sustainability · Earth's Future · PLoS One · Geo-Spatial Information Science · GeoJournal · Transactions in GIS · Sustainable Cities and Society · Social Sciences &amp; Humanities · Journal of Housing and the Built Environment · International Journal of Sustainable Development &amp; World Ecology.</p>
 
-        <h3 style="margin-bottom:12px; font-size:18px;">Leadership</h3>
+        <h3 class="cv-subhead u-mb-12">Leadership</h3>
         <ul class="cv-list">
           <li><span class="num">·</span><span class="citation">Graduate Student Member, Department of Geography Physical Geography Faculty Search Committee, Texas A&amp;M University. <span class="meta">2021–22</span></span></li>
           <li><span class="num">·</span><span class="citation">Senator, Graduate and Professional Student Government, Texas A&amp;M University. <span class="meta">2020–21</span></span></li>
@@ -721,7 +717,7 @@
           <li><span class="num">·</span><span class="citation">Graduate Student Member, Department of Geography Awards Committee, Texas A&amp;M University. <span class="meta">2019–21</span></span></li>
         </ul>
 
-        <h3 style="margin:32px 0 12px; font-size:18px;">Professional affiliations</h3>
+        <h3 class="cv-subhead u-mt-32 u-mb-12">Professional affiliations</h3>
         <p class="cv-flat">American Planning Association (APA) · American Association of Geographers (AAG) · American Geophysical Union (AGU) · European Geosciences Union (EGU) · Global Land Programme (GLP) · The Society for Conservation GIS (SCGIS) · AIMES, Future Earth · URISA · APSG · Royal Town Planning Institute (RTPI) · Bangladesh Institution of Planners (BIP).</p>
 
       </div>
@@ -738,8 +734,8 @@
       <div class="cv-section-label">Technical skills</div>
       <div class="cv-content">
 
-        <h3 style="margin-bottom:8px; font-size:18px;">GIS &amp; geospatial</h3>
-        <div class="cv-pill-list" style="margin-bottom:24px;">
+        <h3 class="cv-subhead u-mb-8">GIS &amp; geospatial</h3>
+        <div class="cv-pill-list u-mb-24">
           <span class="cv-pill">ArcGIS Pro</span>
           <span class="cv-pill">ArcGIS Online</span>
           <span class="cv-pill">ArcGIS Enterprise</span>
@@ -750,8 +746,8 @@
           <span class="cv-pill">ERDAS Imagine</span>
         </div>
 
-        <h3 style="margin-bottom:8px; font-size:18px;">Programming</h3>
-        <div class="cv-pill-list" style="margin-bottom:24px;">
+        <h3 class="cv-subhead u-mb-8">Programming</h3>
+        <div class="cv-pill-list u-mb-24">
           <span class="cv-pill">Python</span>
           <span class="cv-pill">R</span>
           <span class="cv-pill">JavaScript</span>
@@ -759,8 +755,8 @@
           <span class="cv-pill">MATLAB</span>
         </div>
 
-        <h3 style="margin-bottom:8px; font-size:18px;">Statistical &amp; analytical</h3>
-        <div class="cv-pill-list" style="margin-bottom:24px;">
+        <h3 class="cv-subhead u-mb-8">Statistical &amp; analytical</h3>
+        <div class="cv-pill-list u-mb-24">
           <span class="cv-pill">RStudio</span>
           <span class="cv-pill">SPSS</span>
           <span class="cv-pill">JMP</span>
@@ -769,7 +765,7 @@
           <span class="cv-pill">Origin</span>
         </div>
 
-        <h3 style="margin-bottom:8px; font-size:18px;">General</h3>
+        <h3 class="cv-subhead u-mb-8">General</h3>
         <div class="cv-pill-list">
           <span class="cv-pill">Microsoft Office</span>
           <span class="cv-pill">Adobe Creative Cloud</span>
@@ -812,7 +808,7 @@
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260824a"></script>
+<script src="section-nav.js?v=20260824c"></script>
 
 </body>
 </html>

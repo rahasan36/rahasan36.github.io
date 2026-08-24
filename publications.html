@@ -10,20 +10,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260824a" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="stylesheet" href="styles.css?v=20260824c" />
 </head>
 <body>
 
 
 <div class="orb" aria-hidden="true"></div>
 
-<script>
-  // Cursor-following orb
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--my', e.clientY + 'px');
-  });
-</script>
+<script src="orb.js?v=20260824c"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -73,7 +69,7 @@
           <button data-filter="modeling">Spatial modeling <span class="count"></span></button>
         </div>
 
-        <div class="pub-sidebar-label" style="margin-top: 36px;">Filter by status</div>
+        <div class="pub-sidebar-label u-mt-36">Filter by status</div>
         <div class="pub-filter" role="tablist" data-filter-group="status">
           <button class="active" data-filter="all">All <span class="count"></span></button>
           <button data-filter="published">Published <span class="count"></span></button>
@@ -327,7 +323,7 @@
 
         </div>
 
-        <div style="margin-top:48px; text-align:right;">
+        <div class="u-mt-48 u-right">
           <a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" class="btn ghost" target="_blank" rel="noopener noreferrer">
             Full publication list on Google Scholar
             <span class="arrow">↗</span>
@@ -367,70 +363,9 @@
   </div>
 </footer>
 
-<script>
-  // Dual-filter publication system: theme × status, with live counts
-  const themeBtns = document.querySelectorAll('[data-filter-group="theme"] button');
-  const statusBtns = document.querySelectorAll('[data-filter-group="status"] button');
-  const pubItems = document.querySelectorAll('.pub-item');
+<script src="pub-filter.js?v=20260824c"></script>
 
-  let activeTheme = 'all';
-  let activeStatus = 'all';
-
-  // Test whether an item passes a given (theme, status) combo
-  function itemMatches(item, theme, status) {
-    const tags = item.dataset.tags || '';
-    const itemStatus = item.dataset.status || '';
-    const themeOk = (theme === 'all') || tags.split(' ').includes(theme);
-    const statusOk = (status === 'all') || itemStatus === status;
-    return themeOk && statusOk;
-  }
-
-  // Apply the current filters and update the count badges
-  function applyFilters() {
-    pubItems.forEach(item => {
-      item.style.display = itemMatches(item, activeTheme, activeStatus) ? '' : 'none';
-    });
-
-    // Update theme button counts (counted against the currently active status)
-    themeBtns.forEach(btn => {
-      const f = btn.dataset.filter;
-      let n = 0;
-      pubItems.forEach(item => { if (itemMatches(item, f, activeStatus)) n++; });
-      btn.querySelector('.count').textContent = n;
-    });
-
-    // Update status button counts (counted against the currently active theme)
-    statusBtns.forEach(btn => {
-      const f = btn.dataset.filter;
-      let n = 0;
-      pubItems.forEach(item => { if (itemMatches(item, activeTheme, f)) n++; });
-      btn.querySelector('.count').textContent = n;
-    });
-  }
-
-  themeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      themeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeTheme = btn.dataset.filter;
-      applyFilters();
-    });
-  });
-
-  statusBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      statusBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeStatus = btn.dataset.filter;
-      applyFilters();
-    });
-  });
-
-  // Initialize counts on first paint
-  applyFilters();
-</script>
-
-<script src="section-nav.js?v=20260824a"></script>
+<script src="section-nav.js?v=20260824c"></script>
 
 </body>
 </html>
