@@ -65,9 +65,16 @@
       e.preventDefault();
       if (button) { button.disabled = true; button.innerHTML = 'Sending&hellip;'; }
 
+      // Formspree cannot change the From address, so mark the origin in the
+      // subject line and record which page the message came from.
+      var data = new FormData(form);
+      var typed = (data.get('subject') || '').toString().trim();
+      data.set('_subject', '[rakibulahasan.com] ' + (typed || 'New message from the contact form'));
+      data.set('Sent from', window.location.href);
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
+        body: data,
         headers: { Accept: 'application/json' }
       }).then(function (res) {
         if (res.ok) {
@@ -75,9 +82,9 @@
           show('success', 'Message sent',
                'Thanks for writing. I usually reply within a day or two.');
         } else {
-          return res.json().then(function (data) {
-            var msg = (data && data.errors && data.errors.length)
-              ? data.errors.map(function (x) { return x.message; }).join(', ')
+          return res.json().then(function (payload) {
+            var msg = (payload && payload.errors && payload.errors.length)
+              ? payload.errors.map(function (x) { return x.message; }).join(', ')
               : 'Something went wrong sending that.';
             show('error', 'Not sent', msg + ' You can email rahasan@esri.com instead.', true);
           });

@@ -303,7 +303,34 @@ h1.hero-name em {
   flex-wrap: wrap;
 }
 
-.page-header { padding: 130px 0 60px; }
+.page-header { padding: 130px 0 60px; position: relative; overflow: hidden; }
+/* the same hooding photo as the home hero, carried across the inner pages */
+.page-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  max-width: 860px;
+  background-image: url('assets/hooding.jpg');
+  background-size: cover;
+  background-position: 62% 32%;
+  filter: saturate(0.72) brightness(0.9) contrast(1.04);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.22) 26%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.9) 82%);
+          mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.22) 26%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.9) 82%);
+}
+@media (max-width: 980px) {
+  .page-photo {
+    width: 100%;
+    max-width: none;
+    opacity: 0.26;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.85) 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.85) 100%);
+  }
+}
 .page-header .crumbs {
   font-family: var(--mono);
   font-size: 11px;
