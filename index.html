@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260824h" />
+  <link rel="stylesheet" href="styles.css?v=20260824k" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
 </head>
@@ -44,7 +44,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260824h"></script>
+<script src="orb.js?v=20260824k"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -64,6 +64,7 @@
 
 
 <nav class="section-nav" aria-label="Page sections">
+    <a href="#whats-new" data-target="whats-new"><span class="label">What&#39;s new</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#summary" data-target="summary"><span class="label">Summary</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#about" data-target="about"><span class="label">About</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#research" data-target="research"><span class="label">Research</span><span class="tick" aria-hidden="true"></span></a>
@@ -172,6 +173,62 @@
   </div>
 </div>
 
+
+<!-- What's new -->
+<section class="s" id="whats-new">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">What&#39;s new</div>
+      <h2 class="section-title is-long">Recently, and <em>next.</em></h2>
+    </div>
+
+    <div class="news-grid" data-news>
+
+      <a class="news-card" href="https://community.esri.com/en/discussion/1717070/september-2026-revealing-spatial-patterns-with-density-analysis-in-arcgis-pro" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-upcoming">Upcoming</span><span class="news-date">Sep 2026</span></span>
+        <h3>Revealing spatial patterns with density analysis in ArcGIS Pro</h3>
+        <p>A talk for the Esri GIS in Higher Education Chat, on getting more out of density analysis than a default heat map.</p>
+        <span class="news-cta">Esri Community <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://www.agu.org/annual-meeting" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-convening">Convening</span><span class="news-date">Dec 2026</span></span>
+        <h3>Urban Area and Global Change</h3>
+        <p>Co-convening the session at AGU 2026 in San Francisco, 7&ndash;11 December.</p>
+        <span class="news-cta">AGU Annual Meeting <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2026</span></span>
+        <h3>The growing threat of flooding on transportation infrastructure across Texas through 2100</h3>
+        <p>Half the state&#39;s road and rail network sits in moderate-to-very-high flood susceptibility, and the hazard surface itself shifts under every SSP pathway.</p>
+        <span class="news-cta">Earth&#39;s Future <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-preprint">Preprint</span><span class="news-date">2026</span></span>
+        <h3>Two-thirds of the global protected areas are exposed to edge urbanization</h3>
+        <p>Urban land inside and around 169,997 protected areas, 1992 to 2020. The signal turns out to be at the edge rather than inside the boundary.</p>
+        <span class="news-cta">Read the preprint <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2026</span></span>
+        <h3>Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia</h3>
+        <p>What urban growth has cost habitat across Indonesia&#39;s 410 Key Biodiversity Areas, with Anushna Chaudhuri and Burak G&uuml;neralp.</p>
+        <span class="news-cta">Biological Conservation <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://doi.org/10.1038/s42949-025-00308-7" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2025</span></span>
+        <h3>Urban land-change futures: current understanding, challenges, and implications</h3>
+        <p>A review of where urban land-change forecasting actually stands &mdash; 322 case study sites, and what the field still cannot answer.</p>
+        <span class="news-cta">npj Urban Sustainability <span class="arrow">&#8599;</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 <!-- Professional summary -->
 <section class="s" id="summary">
@@ -548,11 +605,13 @@
 </footer>
 
 
-<script src="section-nav.js?v=20260824h"></script>
+<script src="section-nav.js?v=20260824k"></script>
 
-<script src="lightbox.js?v=20260824h"></script>
+<script src="lightbox.js?v=20260824k"></script>
 
-<script src="form.js?v=20260824h"></script>
+<script src="form.js?v=20260824k"></script>
+
+<script src="whats-new.js?v=20260824k"></script>
 
 </body>
 </html>
