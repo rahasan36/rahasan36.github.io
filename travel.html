@@ -7,6 +7,7 @@
   <meta name="description" content="Travel diaries — recent trips, brief notes, and photographs." />
   <link rel="canonical" href="https://www.rakibulahasan.com/travel.html" />
 
+
   <!-- Open Graph (Facebook, LinkedIn, Slack, WhatsApp) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rakibul Ahasan" />
@@ -35,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260825c" />
+  <link rel="stylesheet" href="styles.css?v=20260825g" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
 </head>
@@ -44,8 +45,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260825c"></script>
-
+<script src="orb.js?v=20260825g"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -67,7 +67,7 @@
 <nav class="section-nav" aria-label="Page sections">
     <a href="#y2026" data-target="y2026"><span class="label">2026</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#y2025" data-target="y2025"><span class="label">2025</span><span class="tick" aria-hidden="true"></span></a>
-        <a href="#y2023" data-target="y2023"><span class="label">2023</span><span class="tick" aria-hidden="true"></span></a>
+    <a href="#y2023" data-target="y2023"><span class="label">2023</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#y2022" data-target="y2022"><span class="label">2022</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#y2019" data-target="y2019"><span class="label">2019</span><span class="tick" aria-hidden="true"></span></a>
 </nav>
@@ -77,43 +77,12 @@
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>Travel</div>
     <h1 class="page-title rise d1">Travel <em>diaries.</em></h1>
-    <p class="page-lede rise d2">Notes from places I've spent time in lately. A geographer who studies cities at planetary scale still notices the small things on the ground.</p>
+    <p class="page-lede rise d2">Notes from places I&#39;ve spent time in lately. A geographer who studies cities at planetary scale still notices the small things on the ground.</p>
   </div>
 </section>
 
 <section class="s">
   <div class="container">
-
-    <!--
-      ============================================================
-      HOW THIS PAGE IS ORGANISED
-      ============================================================
-      Year  ->  <section class="travel-year">, newest year first
-      Trip  ->  <article class="trip"> inside it, newest first
-      Album ->  <div class="trip-gallery">, 6 photos = a 3 x 2 grid
-
-      TO ADD A TRIP
-      1. Copy one <article class="trip"> block into the right year.
-      2. Update trip-date, trip-coord (decimal degrees -> DMS),
-         trip-where, trip-title, and trip-note.
-      3. Drop photos in /assets/travel/ (see README there), then swap
-         each placeholder figure for:
-
-         <figure>
-           <img src="assets/travel/glacier-01.jpg"
-                alt="Short description of the photo"
-                loading="lazy" />
-           <figcaption>Optional caption, shown on hover.</figcaption>
-         </figure>
-
-      4. Keep 6 per album so the grid stays 3 x 2. Add another row of
-         3 if a trip deserves more.
-
-      TO ADD A YEAR
-      Copy the <section class="travel-year"> wrapper, change the year
-      number and trip count, and place it above the previous year.
-      ============================================================
-    -->
 
     <!-- ==================== 2026 ==================== -->
     <section class="travel-year" id="y2026">
@@ -792,9 +761,9 @@
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260825c"></script>
+<script src="section-nav.js?v=20260825g"></script>
 
-<script src="lightbox.js?v=20260825c"></script>
+<script src="lightbox.js?v=20260825g"></script>
 
 </body>
 </html>
