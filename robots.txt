@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Full-resolution originals are not published; nothing else is restricted.
+Disallow: /assets/photos/
+
+Sitemap: https://www.rakibulahasan.com/sitemap.xml
