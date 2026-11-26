@@ -1,3 +1,25 @@
 # Full-resolution originals. Kept locally, never published --
 # the processed, EXIF-stripped copies in assets/travel/ are what the site serves.
 assets/photos/
+
+# Editor and OS files: local settings carry machine paths and user names
+.vscode/
+.idea/
+*.code-workspace
+.history/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+*.local
+__pycache__/
+*.pyc
+node_modules/
+
+# Files set aside for deletion, never published
+_to_delete/

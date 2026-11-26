@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260901a" />
+  <link rel="stylesheet" href="styles.css?v=20261124c" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
   <script type="application/ld+json">
@@ -81,7 +81,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260901a"></script>
+<script src="orb.js?v=20261124a"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -89,10 +89,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="primary" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="research.html" class="active">Research</a>
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
+      <a href="about.html">About</a>
       <a href="travel.html">Travel</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -111,7 +111,8 @@
 </nav>
 
 <section class="page-header">
-  <div class="page-photo" aria-hidden="true"></div>
+  <div class="page-photo photo-tropics" aria-hidden="true"></div>
+  <p class="page-photo-cap" aria-hidden="true">Threatened species reached by tropical urban growth</p>
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>Research</div>
     <h1 class="page-title rise d1"><em>Research.</em></h1>
@@ -129,8 +130,13 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Urban land is the single most concentrated form of human transformation of the planet, and yet long-term high-resolution maps of where it has actually grown remain scarce. My work reconstructs where urban land has actually appeared over the past three decades, using long-run satellite records, and projects it forward under a range of development futures. The aim is to keep regional differences visible: a single global growth curve hides the places where the change is fastest and the consequences heaviest.</p>
-          <p>Ongoing work covers a global ensemble forecast of urban land-cover conversion, and a reconstruction of urban expansion in Bangladesh from the mid-1980s with projections to 2050. Both are in preparation. A study of urban growth around protected areas is in revision.</p>
+          <p>Long-term, high-resolution maps of where urban land has grown remain scarce. I reconstruct three decades of urban expansion from satellite records and project it forward under several development futures, keeping regional differences visible rather than folding them into one global curve.</p>
+          <ul class="theme-points">
+            <li><strong>Global futures.</strong> Divergent urban boundaries and high spatial uncertainty in global urban land projections. <span class="pt-status">In preparation</span></li>
+            <li><strong>Gulf coast.</strong> Settlement on the US Gulf coast moved while the hurricane corridor stayed in place. <span class="pt-status">In preparation</span></li>
+            <li><strong>Bangladesh.</strong> Hidden urban exposure around protected areas and species habitats, at <em>iScience</em>. <span class="pt-status">Under review</span></li>
+            <li><strong>Protected areas.</strong> Urban growth around the world&#39;s protected areas, 1992 to 2020, at <em>Nature Sustainability</em>. <span class="pt-status">Revision submitted</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
@@ -138,23 +144,27 @@
           <ol class="theme-pub-list">
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Historical and forecasted urban expansion and biodiversity loss in Bangladesh through 2050.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Global ensemble forecasts reveal accelerating urban land-cover conversion and high uncertainty.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Two-thirds of the global protected areas are exposed to edge urbanization.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status">In Revision</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia.<span class="theme-pub-meta">Chaudhuri, A., <strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Biological Conservation, 316, 111731</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer">Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia</a>.<span class="theme-pub-meta">Chaudhuri, A., <strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Biological Conservation, 316, 111731</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2025</span>
-              <div class="theme-pub-cite">Urban land-change futures: current understanding, challenges, and implications.<span class="theme-pub-meta">Güneralp, B., <strong>Ahasan, R.</strong> <span class="journal">npj Urban Sustainability</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1038/s42949-025-00308-7" target="_blank" rel="noopener noreferrer">Urban land-change futures: current understanding, challenges, and implications</a>.<span class="theme-pub-meta">Güneralp, B., <strong>Ahasan, R.</strong> <span class="journal">npj Urban Sustainability</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">Two-thirds of the global protected areas are exposed to edge urbanization</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Nature Sustainability</span> <span class="status">Revision Submitted</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Mapping hidden urban exposure around Bangladesh&#39;s protected areas and species habitats.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Das, P.C., Chowdhury, S. <span class="journal">iScience</span> <span class="status">Under Review</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Divergent urban boundaries and high spatial uncertainty in global urban land projections.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status prep">In Prep</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Gulf coast settlement moved while the hurricane corridor stayed in place.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Mahmud, S., Chatterjee, S., Noman, N. <span class="status prep">In Prep</span></span></div>
             </li>
           </ol>
         </div>
@@ -185,6 +195,11 @@
                loading="lazy" />
           <figcaption>Every class-to-class flow, by sub-region, 1992–2020</figcaption>
         </figure>
+
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/urban-landcover-change-pa.webp" alt="Slope charts of the shares of eleven land-cover classes inside protected areas and in their 0 to 50 km peripheries in 1992 and 2020, and a bar chart of the number of sub-regions where each class declined" loading="lazy" />
+          <figcaption>Every other land-cover class declined somewhere; urban land never did: eleven classes in and around protected areas, 1992 and 2020 — <em>Nature Sustainability</em> (revision submitted)</figcaption>
+        </figure>
       </aside>
     </div>
   </div>
@@ -200,13 +215,33 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>My doctoral work produced the first global-scale road network growth model, calibrated against historical road expansion and projected forward under multiple development scenarios. AGU's <em>Eos</em> magazine featured the work shortly after publication.</p>
-          <p>Ongoing work extends the model in two directions. A manuscript on hierarchical road network growth is in revision. In preparation are a study of how infrastructure siting decisions shape future hazard exposure, and a forecast of healthcare access in India and Bangladesh that treats road and urban growth as one coupled process.</p>
+          <p>My doctoral work produced one of the first global-scale road network growth models, calibrated against historical road expansion and projected under several development scenarios. AGU&#39;s <em>Eos</em> magazine featured the work.</p>
+          <ul class="theme-points">
+            <li><strong>Hierarchical growth.</strong> A location-based model that forecasts road growth by road class, at <em>Nature Communications</em>. <span class="pt-status">In press</span></li>
+            <li><strong>Siting and hazard.</strong> How infrastructure siting decisions shape future hazard exposure. <span class="pt-status">In preparation</span></li>
+            <li><strong>Healthcare access.</strong> Access in India and Bangladesh, with road and urban growth modeled as one coupled process. <span class="pt-status">In preparation</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
           <h3 class="theme-pubs-label">Recent work</h3>
           <ol class="theme-pub-list">
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer">The growing threat of flooding on transportation infrastructure across Texas through 2100</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth's Future, 14, e2026EF008207</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2022</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1080/1747423X.2022.2086639" target="_blank" rel="noopener noreferrer">Transportation in urban land change models: a systematic review and future directions</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Journal of Land Use Science, 17(1)</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.5281/zenodo.23333891" target="_blank" rel="noopener noreferrer">A location-based model for forecasting hierarchical road network growth</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Abeer, N. <span class="journal">Nature Communications, in press</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">A global co-exposure analysis of river and coastal flood risk to road infrastructure.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B. <span class="status prep">In Prep</span></span></div>
+            </li>
             <li>
               <span class="theme-pub-year">2026</span>
               <div class="theme-pub-cite">Coupled urban and road network growth will reshape healthcare access for 1.6 billion people in India and Bangladesh by 2050.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
@@ -215,46 +250,29 @@
               <span class="theme-pub-year">2026</span>
               <div class="theme-pub-cite">Where the world will build next: infrastructure siting as a driver of future hazard exposure.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
             </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">A spatially explicit model for forecasting hierarchical road network growth.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Abeer, N. <span class="status">In Revision</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">The growing threat of flooding on transportation infrastructure across Texas through 2100.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth's Future, 14, e2026EF008207</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2022</span>
-              <div class="theme-pub-cite">Transportation in urban land change models: a systematic review and future directions.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Journal of Land Use Science, 17(1)</span></span></div>
-            </li>
           </ol>
         </div>
       </div>
 
       <aside class="theme-figures">
-        <figure class="theme-figure">
-          <img src="assets/research/roads-01.png"
-               alt="Stacked bar chart of road, rail and freight network length by flood susceptibility class"
-               loading="lazy" />
-          <figcaption>Half of Texas’ road and rail network sits in moderate-to-very-high flood susceptibility — <em>Earth’s Future</em> (2026)</figcaption>
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/roads-growth-2050.webp" alt="Maps of Bangladesh, Brazil and Nigeria showing the 2015 road network and the new and upgraded roads forecast to 2050 under SSP1, SSP3 and SSP5, with city insets" loading="lazy" />
+          <figcaption>New and upgraded roads to 2050 in Bangladesh, Brazil, and Nigeria under three development pathways, with city insets — <em>Nature Communications</em> (in press)</figcaption>
         </figure>
+
         <figure class="theme-figure">
-          <img src="assets/research/roads-02.png"
-               alt="Sunburst chart of how urban land change models represent transportation"
-               loading="lazy" />
-          <figcaption>How 128 urban land change models represent transportation — <em>Journal of Land Use Science</em> (2022)</figcaption>
+          <img src="assets/research/roads-allocation-cycle.webp" alt="Circular workflow diagram of the spatial allocation steps, from input driver maps through urban cluster detection, pattern detection and radial and hierarchical growth to the final road network of Bangladesh" loading="lazy" />
+          <figcaption>The spatial allocation cycle, from driver maps to the final road network of Bangladesh — <em>Nature Communications</em> (in press)</figcaption>
         </figure>
+
         <figure class="theme-figure">
-          <img src="assets/research/roads-03.png"
-               alt="World map of 322 urban land-change case study sites, shaded by number of studies per country, with panels for country counts and publication year"
-               loading="lazy" />
-          <figcaption>Where urban land-change models are actually built: 322 case study sites — <em>Journal of Land Use Science</em> (2022)</figcaption>
+          <img src="assets/research/roads-framework.webp" alt="Flowchart of the road growth modeling framework linking an urban land change model, road length forecasts, radial growth, upgrading and new linear roads" loading="lazy" />
+          <figcaption>Radial growth, upgrading, and new linear roads in one modeling framework — <em>Nature Communications</em> (in press)</figcaption>
         </figure>
-        <figure class="theme-figure">
-          <img src="assets/research/roads-04.png"
-               alt="Maps of Texas showing the road, freight, and railroad networks coloured by flood susceptibility, with insets for Dallas-Fort Worth, Houston and Austin-San Antonio"
-               loading="lazy" />
-          <figcaption>Road, freight, and rail across the state’s flood-susceptibility surface — <em>Earth’s Future</em> (2026)</figcaption>
+
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/roads-upgrades-nigeria.webp" alt="Layered driver maps of Nigeria and two maps locating four road upgrade areas by road density and the upgraded roads by 2050" loading="lazy" />
+          <figcaption>Where upgrades go: urban centers and road density set the location and length of road upgrades, Nigeria, 2050 — <em>Nature Communications</em> (in press)</figcaption>
         </figure>
       </aside>
     </div>
@@ -271,9 +289,13 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Protected areas are the main instrument the world has for holding onto habitat, and this thread asks how well that instrument is actually working while cities and roads grow around it. The questions run from a single delta to the whole terrestrial network: which habitats are being consumed, which species ranges are contracting fastest, and whether a boundary on a map still means what it did thirty years ago. The recurring finding is that the pressure now sits at the edge rather than inside the line &mdash; reserves are not being built over so much as surrounded, and their connection to everything around them is quietly severed.</p>
-
-          <p>Two manuscripts are with journals. One, with Burak G&uuml;neralp and Lee A. Fitzgerald, is under review and covers the combined impacts of road development and urban expansion on biodiversity in Brazil, Indonesia, and Nigeria. A second, with G&uuml;neralp, is in revision and measures how urban growth isolated the global protected-area network between 1992 and 2020. Two further studies are in preparation: one on how city size scales with habitat loss, and one on urban expansion and biodiversity loss in Bangladesh to 2050.</p>
+          <p>Protected areas are the main instrument the world has for holding onto habitat. This thread asks how well that instrument works while cities and roads grow around it. The recurring finding is that the pressure now sits at the edge: reserves are less often built over than surrounded and cut off.</p>
+          <ul class="theme-points">
+            <li><strong>Roads and cities together.</strong> Coupled urban and road growth reveals underestimated tropical biodiversity loss in Brazil, Indonesia, and Nigeria, with Burak G&uuml;neralp and Lee A. Fitzgerald, at <em>Nature Sustainability</em>. <span class="pt-status">Under review</span></li>
+            <li><strong>Network isolation.</strong> How urban growth isolated the global protected-area network between 1992 and 2020, with G&uuml;neralp, at <em>Nature Sustainability</em>. <span class="pt-status">Revision submitted</span></li>
+            <li><strong>Tropical species.</strong> The geography of threatened species exposure to urban growth across the tropics. <span class="pt-status">In preparation</span></li>
+            <li><strong>Bangladesh.</strong> Hidden urban exposure around protected areas and species habitats, at <em>iScience</em>. <span class="pt-status">Under review</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
@@ -281,23 +303,23 @@
           <ol class="theme-pub-list">
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Urban scaling drives disproportionate habitat loss across conservation landscapes.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer">Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia</a>.<span class="theme-pub-meta">Chaudhuri, A., <strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Biological Conservation, 316, 111731</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Historical and forecasted urban expansion and biodiversity loss in Bangladesh through 2050.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">Two-thirds of the global protected areas are exposed to edge urbanization</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Nature Sustainability</span> <span class="status">Revision Submitted</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Combined impacts of road development and urban expansion on biodiversity and habitats: insights from Brazil, Indonesia, and Nigeria.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Fitzgerald, L. <span class="status">Under Review</span></span></div>
+              <div class="theme-pub-cite">Mapping hidden urban exposure around Bangladesh&#39;s protected areas and species habitats.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Das, P.C., Chowdhury, S. <span class="journal">iScience</span> <span class="status">Under Review</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Two-thirds of the global protected areas are exposed to edge urbanization.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status">In Revision</span></span></div>
+              <div class="theme-pub-cite">Coupled urban–road growth reveals underestimated tropical biodiversity loss.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Fitzgerald, L. <span class="journal">Nature Sustainability</span> <span class="status">Under Review</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia.<span class="theme-pub-meta">Chaudhuri, A., <strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Biological Conservation, 316, 111731</span></span></div>
+              <div class="theme-pub-cite">The geography of threatened species exposure to tropical urban growth.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Chowdhury, S., Fitzgerald, L. <span class="status prep">In Prep</span></span></div>
             </li>
           </ol>
         </div>
@@ -343,8 +365,14 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>This is the umbrella that ties the previous three together. Cities, roads, and infrastructure are not external to ecosystems — they are coupled with them. The questions I keep returning to are about where that coupling produces conflict (habitat loss, hazard exposure, lost services) and where it produces opportunity (compact development, accessibility, conservation gains).</p>
-          <p>Two studies are in preparation: rapid-intensification hurricane hazard and coastal exposure in the Gulf of Mexico, and built environment and socioeconomic exposure to flooding in Nigeria. A study of the combined impacts of road development and urban expansion is under review.</p>
+          <p>This theme ties the previous three together. Cities, roads, and infrastructure are coupled with ecosystems, and I ask where that coupling produces conflict (habitat loss, hazard exposure, lost services) and where it produces opportunity (compact development, accessibility, conservation gains).</p>
+          <ul class="theme-points">
+            <li><strong>Gulf ocean heat.</strong> Rapid hurricane intensification in the Gulf of Mexico and the daily upper-ocean heat beneath the storm track. <span class="pt-status">In preparation</span></li>
+            <li><strong>Gulf coast settlement.</strong> How settlement on the US Gulf coast moved while the hurricane corridor stayed in place, 1985 to 2024. <span class="pt-status">In preparation</span></li>
+            <li><strong>Nigeria.</strong> Built environment and socioeconomic exposure to flooding. <span class="pt-status">In preparation</span></li>
+            <li><strong>Global flood co-exposure.</strong> River and coastal flood risk to road infrastructure worldwide. <span class="pt-status">In preparation</span></li>
+            <li><strong>Tropical biodiversity.</strong> Coupled urban and road growth and the biodiversity loss it implies. <span class="pt-status">Under review</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
@@ -352,29 +380,42 @@
           <ol class="theme-pub-list">
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Fixed storm corridors over a warming ocean: rapid-intensification hazard and coastal exposure in the Gulf of Mexico.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer">The growing threat of flooding on transportation infrastructure across Texas through 2100</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth's Future, 14, e2026EF008207</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2023</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1007/s41976-023-00088-7" target="_blank" rel="noopener noreferrer">Spatio-temporal investigation of urban thermal comfort in Khulna City and surrounding areas</a>.<span class="theme-pub-meta">Chakraborty, T., Alam, M., Bashit, M., Hosen, K., <strong>Ahasan, R.</strong> <span class="journal">Remote Sensing in Earth Systems Sciences</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Coupled urban–road growth reveals underestimated tropical biodiversity loss.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Fitzgerald, L. <span class="journal">Nature Sustainability</span> <span class="status">Under Review</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">A global co-exposure analysis of river and coastal flood risk to road infrastructure.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B. <span class="status prep">In Prep</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Rapid intensification in the Gulf of Mexico tracks daily upper-ocean heat under the storm.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Mahmud, S., Chatterjee, S., Noman, N. <span class="status prep">In Prep</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Gulf coast settlement moved while the hurricane corridor stayed in place.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Mahmud, S., Chatterjee, S., Noman, N. <span class="status prep">In Prep</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2026</span>
               <div class="theme-pub-cite">Spatial analysis of built environment and socioeconomic exposure to flooding in Nigeria.<span class="theme-pub-meta">Scardino, A., et al. <span class="status prep">In Prep</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Combined impacts of road development and urban expansion on biodiversity and habitats: insights from Brazil, Indonesia, and Nigeria.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Fitzgerald, L. <span class="status">Under Review</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">The growing threat of flooding on transportation infrastructure across Texas through 2100.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth's Future, 14, e2026EF008207</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2023</span>
-              <div class="theme-pub-cite">Spatio-temporal investigation of urban thermal comfort in Khulna City and surrounding areas.<span class="theme-pub-meta">Chakraborty, T., Alam, M., Bashit, M., Hosen, K., <strong>Ahasan, R.</strong> <span class="journal">Remote Sensing in Earth Systems Sciences</span></span></div>
             </li>
           </ol>
         </div>
       </div>
 
       <aside class="theme-figures">
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/environment-flood-damage-gdp.webp" alt="World map of expected annual flood damage to road infrastructure as a share of national GDP, darkest across South and Southeast Asia and much of Africa" loading="lazy" />
+          <figcaption>Expected annual river and coastal flood damage to roads as a share of GDP, by country — global co-exposure analysis (in preparation)</figcaption>
+        </figure>
+
         <figure class="theme-figure">
           <img src="assets/research/environment-01.png"
                alt="Four-panel map comparison of FEMA flood hazard zones against modeled flood susceptibility for Beaumont and greater Houston"
@@ -388,16 +429,17 @@
           <figcaption>Statewide flood susceptibility across three modeling approaches — <em>Earth’s Future</em> (2026)</figcaption>
         </figure>
         <figure class="theme-figure">
-          <img src="assets/research/environment-03.png"
-               alt="Diverging bar charts of net change in flood-susceptible area by susceptibility class under SSP1, SSP3 and SSP5 for 2050 and 2100"
-               loading="lazy" />
-          <figcaption>The hazard surface itself shifts under SSP pathways: land moving into moderate-and-above susceptibility by 2100 — <em>Earth’s Future</em> (2026)</figcaption>
+          <img src="assets/research/environment-bridges-2100.webp" alt="Grid of bar charts of Texas bridges in 2100 by structural prioritization level and flood susceptibility class under SSP1, SSP3 and SSP5, with the share over water and the change from 2020" loading="lazy" />
+          <figcaption>Projected flood susceptibility of Texas bridges in 2100 by structural priority, under three SSP pathways — <em>Earth’s Future</em> (2026)</figcaption>
         </figure>
         <figure class="theme-figure">
-          <img src="assets/research/environment-04.png"
-               alt="Three Texas maps of bridges by structural prioritization, by flood susceptibility, and the two combined on a bivariate key, each with regional insets"
-               loading="lazy" />
-          <figcaption>Where structurally prioritised bridges and high flood susceptibility land on the same point — <em>Earth’s Future</em> (2026)</figcaption>
+          <img src="assets/research/environment-network-disruption.webp" alt="World map of the share of each country's population-weighted shortest-path load that runs over road links disrupted by flooding" loading="lazy" />
+          <figcaption>Where flooding cuts the routes people use: share of national population-weighted shortest-path load on disrupted road links — global co-exposure analysis (in preparation)</figcaption>
+        </figure>
+
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/environment-tropical-accrual.webp" alt="Six panels on how urban conversion of threatened and narrow-range species ranges accrued across the tropics from 2000 to 2020, by period, city, region and realm" loading="lazy" />
+          <figcaption>How urban conversion of threatened species ranges accrued across the tropics, 2000 to 2020 — threatened species exposure to tropical urban growth (in preparation)</figcaption>
         </figure>
       </aside>
     </div>
@@ -414,28 +456,38 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>A parallel thread on spatial methods for public health. Earlier work mapped COVID-19 spread across multiple geographies, examined how geospatial analyses are used in research on homeless populations, and produced systematic reviews on the role of GIS in pandemic decision-making.</p>
-          <p>Ongoing work is a forecast of healthcare access in India and Bangladesh through 2050, in preparation. It projects travel time to primary, secondary, and tertiary care using a coupled urban and road growth model rather than treating the two as independent.</p>
+          <p>A parallel thread applies spatial methods to public health, from disease spread to access to care.</p>
+          <ul class="theme-points">
+            <li><strong>COVID-19.</strong> Mapping the spread of the pandemic across multiple geographies.</li>
+            <li><strong>Homelessness research.</strong> How geospatial analyses are used in studies of homeless populations.</li>
+            <li><strong>Pandemic decisions.</strong> Systematic reviews of the role of GIS in pandemic decision-making.</li>
+            <li><strong>GeoAI and resource allocation.</strong> A decision science framework and research agenda, with M Mahbub Hossain. <span class="pt-status">In preparation</span></li>
+            <li><strong>Healthcare access to 2050.</strong> Travel time to primary, secondary, and tertiary care in India and Bangladesh, from a coupled urban and road growth model. <span class="pt-status">In preparation</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
           <h3 class="theme-pubs-label">Recent work</h3>
           <ol class="theme-pub-list">
             <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Coupled urban and road network growth will reshape healthcare access for 1.6 billion people in India and Bangladesh by 2050.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
+              <span class="theme-pub-year">2022</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.12688/f1000research.27544.2" target="_blank" rel="noopener noreferrer">Applications of GIS and geospatial analyses in COVID-19 research: a systematic review</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Alam, S., Chakraborty, T., Hossain, M. M. <span class="journal">F1000 Research, 9(1379)</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2022</span>
-              <div class="theme-pub-cite">Applications of GIS and geospatial analyses in COVID-19 research: a systematic review.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Alam, S., Chakraborty, T., Hossain, M. M. <span class="journal">F1000 Research, 9(1379)</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2022</span>
-              <div class="theme-pub-cite">Applications of geospatial analyses in health research among homeless people: a systematic scoping review.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Alam, M. S., Chakraborty, T., et al. <span class="journal">Health Policy and Technology, 11(3)</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1016/j.hlpt.2022.100647" target="_blank" rel="noopener noreferrer">Applications of geospatial analyses in health research among homeless people: a systematic scoping review</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Alam, M. S., Chakraborty, T., et al. <span class="journal">Health Policy and Technology, 11(3)</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2021</span>
-              <div class="theme-pub-cite">Leveraging GIS and spatial analysis for informed decision-making in the COVID-19 pandemic.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Hossain, M. M. <span class="journal">Health Policy and Technology, 10(1)</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1016/j.hlpt.2020.11.009" target="_blank" rel="noopener noreferrer">Leveraging GIS and spatial analysis for informed decision-making in the COVID-19 pandemic</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Hossain, M. M. <span class="journal">Health Policy and Technology, 10(1)</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">GeoAI and health resources allocation: a decision science framework and research agenda.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Hossain, M.M. <span class="status prep">In Prep</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Coupled urban and road network growth will reshape healthcare access for 1.6 billion people in India and Bangladesh by 2050.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
             </li>
           </ol>
         </div>
@@ -469,32 +521,38 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Across all of the themes above, the question of <em>how</em> we model spatial processes shows up again and again. My work in this thread brings together <em>machine learning, statistical, and process-based</em> approaches: hedonic and regression models for housing and accessibility, supervised and unsupervised ML for land-cover classification, statistical and AI-based flood susceptibility modeling, and large-scale process models for urban–transportation coevolution.</p>
-          <p>In preparation is a probabilistic assessment of access to hospitals and cyclone shelters that carries flood-model uncertainty through to network failure rather than reporting a single map. A global ensemble forecast of urban land-cover conversion is also in preparation, and the road network growth model is in revision.</p>
+          <p>How we model spatial processes comes up in every theme above. This thread brings together <em>machine learning, statistical, and process-based</em> approaches.</p>
+          <ul class="theme-points">
+            <li><strong>Statistical.</strong> Hedonic and regression models for housing and accessibility.</li>
+            <li><strong>Machine learning.</strong> Supervised and unsupervised land-cover classification, and statistical and AI-based flood susceptibility modeling.</li>
+            <li><strong>Process models.</strong> Large-scale models of urban and transportation coevolution, including the road network growth model at <em>Nature Communications</em>. <span class="pt-status">In press</span></li>
+            <li><strong>Uncertainty.</strong> Critical facility access in Bangladesh with flood-susceptibility uncertainty carried through to network failure, rather than a single map. <span class="pt-status">In preparation</span></li>
+            <li><strong>Projection uncertainty.</strong> Divergent urban boundaries and high spatial uncertainty in global urban land projections. <span class="pt-status">In preparation</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
           <h3 class="theme-pubs-label">Recent work</h3>
           <ol class="theme-pub-list">
             <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Probabilistic assessment of critical facility access under flood susceptibility and uncertainty.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">A spatially explicit model for forecasting hierarchical road network growth.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Abeer, N. <span class="status">In Revision</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Global ensemble forecasts reveal accelerating urban land-cover conversion and high uncertainty.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, et al. <span class="status prep">In Prep</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Two-thirds of the global protected areas are exposed to edge urbanization.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status">In Revision</span></span></div>
-            </li>
-            <li>
               <span class="theme-pub-year">2021</span>
-              <div class="theme-pub-cite">A data-driven machine learning approach for urban land cover change modeling: Khulna City Corporation.<span class="theme-pub-meta">Islam, M. D., Islam, K. S., <strong>Ahasan, R.</strong>, et al. <span class="journal">Remote Sensing Applications: Society and Environment</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1016/j.rsase.2021.100634" target="_blank" rel="noopener noreferrer">A data-driven machine learning approach for urban land cover change modeling: Khulna City Corporation</a>.<span class="theme-pub-meta">Islam, M. D., Islam, K. S., <strong>Ahasan, R.</strong>, et al. <span class="journal">Remote Sensing Applications: Society and Environment</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.5281/zenodo.23333891" target="_blank" rel="noopener noreferrer">A location-based model for forecasting hierarchical road network growth</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B., Abeer, N. <span class="journal">Nature Communications, in press</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">Two-thirds of the global protected areas are exposed to edge urbanization</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Nature Sustainability</span> <span class="status">Revision Submitted</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Critical facility access under uncertain flood susceptibility in Bangladesh.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B. <span class="status prep">In Prep</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite">Divergent urban boundaries and high spatial uncertainty in global urban land projections.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status prep">In Prep</span></span></div>
             </li>
           </ol>
         </div>
@@ -540,8 +598,13 @@
     <div class="theme-grid">
       <div class="theme-main">
         <div class="prose">
-          <p>Every result on this page rests on a chain of geospatial decisions that rarely make it into the abstract: which product to trust, what a 300-metre pixel actually means on the ground, how to partition overlapping buffers so no hectare is counted twice, and whether the answer survives a change of threshold. This thread is that craft treated as the subject rather than the plumbing.</p>
-          <p>Ongoing work supports the studies above: cross-dataset validation and buffer partitioning for the protected-area manuscript in revision, and the susceptibility modelling and uncertainty handling behind the flood-access study in preparation.</p>
+          <p>Every result on this page rests on geospatial decisions that rarely reach the abstract. This thread treats that craft as the subject rather than the plumbing.</p>
+          <ul class="theme-points">
+            <li><strong>Product choice.</strong> Which dataset to trust, and what a 300-meter pixel actually means on the ground.</li>
+            <li><strong>Accounting.</strong> Partitioning overlapping buffers so no hectare is counted twice.</li>
+            <li><strong>Robustness.</strong> Testing whether an answer survives a change of threshold.</li>
+            <li><strong>In practice.</strong> Cross-dataset validation and buffer partitioning for the protected-area study <span class="pt-status">Revision submitted</span>, and the susceptibility modeling and uncertainty handling behind the flood-access study. <span class="pt-status">In preparation</span></li>
+          </ul>
         </div>
 
         <div class="theme-pubs">
@@ -549,26 +612,24 @@
           <ol class="theme-pub-list">
             <li>
               <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">Two-thirds of the global protected areas are exposed to edge urbanization.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="status">In Revision</span></span></div>
-            </li>
-            <li>
-              <span class="theme-pub-year">2026</span>
-              <div class="theme-pub-cite">The growing threat of flooding on transportation infrastructure across Texas through 2100.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth&#39;s Future, 14, e2026EF008207</span></span></div>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer">The growing threat of flooding on transportation infrastructure across Texas through 2100</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, İ., Güneralp, B., Birgisson, B. <span class="journal">Earth&#39;s Future, 14, e2026EF008207</span></span></div>
             </li>
             <li>
               <span class="theme-pub-year">2021</span>
-              <div class="theme-pub-cite">Performance evaluation of public transport system: the case of Dhaka, Bangladesh.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Kabir, A. <span class="journal">Planning Forum, 18(1)</span></span></div>
+              <div class="theme-pub-cite"><a href="https://sites.utexas.edu/planningforum/article-3-performance-evaluation-of-public-transportation-system-analyzing-the-case-of-dhaka-bangladesh/" target="_blank" rel="noopener noreferrer">Performance evaluation of public transport system: the case of Dhaka, Bangladesh</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Kabir, A. <span class="journal">Planning Forum, 18(1)</span></span></div>
+            </li>
+            <li>
+              <span class="theme-pub-year">2026</span>
+              <div class="theme-pub-cite"><a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">Two-thirds of the global protected areas are exposed to edge urbanization</a>.<span class="theme-pub-meta"><strong>Ahasan, R.</strong>, Güneralp, B. <span class="journal">Nature Sustainability</span> <span class="status">Revision Submitted</span></span></div>
             </li>
           </ol>
         </div>
       </div>
 
       <aside class="theme-figures">
-        <figure class="theme-figure">
-          <img src="assets/research/gis-01.png"
-               alt="Workflow diagram running from criteria selection and data processing through three susceptibility models, spatial comparison, ROC validation, and infrastructure exposure assessment"
-               loading="lazy" />
-          <figcaption>The whole chain: criteria selection → three models → FEMA comparison → ROC validation → exposure — <em>Earth’s Future</em> (2026)</figcaption>
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/gis-urban-product-agreement.webp" alt="Twelve map windows of New York–Philadelphia, Lagos–Ibadan, Dhaka, São Paulo, Beijing–Tianjin and the Jakarta region in 2020 and 2100, shaded by how many of nine products classify each cell as urban" loading="lazy" />
+          <figcaption>How many of nine urban land products agree a cell is urban, six metropolitan regions in 2020 and 2100 — global urban land projections (in preparation)</figcaption>
         </figure>
         <figure class="theme-figure">
           <img src="assets/research/gis-02.png"
@@ -582,11 +643,9 @@
                loading="lazy" />
           <figcaption>Every protected area on Earth, read at five distances from its boundary, thirty years apart</figcaption>
         </figure>
-        <figure class="theme-figure">
-          <img src="assets/research/gis-04.png"
-               alt="Distributions of urban cover per protected area by sub-region, comparing interiors with their surroundings, thirty years apart"
-               loading="lazy" />
-          <figcaption>What the data can and cannot resolve, shown reserve by reserve</figcaption>
+        <figure class="theme-figure is-wide">
+          <img src="assets/research/gis-boundary-landcover.webp" alt="World map of the cropland and forest shares of land along the urban boundary by region, on a bivariate key, with the regions of the most contested clusters outlined in yellow" loading="lazy" />
+          <figcaption>Land cover along the urban boundary: cropland and forest shares by region, with the most contested regions outlined — global urban land projections (in preparation)</figcaption>
         </figure>
       </aside>
     </div>
@@ -597,34 +656,37 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-prompt">
-        Reach out about <em>research, collaboration,</em> or <a href="index.html#reach-out">an idea worth discussing</a>.
+        Reach out about <em>research, collaboration,</em> or <a href="contact.html#note">an idea worth discussing</a>.
       </div>
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
           <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
           <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
-        <h5>Code &amp; Writing</h5>
+        <h5>Elsewhere</h5>
         <ul>
-          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:rakibulahasan@gmail.com">Email</a></li>
+          <li><a href="https://www.esri.com/arcgis-blog/author/rahasan" target="_blank" rel="noopener noreferrer">Technical blogs</a></li>
+          <li><a href="travel.html">Travel diaries</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <span>© 2026 Rakibul Ahasan</span>
-      <span>Last updated · May 2026</span>
+      <span>&copy; 2026 Rakibul Ahasan</span>
+      <span>Last updated &middot; November 2026</span>
     </div>
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260901a"></script>
+<script src="section-nav.js?v=20261124a"></script>
 
-<script src="lightbox.js?v=20260901a"></script>
+<script src="lightbox.js?v=20261124a"></script>
 
 </body>
 </html>

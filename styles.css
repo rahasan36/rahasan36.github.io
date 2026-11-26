@@ -147,61 +147,51 @@ nav.primary a.active { color: var(--accent); }
 
 .hero { padding-top: 96px; padding-bottom: 64px; position: relative; overflow: hidden; }
 
-/* Hooding-ceremony photo, faded into the right of the hero.
-   The mask gradient dissolves the left edge into the page background
-   so the name and subtitle on the left read cleanly while the right
-   side of the photo (Ra, the diploma, the moment) stays visible. */
-.hero-photo {
+/* Home hero backdrop: the 2020 urban land map from the protected area study,
+   faded into the right of the hero. The mask dissolves its left edge into the
+   page background so the name and subtitle read cleanly over it. */
+/* the wrapper has the map's own proportions, so the caption can be placed
+   on the map itself (under Australia) at any screen width */
+.hero-map-wrap {
   position: absolute;
-  top: 0;
   right: 0;
-  bottom: 0;
-  width: 68%;
-  max-width: 980px;
-  background-image: url('assets/hooding.jpg');
-  background-size: cover;
-  background-position: 62% center;
-  background-repeat: no-repeat;
-  filter: saturate(0.78) brightness(0.94) contrast(1.04);
-  opacity: 0.94;
+  top: 34%;
+  translate: 0 -34%;
+  width: min(66%, 1040px);
+  aspect-ratio: 1740 / 764;
   z-index: 0;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 6%,
-    rgba(0, 0, 0, 0.25) 22%,
-    rgba(0, 0, 0, 0.6) 42%,
-    rgba(0, 0, 0, 0.92) 65%,
-    black 82%
-  );
-          mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    transparent 6%,
-    rgba(0, 0, 0, 0.25) 22%,
-    rgba(0, 0, 0, 0.6) 42%,
-    rgba(0, 0, 0, 0.92) 65%,
-    black 82%
-  );
+}
+.hero-map {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/hero-map.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.12) 24%, rgba(0,0,0,0.55) 50%, black 76%);
+          mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.12) 24%, rgba(0,0,0,0.55) 50%, black 76%);
   animation: rise 1.4s cubic-bezier(0.2, 0.85, 0.2, 1) both;
   animation-delay: 0.2s;
 }
-/* Tonal overlay: a thin wash of the page bg over the photo
-   to pull the warm maroons and skin tones toward the olive palette
-   without killing the moment. */
-.hero-photo::after {
-  content: "";
+.hero-map-cap {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    var(--bg) 0%,
-    rgba(31, 42, 34, 0.35) 30%,
-    rgba(31, 42, 34, 0.12) 60%,
-    rgba(31, 42, 34, 0.05) 100%
-  );
-  mix-blend-mode: multiply;
+  right: 6%;
+  top: calc(100% + 8px);
+  width: max-content;
+  max-width: 250px;
+  text-align: right;
+  line-height: 1.6;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-mute);
+  opacity: 0.8;
   pointer-events: none;
 }
 .hero .container { position: relative; z-index: 1; }
@@ -217,17 +207,21 @@ nav.primary a.active { color: var(--accent); }
 .hero-detail strong { color: var(--cream-soft); font-weight: 400; }
 .hero-cta { position: relative; }
 
+@media (max-width: 1200px) {
+  .hero-map-cap { display: none; }
+}
 @media (max-width: 980px) {
-  /* keep the photo on small screens: full-bleed behind the hero, faded from the
-     top so the name stays legible over it */
-  .hero-photo {
-    width: 100%;
-    max-width: none;
-    opacity: 0.32;
-    background-position: 58% center;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 34%, rgba(0,0,0,0.85) 100%);
-            mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 34%, rgba(0,0,0,0.85) 100%);
+  /* small screens: the map sits full width behind the name, faded so text stays legible */
+  .hero-map-wrap { width: 100%; top: 0; translate: none; }
+  .hero-map {
+    opacity: 0.22;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 45%, transparent 85%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 45%, transparent 85%);
   }
+  .hero-map-cap { display: none; }
+}
+@media (max-width: 640px) {
+  .hero-map-wrap { display: none; }
 }
 
 .hero-meta {
@@ -296,6 +290,30 @@ h1.hero-name em {
   margin-bottom: 52px;
 }
 .hero-detail strong { color: var(--cream-soft); font-weight: 400; }
+.hero-stats {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  margin: -24px 0 44px;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-mute);
+}
+.hero-stats strong {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--accent);
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+.hero-stats em { font-style: italic; text-transform: none; letter-spacing: 0.02em; }
 .hero-cta {
   display: flex;
   gap: 18px;
@@ -304,7 +322,8 @@ h1.hero-name em {
 }
 
 .page-header { padding: 130px 0 60px; position: relative; overflow: hidden; }
-/* the same hooding photo as the home hero, carried across the inner pages */
+/* Inner-page backdrop. Only About (hooding photo) and Travel (landscape) carry
+   one; the other inner pages keep a plain typographic header. */
 .page-photo {
   position: absolute;
   top: 0;
@@ -312,7 +331,6 @@ h1.hero-name em {
   bottom: 0;
   width: 58%;
   max-width: 860px;
-  background-image: url('assets/hooding.jpg');
   background-size: cover;
   background-position: 62% 32%;
   filter: saturate(0.72) brightness(0.9) contrast(1.04);
@@ -321,6 +339,77 @@ h1.hero-name em {
   pointer-events: none;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.22) 26%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.9) 82%);
           mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.22) 26%, rgba(0,0,0,0.62) 55%, rgba(0,0,0,0.9) 82%);
+}
+.page-photo.photo-hooding { background-image: url('assets/hooding.jpg'); }
+.page-photo.photo-glacier {
+  background-image: url('assets/travel/glacier-03.jpg');
+  background-position: 55% 45%;
+  filter: saturate(0.78) brightness(0.74) contrast(1.04);
+  opacity: 0.46;
+}
+.page-photo.photo-hex {
+  background-image: url('assets/hero-hex.webp');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  filter: brightness(1.35) saturate(1.25);
+  opacity: 0.95;
+}
+.page-photo.photo-roads {
+  top: 92px;
+  bottom: 48px;
+  background-image: url('assets/hero-roads.webp');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  filter: none;
+  opacity: 0.7;
+}
+.page-photo.photo-coexp-cities {
+  top: 92px;
+  bottom: 48px;
+  background-image: url('assets/hero-coexp-cities.webp');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  filter: none;
+  opacity: 0.8;
+}
+.page-photo.photo-coexposure {
+  background-image: url('assets/hero-coexposure.webp');
+  background-size: cover;
+  background-position: 55% 40%;
+  filter: saturate(0.85);
+  opacity: 0.6;
+}
+.page-photo.photo-tropics {
+  top: 92px;
+  bottom: 48px;
+  background-image: url('assets/hero-tropics.webp');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  filter: none;
+  opacity: 0.85;
+}
+.page-photo-cap {
+  position: absolute;
+  right: 40px;
+  bottom: 18px;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-mute);
+  opacity: 0.8;
+  text-shadow: 0 0 6px var(--bg), 0 0 2px var(--bg);
+  pointer-events: none;
+}
+@media (max-width: 980px) {
+  .page-photo-cap { display: none; }
+  .page-photo.photo-roads, .page-photo.photo-hex, .page-photo.photo-coexp-cities, .page-photo.photo-coexposure, .page-photo.photo-tropics { opacity: 0.16; }
 }
 @media (max-width: 980px) {
   .page-photo {
@@ -566,11 +655,12 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 .section-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13.5px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: var(--accent);
-  padding-top: 18px;
+  padding-top: 14px;
 }
 .section-label::before {
   content: "";
@@ -580,15 +670,8 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   background: var(--accent);
   margin-bottom: 10px;
 }
-/* long headings: step the display size down so they hold one line.
-   The title column is ~948px (container minus the 220px label and 56px gap);
-   trip titles sit inside a 760px header. They still wrap on small screens. */
-.section-title.is-long {
-  font-size: clamp(30px, 3.6vw, 50px);
-  line-height: 1.04;
-  letter-spacing: -0.025em;
-  max-width: none;
-}
+/* long trip titles step down so they hold one line inside the 760px header.
+   Section titles use one size everywhere (see .section-title), so is-long no longer changes them. */
 .trip-title.is-long {
   font-size: clamp(26px, 3.1vw, 42px);
   line-height: 1.06;
@@ -596,10 +679,10 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 .section-title {
   font-family: var(--display);
-  font-size: clamp(44px, 6vw, 88px);
+  font-size: clamp(32px, 4vw, 56px);
   font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
   max-width: 980px;
   color: var(--cream);
 }
@@ -607,12 +690,13 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 
 .prose { max-width: 720px; }
 /* underline the one clause the page is really about */
+/* emphasis for a key phrase: a soft highlighter band, not an underline,
+   so it is not mistaken for a link */
 .prose .mark {
   color: var(--cream);
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 5px;
+  text-decoration: none;
+  background: linear-gradient(transparent 60%, rgba(232, 155, 92, 0.22) 60%);
+  padding: 0 2px;
 }
 /* a button in prose: no text leading, so its spacing is symmetric */
 .prose .prose-cta {
@@ -635,16 +719,6 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   color: var(--cream);
   font-size: 1.05em;
 }
-.prose p.dropcap::first-letter {
-  font-family: var(--display);
-  font-size: 5.4em;
-  float: left;
-  line-height: 0.82;
-  margin: 8px 14px -6px 0;
-  color: var(--accent);
-  font-weight: 400;
-  font-style: italic;
-}
 .prose h3 {
   font-family: var(--display);
   font-size: 32px;
@@ -662,6 +736,19 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   font-weight: 300;
 }
 .prose li { margin-bottom: 0.5em; }
+/* research themes: a short intro, then scannable points */
+.prose ul.theme-points { list-style: none; margin: 0 0 1.4em; padding: 0; font-size: 17.5px; line-height: 1.6; }
+.prose ul.theme-points li { position: relative; padding-left: 26px; margin-bottom: 0.85em; }
+.prose ul.theme-points li::before {
+  content: ""; position: absolute; left: 0; top: 0.8em;
+  width: 12px; height: 1.5px; background: var(--accent);
+}
+.prose ul.theme-points strong { color: var(--cream); font-weight: 500; }
+.pt-status {
+  display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid rgba(232, 155, 92, 0.45); vertical-align: 2px; white-space: nowrap;
+}
 .prose a:not(.btn) {
   color: var(--accent);
   text-decoration: none;
@@ -810,6 +897,8 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   transition: color 0.2s ease;
 }
 .pub-link:hover { color: var(--cream); }
+/* two links in one slot (code and data), stacked */
+.pub-links { justify-self: end; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 /* no public link yet: the slot states the status instead of offering a dead button */
 .pub-link.is-status {
   color: var(--cream-mute);
@@ -834,7 +923,6 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 .pub-status.review { background: var(--coral); }
 .pub-status.prep   { background: var(--cream-mute); color: var(--bg); }
-.pub-status.wishful { background: var(--moss); color: var(--cream); }
 
 .pub-filter {
   display: flex;
@@ -966,7 +1054,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
 }
 .service-item:hover { padding-left: 12px; }
 a.service-item { text-decoration: none; cursor: pointer; }
-a.service-item:hover .service-what { color: var(--amber); }
+a.service-item:hover .service-what { color: var(--accent); }
 .service-when {
   font-family: var(--mono);
   font-size: 12px;
@@ -1062,7 +1150,8 @@ a.service-item:hover .service-what { color: var(--amber); }
 }
 .cv-section-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--accent);
@@ -1118,8 +1207,8 @@ a.service-item:hover .service-what { color: var(--amber); }
   border-bottom-color: var(--accent);
 }
 .cv-entry-main .org {
-  font-size: 15px;
-  color: var(--moss);
+  font-size: 17.5px;
+  color: #A9C9A4;
   font-style: italic;
   font-family: var(--display);
   font-weight: 400;
@@ -1194,6 +1283,10 @@ a.service-item:hover .service-what { color: var(--amber); }
   transition: color 0.2s ease;
 }
 .cv-content a.cv-link:hover::after { color: var(--accent); }
+/* CV: code and data links under a citation, one per row */
+.cv-res { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 8px; }
+.cv-content .cv-res a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.cv-content .cv-res a:hover { color: var(--cream); }
 .cv-entry-date {
   font-family: var(--mono);
   font-size: 12px;
@@ -1320,6 +1413,7 @@ footer.site {
   color: var(--cream-mute);
   transition: all 0.2s ease;
 }
+.contact-col a:not([target])::after { content: none; }
 .contact-col a:hover { color: var(--accent); }
 .contact-col a:hover::after { transform: translate(2px, -2px); color: var(--accent); }
 
@@ -1453,6 +1547,7 @@ footer.site {
   position: sticky;
   top: 110px;
 }
+.theme-figure.is-wide { grid-column: 1 / -1; }
 .theme-figure {
   margin: 0;
   border-radius: 12px;
@@ -1642,6 +1737,8 @@ footer.site {
 
   .pub-item { grid-template-columns: 60px 1fr; gap: 16px; }
   .pub-link { grid-column: 2; justify-self: start; padding-top: 4px; }
+  .pub-links { grid-column: 2; justify-self: start; flex-direction: row; gap: 20px; padding-top: 4px; }
+  .pub-links .pub-link { padding-top: 0; }
 
   .service-item, .cv-entry { grid-template-columns: 1fr; gap: 6px; }
   .service-where, .cv-entry-date { text-align: left; }
@@ -2243,9 +2340,11 @@ html.lb-open { overflow: hidden; }
   flex-direction: column;
   gap: 12px;
   padding: 28px 26px 24px;
-  background: var(--bg-2);
-  border: 1px solid var(--hairline);
+  background: var(--bg-3);
+  border: 1px solid rgba(232, 155, 92, 0.35);
+  border-top: 3px solid var(--accent);
   border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   color: inherit;
   transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
@@ -2306,16 +2405,25 @@ html.lb-open { overflow: hidden; }
 }
 .news-card:hover .arrow { margin-left: 3px; }
 
-.news-dots { display: flex; gap: 8px; justify-content: center; margin-top: 32px; }
-.news-dots button {
-  width: 8px; height: 8px; padding: 0;
-  border-radius: 50%;
-  border: 1px solid var(--hairline);
-  background: transparent;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+/* page indicator: one inch in total, split evenly among the pages */
+.news-dots {
+  display: flex;
+  width: 1in;
+  margin: 32px auto 0;
 }
-.news-dots button.is-active { background: var(--accent); border-color: var(--accent); transform: scale(1.25); }
+.news-dots button {
+  flex: 1 1 0;
+  height: 16px;
+  padding: 6px 2px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--hairline);
+  background-clip: content-box;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.news-dots button:hover { background-color: var(--cream-mute); }
+.news-dots button.is-active { background-color: var(--accent); }
 .news-dots button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 @media (max-width: 980px) {
@@ -2340,3 +2448,11 @@ html.lb-open { overflow: hidden; }
   .s.is-tight .section-head { margin-bottom: 28px; }
   .s.is-tight + .s { padding-top: 60px; }
 }
+
+/* research page: published and preprint titles link out */
+.theme-pub-cite a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(232, 155, 92, 0.45); transition: color 0.2s ease, border-color 0.2s ease; }
+.theme-pub-cite a::after { content: " \2197"; font-size: 0.8em; color: var(--accent); }
+.theme-pub-cite a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* CV: a small heading for a second list inside a section */
+.cv-sublabel { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 40px 0 14px; }

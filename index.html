@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260901a" />
+  <link rel="stylesheet" href="styles.css?v=20261124c" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
   <script type="application/ld+json">
@@ -115,7 +115,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260901a"></script>
+<script src="orb.js?v=20261124a"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -123,10 +123,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="primary" id="primary-nav" aria-label="Primary">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
+      <a href="about.html">About</a>
       <a href="travel.html">Travel</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -136,8 +136,6 @@
 
 <nav class="section-nav" aria-label="Page sections">
     <a href="#whats-new" data-target="whats-new"><span class="label">What&#39;s new</span><span class="tick" aria-hidden="true"></span></a>
-    <a href="#summary" data-target="summary"><span class="label">Summary</span><span class="tick" aria-hidden="true"></span></a>
-    <a href="#about" data-target="about"><span class="label">About</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#research" data-target="research"><span class="label">Research</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#selected" data-target="selected"><span class="label">Selected work</span><span class="tick" aria-hidden="true"></span></a>
     <a href="#approach" data-target="approach"><span class="label">How I work</span><span class="tick" aria-hidden="true"></span></a>
@@ -146,12 +144,17 @@
 </nav>
 
 <section class="hero">
-  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-map-wrap" aria-hidden="true">
+    <div class="hero-map"></div>
+    <p class="hero-map-cap">Urban land within 50 km of the world&#39;s protected areas, 2020</p>
+  </div>
   <div class="container">
     <div class="hero-meta rise d1">
-      <span class="coord">34°03′N · 117°11′W</span>
-      <span class="sep">/</span>
-      <span class="live">Esri</span>
+      <span class="coord">Geographer</span>
+      <span class="sep">&middot;</span>
+      <span>Land system science</span>
+      <span class="sep">&middot;</span>
+      <span>GIScience</span>
     </div>
 
     <h1 class="hero-name rise d2">
@@ -160,90 +163,32 @@
     </h1>
 
     <p class="hero-sub rise d3">
-      I develop <em>theories and methods to forecast</em> where cities will grow and what that
-      growth will cost &mdash; in habitat, in hazard exposure, in the systems people depend on
-      &mdash; and, at Esri, build the spatial analysis and raster analysis tools that make those methods usable.
+      I study the sustainability of urban and infrastructure growth at the <em>global scale</em>,
+      and develop geospatial methods to measure and forecast that change. My work projects where
+      cities and road networks will expand and quantifies the cost in habitat, hazard exposure,
+      and access to services.
     </p>
 
     <p class="hero-detail rise d3">
-      My doctoral research produced <strong>one of the first global-scale road network growth models</strong>,
-      work AGU&#39;s <em>Eos</em> covered on publication. The same machinery now drives studies of
-      protected-area isolation, species-range loss, and transport exposure to flooding across
-      Brazil, Indonesia, Nigeria, Bangladesh, and Texas &mdash; <strong>13+ peer-reviewed articles</strong>,
-      <strong>10+ more in review or in preparation</strong>, and 33+ conference presentations,
-      held together by a preference for models that take spatial structure seriously and state their
-      uncertainty plainly.
+      PhD in Geography, Texas A&amp;M University &middot; Product Engineer II, Esri &middot; GISP
     </p>
 
     <div class="hero-cta rise d4">
       <a href="publications.html" class="btn">
-        Selected Publications
-        <span class="arrow">→</span>
+        Selected publications
+        <span class="arrow">&rarr;</span>
       </a>
       <a href="cv.html" class="btn ghost">
         View CV
-        <span class="arrow">→</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+      <a href="about.html" class="btn ghost">
+        About me
+        <span class="arrow">&rarr;</span>
       </a>
     </div>
   </div>
 </section>
-
-<!-- Latest publications strip -->
-<div class="marquee" aria-label="Latest publications">
-  <div class="marquee-track">
-
-    <a href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer" class="latest biodiv">
-      <span class="dot"></span>
-      <span class="latest-tag is-live">Latest</span>
-      <span class="latest-title">Urban impacts on Indonesia's biodiversity</span>
-      <span class="latest-meta">2026 · <em>Biological Conservation</em></span>
-    </a>
-    <span class="pip"></span>
-
-    <a href="publications.html" class="latest roads">
-      <span class="dot"></span>
-      <span class="latest-tag">In Revision</span>
-      <span class="latest-title">A global model of hierarchical road network growth</span>
-      <span class="latest-meta">2026</span>
-    </a>
-    <span class="pip"></span>
-
-    <a href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer" class="latest environment">
-      <span class="dot"></span>
-      <span class="latest-tag is-live">Latest</span>
-      <span class="latest-title">Texas transport infrastructure under flood risk</span>
-      <span class="latest-meta">2026 · <em>Earth's Future</em></span>
-    </a>
-    <span class="pip"></span>
-
-    <!-- duplicate set for seamless loop -->
-    <a href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer" class="latest biodiv">
-      <span class="dot"></span>
-      <span class="latest-tag is-live">Latest</span>
-      <span class="latest-title">Urban impacts on Indonesia's biodiversity</span>
-      <span class="latest-meta">2026 · <em>Biological Conservation</em></span>
-    </a>
-    <span class="pip"></span>
-
-    <a href="publications.html" class="latest roads">
-      <span class="dot"></span>
-      <span class="latest-tag">In Revision</span>
-      <span class="latest-title">A global model of hierarchical road network growth</span>
-      <span class="latest-meta">2026</span>
-    </a>
-    <span class="pip"></span>
-
-    <a href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer" class="latest environment">
-      <span class="dot"></span>
-      <span class="latest-tag is-live">Latest</span>
-      <span class="latest-title">Texas transport infrastructure under flood risk</span>
-      <span class="latest-meta">2026 · <em>Earth's Future</em></span>
-    </a>
-    <span class="pip"></span>
-
-  </div>
-</div>
-
 
 <!-- What's new -->
 <section class="s is-tight" id="whats-new">
@@ -255,6 +200,20 @@
 
     <div class="news-grid" data-news>
 
+      <a class="news-card" href="https://doi.org/10.5281/zenodo.23333891" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-upcoming">In press</span><span class="news-date">2026</span></span>
+        <h3>A location-based model for forecasting hierarchical road network growth</h3>
+        <p>Forecasts where new roads will appear, by road class, in Bangladesh, Brazil, and Nigeria to 2050. In press at <em>Nature Communications</em>.</p>
+        <span class="news-cta">Data and code <span class="arrow">&#8599;</span></span>
+      </a>
+
+      <a class="news-card" href="https://annual.ametsoc.org/2027/" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-upcoming">Upcoming</span><span class="news-date">Jan 2027</span></span>
+        <h3>Two talks at AMS 2027</h3>
+        <p>Hazard exposure and demographic vulnerability across the United States, 2000&ndash;2025, and rapid-intensification storm hazard on the Gulf of Mexico coast. Denver, 10&ndash;14 January.</p>
+        <span class="news-cta">AMS Annual Meeting <span class="arrow">&#8599;</span></span>
+      </a>
+
       <a class="news-card" href="https://www.agu.org/annual-meeting" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-convening">Convening</span><span class="news-date">Dec 2026</span></span>
         <h3>Urban Area and Global Change</h3>
@@ -262,119 +221,48 @@
         <span class="news-cta">AGU Annual Meeting <span class="arrow">&#8599;</span></span>
       </a>
 
+      <a class="news-card" href="https://www.agu.org/annual-meeting" target="_blank" rel="noopener noreferrer">
+        <span class="news-meta"><span class="news-tag is-upcoming">Upcoming</span><span class="news-date">Dec 2026</span></span>
+        <h3>Urbanization and the isolation of protected areas</h3>
+        <p>A talk at AGU 2026 on how accelerating urbanization physically isolates the global protected-area network.</p>
+        <span class="news-cta">AGU Annual Meeting <span class="arrow">&#8599;</span></span>
+      </a>
+
       <a class="news-card" href="https://community.esri.com/en/discussion/1717070/september-2026-revealing-spatial-patterns-with-density-analysis-in-arcgis-pro" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-delivered">Delivered</span><span class="news-date">Sep 2026</span></span>
-        <h3>Revealing spatial patterns with density analysis in ArcGIS Pro</h3>
-        <p>A talk for the Esri GIS in Higher Education Chat, on getting more out of density analysis than a default heat map.</p>
+        <h3>Density analysis in ArcGIS Pro</h3>
+        <p>A talk for the Esri GIS in Higher Education Chat.</p>
         <span class="news-cta">Session thread <span class="arrow">&#8599;</span></span>
       </a>
 
       <a class="news-card" href="https://doi.org/10.1029/2026EF008207" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2026</span></span>
-        <h3>The growing threat of flooding on transportation infrastructure across Texas through 2100</h3>
-        <p>Half the state&#39;s road and rail network sits in moderate-to-very-high flood susceptibility, and the hazard surface itself shifts under every SSP pathway.</p>
+        <h3>Flooding and Texas transportation through 2100</h3>
+        <p>Half the state&#39;s road and rail network lies in moderate-to-very-high flood susceptibility.</p>
         <span class="news-cta">Earth&#39;s Future <span class="arrow">&#8599;</span></span>
       </a>
 
       <a class="news-card" href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-preprint">Preprint</span><span class="news-date">2026</span></span>
-        <h3>Two-thirds of the global protected areas are exposed to edge urbanization</h3>
-        <p>Urban land inside and around 169,997 protected areas, 1992 to 2020. The signal turns out to be at the edge rather than inside the boundary.</p>
+        <h3>Edge urbanization around protected areas</h3>
+        <p>Urban growth around 169,997 protected areas from 1992 to 2020 concentrates at the boundary.</p>
         <span class="news-cta">Read the preprint <span class="arrow">&#8599;</span></span>
       </a>
 
       <a class="news-card" href="https://doi.org/10.1016/j.biocon.2026.111731" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2026</span></span>
-        <h3>Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia</h3>
-        <p>What urban growth has cost habitat across Indonesia&#39;s 410 Key Biodiversity Areas, with Anushna Chaudhuri and Burak G&uuml;neralp.</p>
+        <h3>Urban growth and Indonesia&#39;s biodiversity</h3>
+        <p>Habitat loss to urban growth across Indonesia&#39;s 410 Key Biodiversity Areas.</p>
         <span class="news-cta">Biological Conservation <span class="arrow">&#8599;</span></span>
       </a>
 
       <a class="news-card" href="https://doi.org/10.1038/s42949-025-00308-7" target="_blank" rel="noopener noreferrer">
         <span class="news-meta"><span class="news-tag is-published">Published</span><span class="news-date">2025</span></span>
-        <h3>Urban land-change futures: current understanding, challenges, and implications</h3>
-        <p>A review of where urban land-change forecasting actually stands &mdash; 322 case study sites, and what the field still cannot answer.</p>
+        <h3>Urban land-change futures</h3>
+        <p>Where urban land-change forecasting stands, and what it still cannot answer.</p>
         <span class="news-cta">npj Urban Sustainability <span class="arrow">&#8599;</span></span>
       </a>
 
-    </div>
-  </div>
-</section>
-
-<!-- Professional summary -->
-<section class="s" id="summary">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">Professional summary</div>
-      <h2 class="section-title">Research first, <em>tools</em> second.</h2>
-    </div>
-
-        <div class="summary-grid">
-      <div>
-    <p class="summary-lead">Theories and methods to forecast urban growth and what it costs &mdash; and the production tools that carry them to the people who need the answer.</p>
-
-        <div class="prose">
-          <p>10+ years developing theories and quantitative methods for how human activity builds and reshapes the built environment &mdash; and how that environment, in turn, acts on the land, the species, and the people living with it. The work spans quality assessment of heterogeneous forecast datasets, scenario-based baseline construction, and uncertainty quantification, published across 13+ peer-reviewed articles on land change, biodiversity outcomes, sustainability implications, and climate-driven infrastructure risk.</p>
-          <p>My doctoral research produced one of the first global-scale road network growth models &mdash; work AGU&#39;s <em>Eos</em> covered on publication &mdash; and the same machinery has since gone after protected-area isolation, species-range loss, and transport exposure to flooding across Brazil, Indonesia, Nigeria, Bangladesh, and Texas. Earlier consulting work delivered environmental and social impact assessments and resettlement planning for multilateral development bank infrastructure projects, and field data collection on climate-driven displacement for an international development agency.</p>
-          <p>At Esri, I develop production spatial analysis and raster analysis tools, technical specifications and documentation, along with the data pipelines, dashboards, blogs, and hub sites that deliver analytical results to non-technical users. I hold a PhD in Geography and the GISP certification, and co-convene the AGU Urban Area and Global Change session in 2026.</p>
-        </div>
-      </div>
-
-      <figure class="summary-figure">
-        <img src="assets/research/pa-global-home.png"
-             alt="Two world maps showing urban land cover within protected area boundaries and within their 50 km periphery in 2020, with regional insets"
-             loading="lazy" />
-        <figcaption>Urban land inside 169,997 protected areas against their 50&nbsp;km periphery, 2020</figcaption>
-      </figure>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="stat-num">13<span class="unit">+</span></div>
-        <div class="stat-label">Peer-reviewed articles<br />&gt; 10 in review or prep</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">33<span class="unit">+</span></div>
-        <div class="stat-label">Conference<br />presentations</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">15<span class="unit">+</span></div>
-        <div class="stat-label">Professional blogs<br />&amp; white papers</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">5<span class="unit">+</span></div>
-        <div class="stat-label">Funded projects<br />contributed to</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="s" id="about">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">About</div>
-      <h2 class="section-title">The <em>short version.</em></h2>
-    </div>
-
-    <div class="about-grid">
-      <aside class="about-meta">
-        <dl>
-          <div class="row"><dt>Role</dt><dd>Product Engineer II, Esri</dd></div>
-          <div class="row"><dt>PhD</dt><dd>Geography, Texas A&amp;M University</dd></div>
-          <div class="row"><dt>Master&#39;s</dt><dd>Iowa State University &times;2</dd></div>
-          <div class="row"><dt>Bachelor&#39;s</dt><dd>Khulna University, Bangladesh</dd></div>
-          <div class="row"><dt>Certification</dt><dd>GISP</dd></div>
-          <div class="row"><dt>Based in</dt><dd>Redlands, California</dd></div>
-        </dl>
-      </aside>
-
-      <div class="prose">
-        <p class="dropcap">My work follows a single line of inquiry: <span class="mark">how urban expansion and road networks reshape landscapes, and what that change means for the species and people who share them</span>. Alongside the research I design and document the spatial analysis and raster analysis tooling that others use to ask questions of the same kind.</p>
-        <p>Before joining Esri in 2024 I completed a PhD in Geography at Texas A&amp;M, advised by Burak G&uuml;neralp. Earlier came two master&#39;s degrees from Iowa State — Community and Regional Planning, and Transportation — with a graduate certificate in GIS along the way, and an undergraduate degree in Urban and Rural Planning from Khulna University. The planning identity runs underneath everything I do.</p>
-        <p>Recent collaborators include Burak G&uuml;neralp, &#304;nci G&uuml;neralp, and Lee A. Fitzgerald at Texas A&amp;M, M Mahbub Hossain at the University of Houston, and the Oak Ridge National Laboratory Human Geography Group.</p>
-        <div class="prose-cta"><a href="about.html" class="btn ghost">Read the longer version <span class="arrow">&rarr;</span></a></div>
-      </div>
     </div>
   </div>
 </section>
@@ -391,37 +279,37 @@
       <a href="research.html#urban" class="research-card">
         <div class="num">I.</div>
         <h3>Urban Land Change &amp; Expansion</h3>
-        <p>Where, how fast, and at what cost the world's cities are growing. Long time-series across Bangladesh, Indonesia, and 19 world regions under SSP scenarios.</p>
+        <p>Where and how fast cities grow, from Bangladesh to 19 world regions.</p>
       </a>
       <a href="research.html#roads" class="research-card">
         <div class="num">II.</div>
         <h3>Road Network Growth Modeling</h3>
-        <p>The first global-scale road network growth model, featured by AGU's <em>Eos</em>. Forecasting where new roads will appear and what landscapes they will cross.</p>
+        <p>One of the first global-scale road growth models, covered by AGU&#39;s <em>Eos</em>.</p>
       </a>
       <a href="research.html#biodiversity" class="research-card">
         <div class="num">III.</div>
         <h3>Biodiversity &amp; Protected Areas</h3>
-        <p>How urban expansion and roads isolate protected-area networks and threatened species ranges. Brazil, Indonesia, Nigeria, Bangladesh.</p>
+        <p>How cities and roads isolate protected areas and threatened species ranges.</p>
       </a>
       <a href="research.html#environment" class="research-card">
         <div class="num">IV.</div>
-        <h3>Human–Environment <em>Interactions</em></h3>
-        <p>How human activities — settlements, roads, infrastructure — interact with biophysical systems. Where pressure accumulates, what couplings emerge, and what those imply for sustainability.</p>
+        <h3>Human&ndash;Environment <em>Interactions</em></h3>
+        <p>Where settlements and infrastructure meet hazards and ecosystems.</p>
       </a>
       <a href="research.html#health" class="research-card">
         <div class="num">V.</div>
         <h3>Health GIS</h3>
-        <p>Spatial methods applied to public health. Earlier work mapped COVID-19 spread, examined geospatial methods in research on homeless populations, and reviewed the role of GIS in pandemic decision-making.</p>
+        <p>Spatial methods for public health, from COVID-19 to access to care.</p>
       </a>
       <a href="research.html#modeling" class="research-card">
         <div class="num">VI.</div>
         <h3>Spatial <em>Modeling</em></h3>
-        <p><em>Machine learning, statistical,</em> and process-based models for spatial problems. From hedonic regression to XGBoost land-cover classification, AI-based flood susceptibility, and urban–transport coevolution.</p>
+        <p>Machine learning, statistical, and process models for spatial problems.</p>
       </a>
       <a href="research.html#gis" class="research-card">
         <div class="num">VII.</div>
         <h3>GIS &amp; <em>Geospatial Data</em></h3>
-        <p>The craft underneath the results: checking results against independently built datasets, hazard modelling that carries its own uncertainty, and measuring how well transit networks actually reach people.</p>
+        <p>Validation, uncertainty, and the data choices behind every result.</p>
       </a>
     </div>
   </div>
@@ -433,19 +321,35 @@
   <div class="container">
     <div class="section-head">
       <div class="section-label">Selected work</div>
-      <h2 class="section-title is-long">Four papers, <em>if you only read four.</em></h2>
+      <h2 class="section-title is-long">Five papers, <em>if you only read five.</em></h2>
     </div>
 
     <div class="pub-list">
       <article class="pub-item">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Two-thirds of the global protected areas are exposed to edge urbanization<span class="pub-status review">In Revision</span></div>
+          <div class="pub-title">A location-based model for forecasting hierarchical road network growth<span class="pub-status">In Press</span></div>
           <div class="pub-meta">
+            <span class="journal">Nature Communications</span><br />
+            <span class="authors">Ahasan, R., G&uuml;neralp, B., Abeer, N.</span>
+          </div>
+        </div>
+        <div class="pub-links">
+          <a href="https://github.com/rahasan36/road-growth-model" class="pub-link" target="_blank" rel="noopener noreferrer">Code &#8599;</a>
+          <a href="https://doi.org/10.5281/zenodo.23333891" class="pub-link" target="_blank" rel="noopener noreferrer">Data &#8599;</a>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Two-thirds of the global protected areas are exposed to edge urbanization<span class="pub-status review">Revision Submitted</span></div>
+          <div class="pub-meta">
+            <span class="journal">Nature Sustainability, revision submitted &middot; Preprint, Research Square</span><br />
             <span class="authors">Ahasan, R., G&uuml;neralp, B.</span>
           </div>
         </div>
-        <a href="publications.html" class="pub-link">Details &#8599;</a>
+        <a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" class="pub-link" target="_blank" rel="noopener noreferrer">Preprint &#8599;</a>
       </article>
 
       <article class="pub-item">
@@ -463,12 +367,13 @@
       <article class="pub-item">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">A spatially explicit model for forecasting hierarchical road network growth<span class="pub-status review">In Revision</span></div>
+          <div class="pub-title">Urban expansion and its impact on species ranges and Key Biodiversity Areas in Indonesia</div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., G&uuml;neralp, B., Abeer, N.</span>
+            <span class="journal">Biological Conservation, 316, 111731</span><br />
+            <span class="authors">Chaudhuri, A., Ahasan, R., G&uuml;neralp, B.</span>
           </div>
         </div>
-        <a href="publications.html" class="pub-link">Details &#8599;</a>
+        <a href="https://doi.org/10.1016/j.biocon.2026.111731" class="pub-link" target="_blank" rel="noopener noreferrer">DOI &#8599;</a>
       </article>
 
       <article class="pub-item">
@@ -485,7 +390,7 @@
     </div>
 
     <div class="u-mt-48 u-right">
-      <a href="publications.html" class="btn ghost">All 19 publications <span class="arrow">&rarr;</span></a>
+      <a href="publications.html" class="btn ghost">View all publications <span class="arrow">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -498,27 +403,21 @@
       <h2 class="section-title is-long">Three habits <em>that survive every project.</em></h2>
     </div>
 
-    <p class="summary-lead">Before the method, the question I keep coming back to is <em>why this, and what follows from it</em> &mdash; who the answer is for, what decision it could change, and what it would cost to be wrong.</p>
-
-    <div class="prose u-mb-64">
-      <p>A global model is only interesting if someone can act on it. So the work starts with the implication rather than the technique: if urban growth is pressing in on two-thirds of the world&#39;s protected areas, that is a conservation-planning problem before it is a statistics problem. If half of Texas&#39; road and rail network sits in moderate-to-high flood susceptibility, that is a maintenance-budget problem. Keeping that end in view is what decides which version of a question is worth asking, and it is why the three habits below matter &mdash; each one protects the answer at the point where it would otherwise mislead someone.</p>
-    </div>
-
     <div class="tools-grid">
       <div class="tool-card">
         <div class="tool-num">01</div>
         <h4>Take spatial structure seriously</h4>
-        <p>Neighbours are not independent observations. Where things sit relative to each other is usually the finding, not a nuisance to correct away — a map of where an effect concentrates tells me more than a single coefficient averaged over everywhere.</p>
+        <p>Nearby places are not independent observations, and where an effect concentrates is often the finding itself.</p>
       </div>
       <div class="tool-card">
         <div class="tool-num">02</div>
         <h4>Report the uncertainty honestly</h4>
-        <p>When the sample runs to every protected area on Earth, almost anything comes out statistically significant, so significance alone says nothing. How big the effect is, how confident we can be, and whether it survives a change of assumptions all go in alongside the headline number.</p>
+        <p>Effect sizes, confidence, and sensitivity to assumptions travel with every headline number.</p>
       </div>
       <div class="tool-card">
         <div class="tool-num">03</div>
-        <h4>Validate against something you didn&#39;t build</h4>
-        <p>One land-cover product is a hypothesis. I check results against independently produced datasets, compare model output to FEMA hazard maps and ROC curves, and say plainly where they disagree rather than picking the version that flatters the argument.</p>
+        <h4>Validate against something I did not build</h4>
+        <p>Results are checked against independently produced datasets, and disagreements are reported.</p>
       </div>
     </div>
   </div>
@@ -577,35 +476,7 @@
       <h2 class="section-title">Send a <em>note.</em></h2>
     </div>
 
-    <p class="interest-lead">Most of what I work on comes back to one question &mdash; <em>how do cities reshape the planet?</em> &mdash; approached from four directions. If your question sits near any of these, I would like to hear about it.</p>
-
-    <div class="interest-grid">
-      <div class="interest">
-        <div class="interest-num">01</div>
-        <h4>Urban land change at local, regional, and global scale</h4>
-        <p>Where cities have already grown and where they are going next, reconstructed from multi-decadal land-cover series and projected under SSP scenarios &mdash; from single metropolitan areas through world regions to the global total. Each scale answers a different question, and I care about keeping those differences visible rather than averaging them into one curve.</p>
-      </div>
-
-      <div class="interest">
-        <div class="interest-num">02</div>
-        <h4>Road networks as a driver, not a backdrop</h4>
-        <p>Transportation usually enters land-change models as a fixed input. My work treats road growth as something to forecast in its own right, because knowing where new roads appear tells you where forests open and where new hazard exposure accumulates.</p>
-      </div>
-
-      <div class="interest">
-        <div class="interest-num">03</div>
-        <h4>Biodiversity and protected-area integrity</h4>
-        <p>What urban and road expansion do to species ranges, Key Biodiversity Areas, and the landscapes immediately outside protected boundaries. Increasingly the interesting signal is at the edge rather than inside the line on the map.</p>
-      </div>
-
-      <div class="interest">
-        <div class="interest-num">04</div>
-        <h4>Hazard exposure and spatial method</h4>
-        <p>How built systems sit relative to flooding and other hazards, and the methodological questions underneath &mdash; scale, product choice, validation, and how to report uncertainty when the sample is large enough to make everything significant.</p>
-      </div>
-    </div>
-
-    <p class="interest-note">Beyond the areas above, I am glad to discuss potential collaborations, questions about published work, the graduate school and early-career research journey, and Earth and environmental science research more broadly. A short note on your question and the data behind it helps me reply usefully.</p>
+    <p class="interest-lead">Questions about the work, collaboration ideas, or talk invitations are welcome. Send a note below, or write to <a href="mailto:rakibulahasan@gmail.com">rakibulahasan@gmail.com</a>.</p>
 
     <form class="contact-form" action="https://formspree.io/f/mwvybwwn" method="POST">
       <div class="form-row">
@@ -650,39 +521,42 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-prompt">
-        Reach out about <em>research, collaboration,</em> or <a href="index.html#reach-out">an idea worth discussing</a>.
+        Reach out about <em>research, collaboration,</em> or <a href="#reach-out">an idea worth discussing</a>.
       </div>
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
           <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
           <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
-        <h5>Code &amp; Writing</h5>
+        <h5>Elsewhere</h5>
         <ul>
-          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:rakibulahasan@gmail.com">Email</a></li>
+          <li><a href="https://www.esri.com/arcgis-blog/author/rahasan" target="_blank" rel="noopener noreferrer">Technical blogs</a></li>
+          <li><a href="travel.html">Travel diaries</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <span>© 2026 Rakibul Ahasan</span>
-      <span>Last updated · May 2026</span>
+      <span>&copy; 2026 Rakibul Ahasan</span>
+      <span>Last updated &middot; November 2026</span>
     </div>
   </div>
 </footer>
 
 
-<script src="section-nav.js?v=20260901a"></script>
+<script src="section-nav.js?v=20261124a"></script>
 
-<script src="lightbox.js?v=20260901a"></script>
+<script src="lightbox.js?v=20261124a"></script>
 
-<script src="form.js?v=20260901a"></script>
+<script src="form.js?v=20261124a"></script>
 
-<script src="whats-new.js?v=20260901a"></script>
+<script src="whats-new.js?v=20261124b"></script>
 
 </body>
 </html>

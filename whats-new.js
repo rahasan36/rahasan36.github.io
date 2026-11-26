@@ -1,20 +1,23 @@
 /* ====================================================
    WHAT'S NEW
    ----------------------------------------------------
-   Shows three announcements at a time. Every entry lives
-   in the HTML, so without JavaScript (and for crawlers)
-   the full list is simply visible.
+   Shows three announcements at a time, and only the first
+   nine cards in the HTML (three pages). Add a new card at
+   the top and the oldest one beyond nine drops out of view
+   on its own; delete it from the HTML when convenient.
 
-   Add a fourth card and this starts rotating through
-   them in pages of three, with dots to jump between
-   pages. Rotation pauses on hover and on keyboard focus,
+   Pages rotate, with a one-inch bar below split evenly
+   among the pages for jumping between them. Rotation pauses on hover and on keyboard focus,
    and is disabled under prefers-reduced-motion.
    ==================================================== */
 (function () {
   var grid = document.querySelector('[data-news]');
   if (!grid) return;
 
-  var cards = Array.prototype.slice.call(grid.children);
+  var MAX = 9;
+  var all = Array.prototype.slice.call(grid.children);
+  all.slice(MAX).forEach(function (c) { c.hidden = true; });
+  var cards = all.slice(0, MAX);
   var PER = 3;
   var pages = Math.ceil(cards.length / PER);
   if (pages < 2) return;                       // three or fewer: nothing to rotate

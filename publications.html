@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260901a" />
+  <link rel="stylesheet" href="styles.css?v=20261124c" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
   <script type="application/ld+json">
@@ -82,7 +82,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260901a"></script>
+<script src="orb.js?v=20261124a"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -90,10 +90,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="primary" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="research.html">Research</a>
       <a href="publications.html" class="active">Publications</a>
       <a href="cv.html">CV</a>
+      <a href="about.html">About</a>
       <a href="travel.html">Travel</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -110,7 +110,8 @@
 </nav>
 
 <section class="page-header">
-  <div class="page-photo" aria-hidden="true"></div>
+  <div class="page-photo photo-coexposure" aria-hidden="true"></div>
+  <p class="page-photo-cap" aria-hidden="true">National road exposure to river and coastal flooding</p>
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>Publications</div>
     <h1 class="page-title rise d1"><em>Publications.</em></h1>
@@ -137,35 +138,28 @@
         <div class="pub-filter" role="tablist" data-filter-group="status">
           <button class="active" data-filter="all">All <span class="count"></span></button>
           <button data-filter="published">Published <span class="count"></span></button>
+          <button data-filter="press">Accepted, In Press <span class="count"></span></button>
           <button data-filter="review">Under Review <span class="count"></span></button>
           <button data-filter="prep">In Prep <span class="count"></span></button>
-          <button data-filter="wishful">Wishful Thinking <span class="count"></span></button>
         </div>
       </aside>
 
       <div class="pub-list-wrap">
         <div class="pub-list">
 
-      <article class="pub-item" data-tags="urban roads biodiv environment" data-status="review" id="y2026">
+      <article class="pub-item" data-tags="roads modeling" data-status="press" id="y2026">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Combined impacts of road development and urban expansion on biodiversity and habitats: insights from Brazil, Indonesia, and Nigeria<span class="pub-status review">Under Review</span></div>
+          <div class="pub-title">A location-based model for forecasting hierarchical road network growth<span class="pub-status">In Press</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., Güneralp, B., Fitzgerald, L.</span>
+            <span class="journal">Nature Communications</span><br />
+            <span class="authors">Ahasan, R., Güneralp, B., Abeer, N.</span>
           </div>
         </div>
-        <span class="pub-link is-status">Under Review</span>
-      </article>
-
-      <article class="pub-item" data-tags="urban biodiv" data-status="review">
-        <div class="pub-year">2026</div>
-        <div>
-          <div class="pub-title">Two-thirds of the global protected areas are exposed to edge urbanization<span class="pub-status review">In Revision</span></div>
-          <div class="pub-meta">
-            <span class="authors">Ahasan, R., Güneralp, B.</span>
-          </div>
+        <div class="pub-links">
+          <a href="https://github.com/rahasan36/road-growth-model" class="pub-link" target="_blank" rel="noopener noreferrer">Code ↗</a>
+          <a href="https://doi.org/10.5281/zenodo.23333891" class="pub-link" target="_blank" rel="noopener noreferrer">Data ↗</a>
         </div>
-        <a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer" class="pub-link">Preprint ↗</a>
       </article>
 
       <article class="pub-item" data-tags="roads environment" data-status="published">
@@ -180,23 +174,48 @@
         <a href="https://doi.org/10.1029/2026EF008207" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="roads modeling" data-status="review">
+      <article class="pub-item" data-tags="urban biodiv" data-status="review">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">A spatially explicit model for forecasting hierarchical road network growth<span class="pub-status review">In Revision</span></div>
+          <div class="pub-title">Two-thirds of the global protected areas are exposed to edge urbanization<span class="pub-status review">Revision Submitted</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., Güneralp, B., Abeer, N.</span>
+            <span class="journal">Nature Sustainability</span><br />
+            <span class="authors">Ahasan, R., Güneralp, B.</span>
           </div>
         </div>
-        <span class="pub-link is-status">In Revision</span>
+        <a href="https://doi.org/10.21203/rs.3.rs-9323492/v1" target="_blank" rel="noopener noreferrer" class="pub-link">Preprint ↗</a>
       </article>
 
-      <article class="pub-item" data-tags="health roads urban modeling" data-status="prep">
+      <article class="pub-item" data-tags="urban roads biodiv environment" data-status="review">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Coupled urban and road network growth will reshape healthcare access for 1.6 billion people in India and Bangladesh by 2050<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-title">Coupled urban–road growth reveals underestimated tropical biodiversity loss<span class="pub-status review">Under Review</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., et al.</span>
+            <span class="journal">Nature Sustainability</span><br />
+            <span class="authors">Ahasan, R., Güneralp, B., Fitzgerald, L.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">Under Review</span>
+      </article>
+
+      <article class="pub-item" data-tags="urban biodiv" data-status="review">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Mapping hidden urban exposure around Bangladesh&#39;s protected areas and species habitats<span class="pub-status review">Under Review</span></div>
+          <div class="pub-meta">
+            <span class="journal">iScience</span><br />
+            <span class="authors">Ahasan, R., Das, P.C., Chowdhury, S.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">Under Review</span>
+      </article>
+
+      <article class="pub-item" data-tags="roads environment modeling" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">A global co-exposure analysis of river and coastal flood risk to road infrastructure<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Güneralp, İ., Güneralp, B.</span>
           </div>
         </div>
         <span class="pub-link is-status">In Prep</span>
@@ -205,31 +224,9 @@
       <article class="pub-item" data-tags="urban modeling" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Global ensemble forecasts reveal accelerating urban land-cover conversion and high uncertainty<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-title">Divergent urban boundaries and high spatial uncertainty in global urban land projections<span class="pub-status prep">In Prep</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., et al.</span>
-          </div>
-        </div>
-        <span class="pub-link is-status">In Prep</span>
-      </article>
-
-      <article class="pub-item" data-tags="environment modeling" data-status="prep">
-        <div class="pub-year">2026</div>
-        <div>
-          <div class="pub-title">Spatial analysis of built environment and socioeconomic exposure to flooding in Nigeria<span class="pub-status prep">In Prep</span></div>
-          <div class="pub-meta">
-            <span class="authors">Scardino, A., et al.</span>
-          </div>
-        </div>
-        <span class="pub-link is-status">In Prep</span>
-      </article>
-
-      <article class="pub-item" data-tags="roads environment modeling" data-status="prep">
-        <div class="pub-year">2026</div>
-        <div>
-          <div class="pub-title">Probabilistic assessment of critical facility access under flood susceptibility and uncertainty<span class="pub-status prep">In Prep</span></div>
-          <div class="pub-meta">
-            <span class="authors">Ahasan, R., et al.</span>
+            <span class="authors">Ahasan, R., Güneralp, B.</span>
           </div>
         </div>
         <span class="pub-link is-status">In Prep</span>
@@ -238,9 +235,31 @@
       <article class="pub-item" data-tags="urban biodiv" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Historical and forecasted urban expansion and biodiversity loss in Bangladesh through 2050<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-title">The geography of threatened species exposure to tropical urban growth<span class="pub-status prep">In Prep</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., et al.</span>
+            <span class="authors">Ahasan, R., Güneralp, B., Chowdhury, S., Fitzgerald, L.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">In Prep</span>
+      </article>
+
+      <article class="pub-item" data-tags="roads environment modeling" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Critical facility access under uncertain flood susceptibility in Bangladesh<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Güneralp, İ., Güneralp, B.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">In Prep</span>
+      </article>
+
+      <article class="pub-item" data-tags="health modeling" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">GeoAI and health resources allocation: a decision science framework and research agenda<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Hossain, M.M.</span>
           </div>
         </div>
         <span class="pub-link is-status">In Prep</span>
@@ -249,7 +268,40 @@
       <article class="pub-item" data-tags="environment modeling" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Fixed storm corridors over a warming ocean: rapid-intensification hazard and coastal exposure in the Gulf of Mexico<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-title">Rapid intensification in the Gulf of Mexico tracks daily upper-ocean heat under the storm<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Mahmud, S., Chatterjee, S., Noman, N.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">In Prep</span>
+      </article>
+
+      <article class="pub-item" data-tags="urban environment" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Gulf coast settlement moved while the hurricane corridor stayed in place<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Mahmud, S., Chatterjee, S., Noman, N.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">In Prep</span>
+      </article>
+
+      <article class="pub-item" data-tags="environment" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Tracking the evolution of hazard exposure and demographic vulnerability across the United States between 2000 and 2025<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-meta">
+            <span class="authors">Ahasan, R., Chatterjee, S., Noman, N.</span>
+          </div>
+        </div>
+        <span class="pub-link is-status">In Prep</span>
+      </article>
+
+      <article class="pub-item" data-tags="health roads urban modeling" data-status="prep">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Coupled urban and road network growth will reshape healthcare access for 1.6 billion people in India and Bangladesh by 2050<span class="pub-status prep">In Prep</span></div>
           <div class="pub-meta">
             <span class="authors">Ahasan, R., et al.</span>
           </div>
@@ -268,12 +320,12 @@
         <span class="pub-link is-status">In Prep</span>
       </article>
 
-      <article class="pub-item" data-tags="urban biodiv" data-status="prep">
+      <article class="pub-item" data-tags="environment modeling" data-status="prep">
         <div class="pub-year">2026</div>
         <div>
-          <div class="pub-title">Urban scaling drives disproportionate habitat loss across conservation landscapes<span class="pub-status prep">In Prep</span></div>
+          <div class="pub-title">Spatial analysis of built environment and socioeconomic exposure to flooding in Nigeria<span class="pub-status prep">In Prep</span></div>
           <div class="pub-meta">
-            <span class="authors">Ahasan, R., et al.</span>
+            <span class="authors">Scardino, A., et al.</span>
           </div>
         </div>
         <span class="pub-link is-status">In Prep</span>
@@ -399,7 +451,6 @@
         <a href="https://doi.org/10.1016/j.hlpt.2020.11.009" class="pub-link" target="_blank" rel="noopener noreferrer">DOI ↗</a>
       </article>
 
-
       <article class="pub-item" data-tags="roads" data-status="published">
         <div class="pub-year">2021</div>
         <div>
@@ -441,34 +492,37 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-prompt">
-        Reach out about <em>research, collaboration,</em> or <a href="index.html#reach-out">an idea worth discussing</a>.
+        Reach out about <em>research, collaboration,</em> or <a href="contact.html#note">an idea worth discussing</a>.
       </div>
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
           <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
           <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
-        <h5>Code &amp; Writing</h5>
+        <h5>Elsewhere</h5>
         <ul>
-          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:rakibulahasan@gmail.com">Email</a></li>
+          <li><a href="https://www.esri.com/arcgis-blog/author/rahasan" target="_blank" rel="noopener noreferrer">Technical blogs</a></li>
+          <li><a href="travel.html">Travel diaries</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <span>© 2026 Rakibul Ahasan</span>
-      <span>Last updated · May 2026</span>
+      <span>&copy; 2026 Rakibul Ahasan</span>
+      <span>Last updated &middot; November 2026</span>
     </div>
   </div>
 </footer>
 
-<script src="pub-filter.js?v=20260901a"></script>
+<script src="pub-filter.js?v=20261124a"></script>
 
-<script src="section-nav.js?v=20260901a"></script>
+<script src="section-nav.js?v=20261124a"></script>
 
 </body>
 </html>

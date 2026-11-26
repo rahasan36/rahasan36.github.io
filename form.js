@@ -86,12 +86,12 @@
             var msg = (payload && payload.errors && payload.errors.length)
               ? payload.errors.map(function (x) { return x.message; }).join(', ')
               : 'Something went wrong sending that.';
-            show('error', 'Not sent', msg + ' You can email rahasan@esri.com instead.', true);
+            show('error', 'Not sent', msg + ' You can email rakibulahasan@gmail.com instead.', true);
           });
         }
       }).catch(function () {
         show('error', 'Not sent',
-             'That did not go through — check your connection, or email rahasan@esri.com instead.', true);
+             'That did not go through — check your connection, or email rakibulahasan@gmail.com instead.', true);
       }).then(function () {
         if (button) { button.disabled = false; button.innerHTML = original; }
       });

@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io https://cloud.umami.is https://api-gateway.umami.dev; form-action https://formspree.io; base-uri 'self'; object-src 'none'; frame-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="stylesheet" href="styles.css?v=20260901a" />
+  <link rel="stylesheet" href="styles.css?v=20261124c" />
   <!-- Umami: cookieless analytics, no consent banner required -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="e248c6ed-f16d-45dd-a9fe-fede9e4f2961"></script>
   <script type="application/ld+json">
@@ -81,7 +81,7 @@
 
 <div class="orb" aria-hidden="true"></div>
 
-<script src="orb.js?v=20260901a"></script>
+<script src="orb.js?v=20261124a"></script>
 
 <header class="site">
   <div class="container header-row">
@@ -89,10 +89,10 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="primary" id="primary-nav" aria-label="Primary">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
+      <a href="about.html" class="active">About</a>
       <a href="travel.html">Travel</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -109,11 +109,11 @@
     <a href="#outside" data-target="outside"><span class="label">Outside work</span><span class="tick" aria-hidden="true"></span></a>
 </nav>
 <section class="page-header">
-  <div class="page-photo" aria-hidden="true"></div>
+  <div class="page-photo photo-hooding" aria-hidden="true"></div>
   <div class="container">
     <div class="crumbs"><a href="index.html">Index</a><span class="sep">/</span>About</div>
-    <h1 class="page-title is-long rise d1">A planner with a PhD in <em>geography</em>, now doing <em>product design and development</em>.</h1>
-    <p class="page-lede rise d2">Planning education in Bangladesh and the United States, hands-on practice and experience at <a href="https://www.iastate.edu" target="_blank" rel="noopener noreferrer">Iowa State</a>, a turn to geography and urban systems at <a href="https://www.tamu.edu" target="_blank" rel="noopener noreferrer">Texas A&amp;M</a>, and now spatial analysis and data science R&amp;D at <a href="https://www.esri.com" target="_blank" rel="noopener noreferrer">Esri</a> in California, the grandest institution in the field. One question throughout: how settlements, roads, and ecosystems change together.</p>
+    <h1 class="page-title is-long rise d1">A planner who became a <em>geographer</em>.</h1>
+    <p class="page-lede rise d2">Planning education in Bangladesh and the United States, a PhD in geography at <a href="https://www.tamu.edu" target="_blank" rel="noopener noreferrer">Texas A&amp;M</a>, and research and development at <a href="https://www.esri.com" target="_blank" rel="noopener noreferrer">Esri</a>. One question throughout: how settlements, roads, and ecosystems change together.</p>
   </div>
 </section>
 
@@ -136,9 +136,9 @@
       <div class="prose">
 
         <div class="about-block" id="overview">
-          <p class="dropcap">My work follows a single line of inquiry: <span class="mark">how urban expansion and road networks reshape landscapes, and what that change means for the species and people who share them</span>. Alongside the research I design and document the spatial analysis and raster analysis tooling that others use to ask questions of the same kind.</p>
+          <p>My work follows one line of inquiry: <span class="mark">how urban expansion and road networks reshape landscapes, and what that change means for the species and people who share them</span>.</p>
 
-          <p>Methodologically my work sits at the convergence of <em>land change modeling, machine learning, statistical modeling,</em> and large-scale spatial analysis. The common thread is a preference for models that take spatial structure seriously, communicate uncertainty honestly, and stay interpretable enough that someone other than the modeler can use them.</p>
+          <p>Methodologically, it combines <em>land change modeling, machine learning, statistical modeling,</em> and large-scale spatial analysis. I prefer models that take spatial structure seriously, report uncertainty honestly, and stay interpretable to people other than the modeler.</p>
 
           <p>Recent collaborators include Burak G&uuml;neralp, &#304;nci G&uuml;neralp, and Lee A. Fitzgerald at Texas A&amp;M, M Mahbub Hossain at the University of Houston, and the Oak Ridge National Laboratory Human Geography Group. I co-convene the AGU Urban Area and Global Change session in 2026.</p>
         </div>
@@ -146,41 +146,48 @@
         <div class="about-block" id="esri">
           <h3>Building the tools at <em>Esri</em></h3>
           <div class="when">Product Engineer II &middot; Redlands, California &middot; 2024 &ndash; present</div>
-          <p>I first heard the name Esri in 2011, as a freshman in Bangladesh, back when ArcGIS Pro did not exist and GIS was more or less synonymous with ArcMap. Eleven years later, driving to Houston with my wife, an email arrived asking about my availability to interview for a summer internship. I nearly took the next exit to answer it there and then. The offer came the following week, and a long-held ambition stopped being hypothetical.</p>
-          <p>What surprised me that summer was how much I enjoyed the other side of the glass. Having spent nearly my entire adult life inside academic institutions, I expected to miss the research. Instead I found the making of the thing absorbing in its own right &mdash; how a capability is conceived, how a parameter gets its name, how an idea becomes something documented, tested, and handed to a stranger.</p>
-          <p>I returned full time in January 2024 and now work in geospatial R&amp;D, applying spatial analysis and raster analysis to questions about urban planning, service delivery, and beyond. It is a different kind of reach from publishing a paper: what I help design and document ends up with millions of users worldwide, across government, utilities, conservation, industry, and research, pointed at problems I will never hear about. That changes what a method has to withstand. Something that works in your own notebook, on your own data, has to survive a different dataset, a different question, and no patience for your assumptions.</p>
+          <p>I first heard of Esri in 2011, as a first-year student in Bangladesh, when GIS meant ArcMap. Eleven years later, while driving to Houston with my wife, I received an email inviting me to interview for a summer internship. The offer came the following week.</p>
+          <p>That summer I found that I enjoyed building as much as researching: how a capability is conceived, how a parameter gets its name, and how an idea becomes something documented, tested, and handed to a stranger.</p>
+          <p>I returned full time in January 2024 and work in geospatial research and development on spatial and raster analysis. What I help design reaches a large user base in government, utilities, conservation, industry, and research.</p>
+          <p>That reach raises the bar for a method. It has to hold up on data and questions its designer never saw, and the same standard now shapes how I build and validate the models in my own research.</p>
         </div>
 
         <div class="about-block" id="doctorate">
           <h3>The doctoral years at <em>Texas A&amp;M</em></h3>
           <div class="when">PhD in Geography &middot; Texas A&amp;M University &middot; 2019 &ndash; 2024</div>
-          <p>I completed my PhD at Texas A&amp;M under Burak G&uuml;neralp. The dissertation produced one of the first global-scale road network growth models &mdash; calibrated against historical road expansion, projected forward under multiple development scenarios &mdash; and AGU&#39;s <em>Eos</em> magazine covered it on publication.</p>
-          <p>What I valued most was the range. Over five years the projects ran from the thermal environment of a single city to the entire terrestrial protected-area network, and the methods had to stretch to match: hazard models that carry their own uncertainty, machine learning for reading land cover from satellite imagery, spatial statistics for global pattern, and process models for how cities and their transport networks grow together. Few graduate students get to move across that many problems, and each one left a technique behind that the next could use.</p>
-          <p>Working at the grandest scale available &mdash; every protected area on Earth, the global road network, a thirty-year land-cover record &mdash; teaches you quickly which questions survive the jump from a case study and which quietly fall apart on the way up. It also came with the chance to teach GIS at undergraduate and graduate level and to mentor fourteen students through their own spatial analysis and habitat-change work, which remains among the more rewarding parts of the job.</p>
-          <p>But College Station gave me something a transcript does not record. The first sign was <em>Howdy</em>. Every class opened with it, and every function after that, formal or informal &mdash; and for a while I found it genuinely strange. It took a while to stop hearing it as a performance and start hearing it as what it is: a greeting an entire campus actually means. After that the rest followed. It made me an <em>Aggie</em>, and there that is not a figure of speech. I learned the traditions from the inside &mdash; the Ring you earn rather than simply buy, the 12th Man standing for the length of a game, Muster and the names read out at it, the <em>Gig &#39;em</em> thumb and the <em>Whoop!</em> that leaves your mouth before you have decided to say it. I did not expect, arriving from Bangladesh, to be claimed by a place quite so completely. Now I bleed maroon. The <em>Howdy</em> has gone involuntary &mdash; it comes out whenever I spot another Aggie anywhere in the world, whether that is on campus in College Station, somewhere out in the Rockies, or at the top of Independence Pass. I am an Aggie for the rest of my life.</p>
+          <p>I completed my PhD under Burak G&uuml;neralp. The dissertation produced one of the first global-scale road network growth models, calibrated against historical road expansion and projected under several development scenarios. AGU&#39;s <em>Eos</em> magazine covered the work.</p>
+          <p>What I valued most was the range. The projects ran from the thermal environment of a single city to the entire terrestrial protected area network.</p>
+          <p>The methods had to stretch to match: hazard models that carry their own uncertainty, machine learning for land cover, spatial statistics for global patterns, and process models of how cities and transport networks grow together.</p>
+          <p>Working at the global scale taught me which questions survive the jump from a case study and which fall apart. I also taught GIS at the undergraduate and graduate levels and mentored fourteen students in spatial analysis and habitat change research.</p>
+          <p>College Station also gave me something a transcript does not record. <em>Howdy</em> took a while to stop sounding like a performance and start sounding like what it is: a greeting an entire campus means.</p>
+          <p>I learned the traditions from the inside, from the Ring to Muster, and I did not expect to be claimed by a place so completely. I am an Aggie for life.</p>
         </div>
 
         <div class="about-block" id="iowa">
           <h3>Two degrees in <em>Iowa</em></h3>
           <div class="when">MCRP, MSc, Graduate Certificate in GIS &middot; Iowa State University &middot; 2017 &ndash; 2019</div>
-          <p>Before Texas came Ames: a master&#39;s in Community and Regional Planning, a second in Transportation, and a graduate certificate in GIS along the way. I taught GIS labs in Community and Regional Planning and, as a teaching assistant, supervised the changeover from ArcMap to ArcGIS Pro across the undergraduate and graduate sequences &mdash; which is a specific kind of education in how software actually gets adopted.</p>
-          <p>I also worked as a GIS technician at the Iowa State GIS Facility, building and validating spatial datasets for the <em>Agricultural Conservation Planning Framework</em> across Iowa, Indiana, and Ohio, and communicating what we found to USDA and Iowa DNR. That job taught me more about data preparation than any course did, and the habit of distrusting a dataset until I have checked it against another one dates from there.</p>
+          <p>Before Texas came Ames: a master&#39;s in Community and Regional Planning, a second in Transportation, and a graduate certificate in GIS.</p>
+          <p>I taught GIS labs in Community and Regional Planning and led the move from ArcMap to ArcGIS Pro across the undergraduate and graduate courses. It was a practical lesson in how software is adopted.</p>
+          <p>As a GIS technician at the Iowa State GIS Facility, I built and validated spatial datasets for the <em>Agricultural Conservation Planning Framework</em> across Iowa, Indiana, and Ohio, and reported findings to USDA and Iowa DNR.</p>
+          <p>That job taught me more about data preparation than any course did. My habit of checking one dataset against another dates from there.</p>
         </div>
 
         <div class="about-block" id="khulna">
           <h3>Where it started: <em>Khulna</em></h3>
           <div class="when">BURP and MURP &middot; Khulna University, Bangladesh</div>
-          <p>My undergraduate and master&#39;s degrees in Urban and Rural Planning are both from Khulna University. I was the first student in the discipline to earn a perfect 4.00 in a semester, and graduated top of my batch with a 3.89 CGPA.</p>
-          <p>Planning in Bangladesh is not an abstract exercise. You are working on cities growing faster than the infrastructure serving them, in a delta that floods. Questions about accessibility, transport equity, and hazard exposure were not research topics there; they were the conditions. That is where the thread running through everything since begins &mdash; my earliest papers were on public transport performance and metro rail accessibility in Dhaka, and on housing affordability measured against the planning theory meant to deliver it.</p>
-          <p>Staying was the comfortable option. But graduate study in the United States had been the plan for years, and I left for it &mdash; the American dream, named plainly. The planning identity came along and still runs underneath all of it: I remain more interested in what a model implies for a decision than in the model itself.</p>
+          <p>My undergraduate and master&#39;s degrees in Urban and Rural Planning are from Khulna University. I was the first student in the discipline to earn a perfect 4.00 in a semester, and I graduated first in my class with a 3.89 CGPA.</p>
+          <p>Planning in Bangladesh is not abstract. Cities grow faster than the infrastructure that serves them, in a delta that floods. Accessibility, transport equity, and hazard exposure were daily conditions, not research topics.</p>
+          <p>My earliest papers, on public transport performance and metro rail accessibility in Dhaka, began the thread that runs through my work today.</p>
+          <p>Graduate study in the United States had been the plan for years, and I left to pursue it. The planning identity came with me: I remain more interested in what a model implies for a decision than in the model itself.</p>
         </div>
 
         <div class="about-block" id="outside">
           <h3>Away from the <em>screen</em></h3>
           <div class="when">Travel, photography, and football</div>
-          <p>I am Bangladeshi, married, and live in the United States. My wife and I travel whenever we can, mostly toward nature &mdash; Glacier, Yellowstone and Grand Teton, the Colorado Plateau, Big Bend and the parks of West Texas and New Mexico. Visiting all of the National Parks before I turn forty is a genuine item on the list, not a figure of speech. There are <a href="travel.html">photographs from some of it</a>.</p>
-          <p>Photography is the other half of that habit. Carrying a camera changes how you look at a landscape: you start noticing light, structure, and the edges of things, which is not so far from what I do with a land-cover raster, only slower and in better weather.</p>
-          <p>I follow sport closely and football above all &mdash; the watching kind, with the arguments that come with it. It is the one domain where I am content to hold strong opinions I cannot support with data.</p>
+          <p>I am Bangladeshi, married, and live in the United States. My wife and I travel whenever we can, mostly to national parks: Glacier, Yellowstone, Grand Teton, the Colorado Plateau, and Big Bend.</p>
+          <p>Visiting every national park before I turn forty is a real goal. There are <a href="travel.html">photographs from some of the trips</a>.</p>
+          <p>Photography is the other half of that habit. A camera makes you notice light, structure, and edges, which is not far from reading a land cover raster, only slower and in better weather.</p>
+          <p>I follow football closely. It is the one subject where I hold strong opinions I cannot support with data.</p>
         </div>
 
       </div>
@@ -192,31 +199,34 @@
   <div class="container">
     <div class="contact-grid">
       <div class="contact-prompt">
-        Reach out about <em>research, collaboration,</em> or <a href="index.html#reach-out">an idea worth discussing</a>.
+        Reach out about <em>research, collaboration,</em> or <a href="contact.html#note">an idea worth discussing</a>.
       </div>
       <div class="contact-col">
         <h5>Profiles</h5>
         <ul>
           <li><a href="https://scholar.google.com/citations?user=SDBFKlsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
           <li><a href="https://orcid.org/0000-0003-4772-8499" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           <li><a href="https://www.researchgate.net/profile/Rakibul-Ahasan" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
           <li><a href="https://www.linkedin.com/in/rakibulahasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>
       <div class="contact-col">
-        <h5>Code &amp; Writing</h5>
+        <h5>Elsewhere</h5>
         <ul>
-          <li><a href="https://github.com/rahasan36" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="mailto:rakibulahasan@gmail.com">Email</a></li>
+          <li><a href="https://www.esri.com/arcgis-blog/author/rahasan" target="_blank" rel="noopener noreferrer">Technical blogs</a></li>
+          <li><a href="travel.html">Travel diaries</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <span>© 2026 Rakibul Ahasan</span>
-      <span>Last updated · May 2026</span>
+      <span>&copy; 2026 Rakibul Ahasan</span>
+      <span>Last updated &middot; November 2026</span>
     </div>
   </div>
 </footer>
 
-<script src="section-nav.js?v=20260901a"></script>
+<script src="section-nav.js?v=20261124a"></script>
 </body>
 </html>
