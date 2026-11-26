@@ -23,7 +23,8 @@ html { scroll-behavior: smooth; }
   --my: 50%;
 
   --display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
-  --body:    'Bricolage Grotesque', 'Helvetica Neue', sans-serif;
+  /* Avenir Next where the device has it (Apple), Nunito Sans (a free, close match) everywhere else */
+  --body:    'Avenir Next', 'Avenir', 'Nunito Sans', 'Helvetica Neue', sans-serif;
   --mono:    'JetBrains Mono', ui-monospace, 'Menlo', monospace;
 }
 
@@ -199,7 +200,7 @@ nav.primary a.active { color: var(--accent); }
   position: relative;
   font-size: 22px;
   line-height: 1.55;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-mute);
   max-width: 900px;
   margin-bottom: 36px;
@@ -266,7 +267,7 @@ h1.hero-name em {
 .hero-sub {
   font-family: var(--body);
   font-size: clamp(19px, 1.75vw, 25px);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 860px;
   color: var(--cream-soft);
   line-height: 1.4;
@@ -284,7 +285,7 @@ h1.hero-name em {
   position: relative;
   font-size: 17px;
   line-height: 1.62;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-mute);
   max-width: 760px;
   margin-bottom: 52px;
@@ -458,7 +459,7 @@ h1.hero-name em {
 .page-lede {
   font-family: var(--body);
   font-size: clamp(19px, 2vw, 24px);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 760px;
   color: var(--cream-soft);
   line-height: 1.45;
@@ -578,7 +579,7 @@ h1.hero-name em {
   font-family: var(--body);
   font-size: 13px;
   color: var(--cream-mute);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 .latest .latest-meta em {
@@ -711,7 +712,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   line-height: 1.65;
   margin-bottom: 1.4em;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
 }
 .prose p em {
   font-family: var(--display);
@@ -733,7 +734,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   font-size: 18px;
   line-height: 1.7;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
 }
 .prose li { margin-bottom: 0.5em; }
 /* research themes: a short intro, then scannable points */
@@ -843,7 +844,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   color: var(--cream-soft);
   line-height: 1.6;
   max-width: 42ch;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .pub-list { border-top: 1px solid var(--cream-mute); }
@@ -883,7 +884,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   margin-bottom: 12px;
   color: var(--cream);
 }
-.pub-meta { font-size: 14px; color: var(--cream-soft); font-weight: 300; }
+.pub-meta { font-size: 14px; color: var(--cream-soft); font-weight: 400; }
 .pub-meta .journal { font-style: italic; font-family: var(--display); font-size: 16px; color: var(--cream); }
 .pub-meta .authors { color: var(--cream-mute); }
 .pub-link {
@@ -1039,7 +1040,7 @@ section.s + section.s { border-top: 1px solid var(--hairline); }
   font-size: 15px;
   color: var(--cream-soft);
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .service-list { border-top: 1px solid var(--hairline); }
@@ -1074,7 +1075,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   font-size: 14px;
   color: var(--cream-soft);
   margin-top: 6px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
 }
 .service-where {
@@ -1115,7 +1116,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   transition: border-color 0.25s ease;
   width: 100%;
   resize: vertical;
-  font-weight: 300;
+  font-weight: 400;
 }
 .form-field input::placeholder,
 .form-field textarea::placeholder { color: var(--cream-mute); }
@@ -1219,7 +1220,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   margin-top: 10px;
   line-height: 1.55;
   max-width: 60ch;
-  font-weight: 300;
+  font-weight: 400;
 }
 .cv-entry-main .desc em {
   font-family: var(--display);
@@ -1239,7 +1240,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   font-size: 14px;
   line-height: 1.6;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
   padding: 5px 0 5px 22px;
   position: relative;
 }
@@ -1305,7 +1306,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   font-size: 14px;
   line-height: 1.55;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
 }
 .cv-list li:last-child { border-bottom: none; }
 .cv-list .num {
@@ -1339,7 +1340,7 @@ a.service-item:hover .service-what { color: var(--accent); }
   font-size: 14px;
   color: var(--cream-soft);
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
 }
 .cv-flat strong { font-weight: 500; color: var(--cream); }
 .cv-pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
@@ -1509,7 +1510,7 @@ footer.site {
   font-family: var(--body);
   font-size: 13px;
   color: var(--cream-mute);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0;
 }
 .theme-pub-cite .theme-pub-meta strong {
@@ -1644,7 +1645,7 @@ footer.site {
   font-size: 18px;
   line-height: 1.6;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
   max-width: 64ch;
 }
 .trip-note em {
@@ -1670,6 +1671,8 @@ footer.site {
 }
 .trip-gallery figure:hover { transform: translateY(-3px); }
 .trip-gallery figure { aspect-ratio: 4 / 3; }
+/* a feature photo spans the full row */
+.trip-gallery figure.is-wide { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
 .trip-gallery img {
   width: 100%;
   height: 100%;
@@ -1760,7 +1763,7 @@ footer.site {
   position: relative;
   font-size: 17px;
   line-height: 1.62;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-mute);
   max-width: 760px;
   margin-bottom: 52px;
@@ -1968,7 +1971,7 @@ footer.site {
   font-size: 16px;
   line-height: 1.62;
   color: var(--cream-soft);
-  font-weight: 300;
+  font-weight: 400;
 }
 @media (max-width: 980px) {
   .interest-grid { grid-template-columns: 1fr; gap: 34px; }
@@ -1977,7 +1980,7 @@ footer.site {
 .interest-note {
   font-size: 18px;
   line-height: 1.65;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-soft);
   max-width: 820px;
   margin-bottom: 56px;
@@ -2292,7 +2295,7 @@ html.lb-open { overflow: hidden; }
 .toast-text {
   font-size: 14.5px;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-soft);
 }
 .toast-close {
@@ -2391,7 +2394,7 @@ html.lb-open { overflow: hidden; }
 .news-card p {
   font-size: 14.5px;
   line-height: 1.6;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--cream-soft);
   flex: 1 1 auto;
 }
